@@ -6,7 +6,7 @@
   Free drug notes for Uganda health students<br><br>
   
   <a href="https://wa.me/256794568447" style="color:#25D366; text-decoration:none; margin:0 10px;">WhatsApp</a> |
-  <a href="https://tiktok.com/@doseafrica" style="color:white; text-decoration:none; margin:0 10px;"Dr.DEVIS N,Pharma.|
+  <a href="https://tiktok.com/@dr.devisn.pharma" style="color:white; text-decoration:none; margin:0 10px;"Dr.DEVIS N,Pharma.|
   <a href="mailto: phoenixdevis893@gmail.com" style="color:white; text-decoration:none; margin:0 10px;">Email</a><br><br>
   
   <small>© 2026 DoseAfrica. Made by a Ugandan pharmacy student for students. Not medical advice - verify with NDA guidelines.</small>

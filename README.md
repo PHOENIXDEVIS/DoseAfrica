@@ -42,7 +42,8 @@
 <body>
 
     <header>
-        <div class="logo">PharmaLearn</div>
+        <div class="<img width="1248" height="832" alt="generate_for_me_a_logo_for_PharmaLearn" src="https://github.com/user-attachments/assets/f7e16abc-3043-4933-87e8-6f2aebbbc227" />
+">PharmaLearn</div>
         <nav>
             <a href="#">Home</a>
             <a href="#search">Search</a>

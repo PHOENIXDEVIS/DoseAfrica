@@ -1,22 +1,14 @@
-from http.server import BaseHTTPRequestHandler, HTTPServer
-from urllib.parse import urlparse, parse_qs
-import webbrowser
-import threading
-
-# Fixed: Wrapped strings in quotes and updated port variable name to uppercase
-HOST = "localhost"
-PORT = 8000
-
-# Complete HTML template with closed tags and functional JavaScript search logic
-HTML_CONTENT = r"""<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PharmaLearn | Pharmacology Education</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+<footer style="background:#0a2540; color:white; padding:30px; text-align:center; margin-top:40px;">
+  <img src="logo.png" alt="DoseAfrica" style="height:40px; margin-bottom:10px;"><br>
+  <b>DoseAfrica - PharmaLearn</b><br>
+  Free drug notes for Uganda health students<br><br>
+  
+  <a href="https://wa.me/256794568447" style="color:#25D366; text-decoration:none; margin:0 10px;">WhatsApp</a> |
+  <a href="https://tiktok.com/@doseafrica" style="color:white; text-decoration:none; margin:0 10px;">TikTok</a> |
+  <a href="mailto: phoenixdevis893@gmail.com" style="color:white; text-decoration:none; margin:0 10px;">Email</a><br><br>
+  
+  <small>© 2026 DoseAfrica. Made by a Ugandan pharmacy student for students. Not medical advice - verify with NDA guidelines.</small>
+</footer>
         body { font-family: Arial, Helvetica, sans-serif; background: #f4f8fb; color: #222; line-height: 1.6; }
         
         /* NAVIGATION */

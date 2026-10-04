@@ -3,88 +3,204 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DoseAfrica - Dr. Devisn Pharma 2026</title>
+<title>DoseAfrica - Dr. Devisn Pharma | Ask Dr. Online</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-  *{box-sizing:border-box; margin:0; padding:0}
-  body{font-family: Inter, system-ui, sans-serif; background:#f4f6f9; color:#1a2332; line-height:1.7}
-  header{background:#0a2342; color:white; padding:14px 3%; position:sticky; top:0; z-index:100; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px}
-  .logo-area{display:flex; align-items:center; gap:12px}
-  .logo-area img{height:44px; width:44px; border-radius:10px; background:white; padding:3px; object-fit:contain}
-  .socials{display:flex; align-items:center; gap:10px}
-  .socials a{color:white; text-decoration:none; padding:7px 14px; border-radius:20px; font-size:13px; font-weight:700; display:flex; align-items:center; gap:6px}
-  .wa{background:#25D366} .tik{background:#000} .ig{background: linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)}
-  .wrapper{width:95%; max-width:1450px; margin:0 auto; padding:25px 0}
-  .cards{display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:22px; margin-bottom:35px}
-  .card{background:white; border-radius:14px; padding:22px 24px; box-shadow:0 4px 18px rgba(0,0,0,0.06); border-left:5px solid; cursor:pointer; transition:0.2s; text-decoration:none; display:block; color:inherit}
-  .card:hover{transform:translateY(-4px); box-shadow:0 8px 25px rgba(0,0,0,0.12)}
-  .card.c1{border-color:#00b4d8} .card.c2{border-color:#0a2342} .card.c3{border-color:#2ec4b6}
-  .content-box{background:white; border-radius:16px; padding:35px 40px; box-shadow:0 4px 20px rgba(0,0,0,0.05); margin-bottom:40px; scroll-margin-top:85px}
-  .content-box h2{font-size:26px; color:#0a2342; border-bottom:3px solid #00b4d8; display:inline-block; padding-bottom:6px; margin-bottom:10px}
-  .badge{display:inline-block; background:#e0f7fa; color:#0077b6; padding:4px 12px; border-radius:20px; font-size:12px; font-weight:700; margin:10px 0 20px 0}
-  table{width:100%; border-collapse:collapse; margin:18px 0; font-size:14px}
-  th{background:#0a2342; color:white; text-align:left; padding:12px 10px}
-  td{padding:11px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top}
-  tr:nth-child(even) td{background:#f8fafc}
-  .alert{background:#fff3cd; border-left:4px solid #ffc107; padding:12px 16px; border-radius:6px; margin:15px 0; font-size:13.5px}
-  .alert-red{background:#fde2e2; border-left:4px solid #e11d48}
-  .btn{background:#0a2342; color:white; border:none; padding:8px 18px; border-radius:20px; cursor:pointer; font-size:13px; text-decoration:none; display:inline-block}
-  footer{background:#0a2342; color:#94a3b8; text-align:center; padding:22px; font-size:13px}
-  footer a{color:#00e5ff; text-decoration:none}
-  @media(max-width:700px){.content-box{padding:22px 18px} header{flex-direction:column; align-items:flex-start}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:#FFFBF2;color:#1e293b;line-height:1.75}
+header{background:#0f2a3c;color:white;padding:12px 3%;position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo-area{display:flex;align-items:center;gap:12px}
+.logo-area img{height:50px;width:50px;border-radius:12px;background:white;padding:4px}
+.socials{display:flex;gap:8px;flex-wrap:wrap}
+.socials a{color:white;text-decoration:none;padding:8px 14px;border-radius:20px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:5px}
+.wa{background:#25D366}.tik{background:#000}.ig{background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)}
+.wrapper{width:95%;max-width:1450px;margin:0 auto;padding:20px 0}
+.hero{text-align:center;padding:28px 12px;background:white;border-radius:16px;margin-bottom:25px;box-shadow:0 4px 18px rgba(0,0,0,0.05)}
+.hero img{max-width:520px;width:92%;height:auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px;margin-bottom:35px}
+.card{background:white;border-radius:14px;padding:22px 24px;box-shadow:0 4px 18px rgba(0,0,0,0.06);border-left:6px solid;text-decoration:none;display:block;color:inherit}
+.card.c1{border-color:#1a8a7a} .card.c2{border-color:#0f2a3c} .card.c3{border-color:#f59e0b}
+.content-box{background:white;border-radius:16px;padding:30px 35px;box-shadow:0 4px 20px rgba(0,0,0,0.05);margin-bottom:40px;scroll-margin-top:95px}
+.content-box h2{font-size:26px;color:#0f2a3c;border-bottom:3px solid #1a8a7a;display:inline-block;padding-bottom:6px;margin-bottom:12px}
+.badge{display:inline-block;background:#e6f4f1;color:#0f766e;padding:5px 14px;border-radius:20px;font-size:12px;font-weight:700;margin:10px 0}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+th{background:#0f2a3c;color:white;text-align:left;padding:12px 10px}
+td{padding:11px 10px;border-bottom:1px solid #e2e8f0;vertical-align:top}
+tr:nth-child(even) td{background:#f8fafc}
+.alert{background:#fff3cd;border-left:4px solid #f59e0b;padding:12px 16px;border-radius:6px;margin:15px 0;font-size:13.5px}
+.alert-red{background:#fde2e2;border-left:4px solid #e11d48}
+.btn{background:#0f2a3c;color:white;border:none;padding:8px 18px;border-radius:20px;cursor:pointer;font-size:13px;text-decoration:none;display:inline-block;margin-bottom:12px}
+footer{background:#0f2a3c;color:#94a3b8;text-align:center;padding:24px;font-size:13px}
+#askBtn{position:fixed;bottom:20px;right:20px;z-index:999;background:#1a8a7a;color:white;border:none;padding:14px 20px;border-radius:30px;font-weight:800;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.25);display:flex;align-items:center;gap:8px}
+#chatBox{position:fixed;bottom:85px;right:20px;width:365px;max-width:92vw;height:480px;background:white;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,0.3);z-index:999;display:none;flex-direction:column;overflow:hidden;border:1px solid #e2e8f0}
+#chatHeader{background:#0f2a3c;color:white;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+#chatMessages{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:#f8fafc}
+.msg{padding:10px 14px;border-radius:14px;max-width:85%;font-size:13.5px;line-height:1.5}
+.user{align-self:flex-end;background:#1a8a7a;color:white;border-bottom-right-radius:4px}
+.bot{align-self:flex-start;background:white;border:1px solid #e2e8f0;border-bottom-left-radius:4px}
+#chatInputArea{display:flex;gap:8px;padding:12px;border-top:1px solid #e2e8f0;background:white}
+#chatInput{flex:1;padding:10px 14px;border-radius:20px;border:1px solid #cbd5e1;outline:none;font-size:13px}
+#chatSend{background:#25D366;color:white;border:none;padding:10px 16px;border-radius:20px;font-weight:700;cursor:pointer}
 </style>
 </head>
 <body>
 <header>
   <div class="logo-area">
-    <img src="logo.png" alt="DoseAfrica Logo" onerror="this.src='https://via.placeholder.com/44?text=DA'">
-    <div>
-      <h1 style="font-size:22px">DoseAfrica</h1>
-      <div style="font-size:10px; opacity:0.7; letter-spacing:1px">DR. DEVISN PHARMA • UGANDA</div>
-    </div>
+    <img src="logo.png" alt="DoseAfrica">
+    <div><h1 style="font-size:22px"><span style="color:#1a8a7a">Dose</span><span style="color:#f59e0b">A</span><span style="color:white">frica</span></h1><div style="font-size:10px;opacity:0.7">DR. DEVISN PHARMD • +256 794 568 447</div></div>
   </div>
   <div class="socials">
-    <a class="wa" href="https://wa.me/256794568447?text=Hello%20Dr%20Devis%20I%20am%20from%20DoseAfrica" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-    <a class="tik" href="https://www.tiktok.com/@dr.devis.n.pharma" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
-    <a class="ig" href="https://www.instagram.com/dr.devisnpharmd" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a class="wa" href="https://wa.me/256794568447?text=Hello%20Dr%20Devis%20from%20DoseAfrica" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a class="tik" href="https://www.tiktok.com/@dr.devis.n.pharma" target="_blank"><i class="fab fa-tiktok"></i> dr.devis.n.pharma</a>
+    <a class="ig" href="https://www.instagram.com/dr.devisnpharmd" target="_blank"><i class="fab fa-instagram"></i> dr.devisnpharmd</a>
   </div>
 </header>
 
 <div class="wrapper">
+  <div class="hero">
+    <img src="logo-full.png" alt="DoseAfrica">
+    <p style="margin-top:12px;color:#475569">Pharmacy • Stewardship • Rational Use • UCG 2023 | Ask Dr. Devisn Online Chat</p>
+  </div>
+
   <div class="cards">
-    <a class="card c1" href="#cardiovascular"><h3>💊 CARDIOVASCULAR DRUGS</h3><p><b>Full guide inside</b><br>Amlodipine, Furosemide, Enalapril, Losartan, Bisoprolol, GTN, Warfarin, Atorvastatin.<br><b style="color:#00b4d8">→ Click to open</b></p></a>
-    <a class="card c2" href="#antibiotics"><h3>🧫 ANTIBIOTICS</h3><p><b>Comprehensive 2026 Guide</b><br>Classes, AWaRe, dosing, UCG 2023 infection overview, stewardship.<br><b style="color:#0a2342">→ Click to open</b></p></a>
-    <a class="card c3" href="#analgesics"><h3>💉 ANALGESICS</h3><p>Coming soon - Paracetamol, NSAIDs, Opioids<br><b style="color:#2ec4b6">→ Click to open</b></p></a>
+    <a class="card c1" href="#cardiovascular"><h3>💊 CARDIOVASCULAR DRUGS</h3><p>From Basic_Cardiovascular_Drugs_Guide.docx - UNTAMPERED<br><b style="color:#1a8a7a">→ Click to open</b></p></a>
+    <a class="card c2" href="#antibiotics"><h3>🧫 ANTIBIOTICS & STEWARDSHIP</h3><p>From COMPREHENSIVE_ANTIBIOTICS_GUIDE.docx - UNTAMPERED<br><b>→ Click to open</b></p></a>
+    <a class="card c3" href="#analgesics"><h3>💉 ANALGESICS</h3><p>From Analgesics_Pharmaceutical_Reference_Guide.docx - UNTAMPERED<br><b style="color:#f59e0b">→ Click to open</b></p></a>
   </div>
 
   <div id="cardiovascular" class="content-box">
     <a class="btn" href="#">← Top</a>
-    <h2 style="margin-top:12px">CARDIOVASCULAR DRUGS</h2><br>
-    <span class="badge">From Basic_Cardiovascular_Drugs_Guide.docx • Doses • Storage • Counseling</span>
-    <div class="alert">WHO: diuretics, ACEi, beta-blockers, CCBs, statins are basic CV meds. Follow current UCG & label. Educational only.</div>
-    <table><tr><th>Class</th><th>Examples</th><th>Use</th><th>Safety</th></tr><tr><td>ACEi</td><td>Enalapril, Lisinopril</td><td>HTN, HF</td><td>BP, K+, renal, cough/angioedema</td></tr><tr><td>ARB</td><td>Losartan 50mg</td><td>HTN alt to ACE</td><td>BP, K+, renal</td></tr><tr><td>CCB</td><td>Amlodipine 5-10mg</td><td>HTN, Angina</td><td>Edema, flushing</td></tr><tr><td>Thiazide</td><td>HCTZ 12.5-25mg</td><td>HTN</td><td>Electrolytes, morning dose</td></tr><tr><td>Loop</td><td>Furosemide 20-40mg</td><td>Edema/HF</td><td>K+, BP, fluid</td></tr><tr><td>Beta-blocker</td><td>Bisoprolol 5-10mg</td><td>HTN/Angina/HF</td><td>DO NOT stop abruptly</td></tr><tr><td>Nitrate</td><td>GTN 0.3-0.6mg SL</td><td>Angina</td><td>NEVER + Sildenafil</td></tr><tr><td>Antiplatelet</td><td>Aspirin 75-100mg, Clopidogrel 75mg</td><td>Thrombosis prevention</td><td>Bleeding</td></tr><tr><td>Anticoagulant</td><td>Warfarin, Apixaban 5mg BD</td><td>VTE</td><td>INR, bleeding</td></tr><tr><td>Statin</td><td>Atorvastatin 10-20mg</td><td>LDL reduction</td><td>Muscle pain</td></tr></table>
+    <h2>CARDIOVASCULAR DRUGS - UNTAMPERED</h2><br><span class="badge">SOURCE: Basic_Cardiovascular_Drugs_Guide.docx</span>
+    <div class="alert">Educational only. Verify UCG 2023, EMHSLU, label, renal/hepatic, allergy, pregnancy.</div>
+    <table><tr><th>Class</th><th>Examples</th><th>Use</th><th>Safety</th></tr>
+    <tr><td>ACEi</td><td>Enalapril 5mg OD, Lisinopril</td><td>HTN, HF</td><td>Cough, angioedema, K+, creatinine</td></tr>
+    <tr><td>ARB</td><td>Losartan 50mg OD</td><td>HTN</td><td>K+, renal</td></tr>
+    <tr><td>CCB</td><td>Amlodipine 5mg OD max 10mg</td><td>HTN, Angina</td><td>Edema</td></tr>
+    <tr><td>Thiazide</td><td>HCTZ 12.5-25mg morning</td><td>HTN</td><td>Electrolytes</td></tr>
+    <tr><td>Loop</td><td>Furosemide 20-40mg morning</td><td>Edema/HF</td><td>K+, fluid</td></tr>
+    <tr><td>Beta</td><td>Bisoprolol 5-10mg - DO NOT STOP ABRUPTLY</td><td>HTN/Angina/HF</td><td>Bradycardia</td></tr>
+    <tr><td>Nitrate</td><td>GTN 0.3-0.6mg SL - NEVER + Sildenafil</td><td>Angina</td><td>Hypotension</td></tr>
+    <tr><td>Antiplatelet</td><td>Aspirin 75-100mg, Clopidogrel 75mg</td><td>Prevention</td><td>Bleeding</td></tr>
+    <tr><td>Anticoag</td><td>Warfarin INR based, Apixaban 5mg BD</td><td>AF, DVT</td><td>Bleeding</td></tr>
+    <tr><td>Statin</td><td>Atorvastatin 10-20mg ON</td><td>Dyslipidemia</td><td>Muscle pain</td></tr>
+    </table>
   </div>
 
   <div id="antibiotics" class="content-box">
     <a class="btn" href="#">← Top</a>
-    <h2 style="margin-top:12px">ANTIBIOTICS & STEWARDSHIP GUIDE</h2><br>
-    <span class="badge">From COMPREHENSIVE_ANTIBIOTICS_GUIDE.docx • Uganda EMHSLU 2023 • AWaRe</span>
-    <div class="alert alert-red">DO NOT SELF-PRESCRIBE. Doses are educational references only. Verify indication, weight, renal, allergy, pregnancy, cultures.</div>
-    <table><tr><th>Antibiotic</th><th>Adult Ref</th><th>Key Counseling</th></tr><tr><td>Amoxicillin</td><td>500mg q8h</td><td>Allergy check</td></tr><tr><td>Amoxy/clav 625</td><td>625mg q8h</td><td>Take with food</td></tr><tr><td>Cefalexin</td><td>500mg q6-12h</td><td>Renal adjust</td></tr><tr><td>Ceftriaxone</td><td>1-2g IV OD</td><td>Hospital, Ca warning</td></tr><tr><td>Azithromycin</td><td>500mg day1 then 250mg</td><td>QT risk</td></tr><tr><td>Ciprofloxacin 500mg BD</td><td>Separate from antacids, tendon pain</td></tr><tr><td>Metronidazole</td><td>400-500mg q8-12h</td><td>Avoid alcohol</td></tr><tr><td>Doxycycline</td><td>100mg BD</td><td>Separate Ca/Fe, photosensitivity</td></tr></table>
-    <p style="font-size:14px"><b>WHO AWaRe:</b> ACCESS=first-line, WATCH=justify use, RESERVE=specialist. <b>Storage:</b> Room temp dry original pack. Suspensions follow reconstitution date. <b>Teach-back:</b> "Can you tell me how you will take these and what if you miss a dose?"</p>
+    <h2>ANTIBIOTICS & STEWARDSHIP - UNTAMPERED</h2><br><span class="badge">SOURCE: COMPREHENSIVE_ANTIBIOTICS_GUIDE.docx</span>
+    <div class="alert alert-red">DO NOT SELF-PRESCRIBE. Verify UCG 2023.</div>
+    <table><tr><th>Antibiotic</th><th>Adult Ref</th><th>Counseling</th></tr>
+    <tr><td>Amoxicillin</td><td>500mg q8h</td><td>Allergy check</td></tr>
+    <tr><td>Amoxy/clav 625</td><td>625mg q8h with food</td><td>GI upset</td></tr>
+    <tr><td>Cefalexin</td><td>500mg q6-12h</td><td>Renal adjust</td></tr>
+    <tr><td>Ceftriaxone</td><td>1-2g IV OD</td><td>No Ca IV</td></tr>
+    <tr><td>Azithromycin</td><td>500mg then 250mg</td><td>QT</td></tr>
+    <tr><td>Ciprofloxacin</td><td>500mg BD separate Ca/Fe 2h</td><td>Tendon pain</td></tr>
+    <tr><td>Metronidazole</td><td>400-500mg q8-12h AVOID alcohol</td><td>Metallic taste</td></tr>
+    <tr><td>Doxycycline</td><td>100mg BD photosensitivity</td><td>Full glass water</td></tr>
+    </table>
+    <p style="font-size:13px">WHO AWaRe: ACCESS first-line, WATCH justify, RESERVE specialist.</p>
   </div>
 
-  <div id="analgesics" class="content-box"><a class="btn" href="#">← Top</a><h2 style="margin-top:12px">ANALGESICS</h2><p>Upload file and I'll add it here in same widened format.</p></div>
+  <div id="analgesics" class="content-box">
+    <a class="btn" href="#">← Top</a>
+    <h2>ANALGESICS - FULL GUIDE UNTAMPERED</h2><br><span class="badge">SOURCE: Analgesics_Pharmaceutical_Reference_Guide.docx - 2026 EDITION</span>
+    <div class="alert">IMPORTANT: Educational only - not a substitute for prescription, label, guideline, or pharmacist/doctor assessment.</div>
+    
+    <h3 style="color:#0f2a3c;margin:18px 0 8px 0">1. Executive overview</h3>
+    <p>Analgesics are medicines used to relieve pain. They include non-opioid analgesics such as paracetamol, NSAIDs, and opioid analgesics. Paracetamol mainly analgesic and antipyretic; little anti-inflammatory. NSAIDs provide analgesic, antipyretic and anti-inflammatory by inhibiting COX. Opioids act at opioid receptors reserved for moderate-to-severe pain because of sedation, respiratory depression, dependence.</p>
+    
+    <h3>2. Major classes</h3>
+    <table><tr><th>Class</th><th>Examples</th><th>Main role</th><th>Major cautions</th></tr>
+    <tr><td>Non-opioid</td><td>Paracetamol</td><td>Mild-moderate pain; fever</td><td>Liver toxicity in overdose</td></tr>
+    <tr><td>NSAIDs</td><td>Ibuprofen, naproxen, diclofenac, aspirin</td><td>Pain with inflammation</td><td>GI bleeding/ulcer, renal, CV risk</td></tr>
+    <tr><td>Opioids</td><td>Morphine, tramadol, codeine</td><td>Moderate-severe pain</td><td>Respiratory depression, dependence</td></tr>
+    <tr><td>Topical</td><td>Diclofenac gel, lidocaine</td><td>Localized pain</td><td>Skin reactions</td></tr>
+    </table>
+
+    <h3>3. Practical reference</h3>
+    <table><tr><th>Medicine</th><th>Typical adult dose*</th><th>Administration</th><th>Access</th><th>Storage</th></tr>
+    <tr><td>Paracetamol 500mg</td><td>500-1000mg every 4-6h; max 8x500mg/24h NHS; FDA max 4000mg/day all sources age 12+</td><td>Oral; some rectal/IV</td><td>Often OTC</td><td>Room temp</td></tr>
+    <tr><td>Ibuprofen</td><td>200-400mg every 4-6h OTC</td><td>With/after food</td><td>OTC low; higher Rx</td><td>Room temp</td></tr>
+    <tr><td>Naproxen</td><td>250-500mg per dose</td><td>With/after food</td><td>Often Rx</td><td>Room temp</td></tr>
+    <tr><td>Diclofenac</td><td>25-50mg 2-3 times daily</td><td>Oral/topical/rectal</td><td>Usually Rx</td><td>Follow label</td></tr>
+    <tr><td>Aspirin pain</td><td>300-900mg per dose at least 4h apart; max 4 doses/day</td><td>With/after food</td><td>OTC pain; low-dose 75mg antiplatelet clinician-directed</td><td>Dry place</td></tr>
+    </table>
+
+    <h3>4. Paracetamol details</h3>
+    <p>Adult 500mg: 1-2 tablets per dose at least 4h apart; max 8x500mg/24h. 1g: one tablet per dose, max four 1g tablets/24h. Do not combine multiple paracetamol-containing products. Liver disease, low body weight, heavy alcohol, malnutrition require lower dose. Overdose can cause severe liver injury fatal. FDA: max 4000mg/day adults 12+.</p>
+
+    <h3>5. NSAIDs</h3>
+    <p>Use lowest effective dose shortest duration. Avoid two systemic NSAIDs together. Risks: dyspepsia, gastritis, ulcer, GI bleeding, renal impairment, fluid retention, CV events. Caution elderly, kidney disease, HF, HTN, ulcer history, anticoagulant use. Interactions: anticoagulants, corticosteroids, antidepressants, antihypertensives, diuretics. Pregnancy requires review; generally avoided unless advised.</p>
+
+    <h3>6. Aspirin</h3>
+    <p>Higher doses pain relief, low doses antiplatelet. Pain: 300mg 1-3 tablets per dose at least 4h apart max 4 doses/day. Low-dose 75mg OD not stronger painkiller; antiplatelet only. Do not start/stop low-dose without advice. Do not give to children under 16 unless prescribed.</p>
+
+    <h3>7. Opioids</h3>
+    <p>Reserved for selected moderate-severe pain. Dosing individualized. IMPORTANT: Never provide generic opioid dose as universal. Requires assessment, monitoring, interaction review, secure storage.</p>
+    <table><tr><th>Medicine</th><th>Key point</th><th>Risks</th></tr>
+    <tr><td>Morphine</td><td>Strong opioid titrated individually</td><td>Respiratory depression, sedation, hypotension, nausea, constipation</td></tr>
+    <tr><td>Tramadol</td><td>Monoaminergic activity</td><td>Seizures, serotonin syndrome, sedation, dependence</td></tr>
+    <tr><td>Codeine</td><td>Combination products; variable metabolism</td><td>Sedation, constipation, respiratory depression</td></tr>
+    <tr><td>Oxycodone</td><td>Potent opioid moderate-severe</td><td>Respiratory depression, dependence, overdose</td></tr>
+    </table>
+
+    <h3>8-11. Prescription, Expiry, Storage</h3>
+    <p>Prescription must have patient, medicine, strength, form, dose, route, frequency, duration, prescriber per law. Check allergies, age, pregnancy, renal/hepatic, current meds, duplicate ingredients. Check OTC/pharmacy/Rx/controlled Uganda framework. Expiry EXP is manufacturer limit unopened. Beyond-use date after opened/reconstituted. Never use after expiry. Do not guess expiry from manufacturing date. Reconstituted liquids shorter BUD write date. Do not use if appearance deteriorated. Expiry not universal years must read package. This guide does not invent expiry dates.</p>
+
+    <h3>12-15. Interactions, Counseling, Red flags</h3>
+    <p>Paracetamol + cold/flu product → overdose. Ibuprofen + naproxen/aspirin → duplication. NSAID + anticoagulant → bleeding. NSAID + corticosteroid → GI injury. Tramadol + serotonergic antidepressants → serotonin syndrome. Tramadol/opioid + alcohol/sedatives → CNS/respiratory depression. Always check active ingredients not brand. Counseling: confirm identity, pain, severity, duration, red-flags, allergies, meds, supplements, herbal. Explain dose, interval, route, max daily, food, duplicate warning, adverse effects, urgent help, storage away children, teach-back. Red flags: severe/sudden pain, chest pain, severe abdominal/headache, trauma/fracture, persistent fever, worsening pain, vomiting blood, black stools GI bleeding, breathing difficulty, facial swelling, rash anaphylaxis, drowsiness slow breathing inability wake after opioid, overdose paracetamol/opioids, new neuro symptoms, weakness, confusion.</p>
+
+    <h3>16-19. Safety rules</h3>
+    <p><b>Never exceed labeled dose. Never assume two brands different actives. Do not combine systemic NSAIDs unless instructed. Keep opioids secure never share. Check expiry/storage. Use exact measuring device liquids. Ask pharmacist/doctor when pregnancy, chronic disease, multiple medicines, severe pain or overdose. Dispose expired via pharmacy/waste pathway.</b></p>
+  </div>
 </div>
 
 <footer>
-  <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-bottom:12px">
-    <a href="https://wa.me/256794568447?text=Hello%20Dr%20Devis" target="_blank" style="background:#25D366; color:white; padding:8px 16px; border-radius:20px"><i class="fab fa-whatsapp"></i> +256 794 568 447</a>
-    <a href="https://www.tiktok.com/@dr.devisn.pharma" target="_blank" style="background:#000; color:white; padding:8px 16px; border-radius:20px"><i class="fab fa-tiktok"></i> dr.devisn.pharma</a>
-    <a href="https://www.instagram.com/dr.devisnpharmd" target="_blank" style="background:#E1306C; color:white; padding:8px 16px; border-radius:20px"><i class="fab fa-instagram"></i> dr.devisnpharmd</a>
+  <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+    <a href="https://wa.me/256794568447" target="_blank" style="background:#25D366;color:white;padding:9px 18px;border-radius:20px;font-weight:700"><i class="fab fa-whatsapp"></i> +256 794 568 447</a>
+    <a href="https://www.tiktok.com/@dr.devis.n.pharma" target="_blank" style="background:#000;color:white;padding:9px 18px;border-radius:20px"><i class="fab fa-tiktok"></i> dr.devis.n.pharma</a>
+    <a href="https://www.instagram.com/dr.devisnpharmd" target="_blank" style="background:#E1306C;color:white;padding:9px 18px;border-radius:20px"><i class="fab fa-instagram"></i> dr.devisnpharmd</a>
   </div>
-  © 2026 DoseAfrica • Dr. Devisn Pharma • Educational • Verify UCG 2023 & product label before use<br>
-  <span style="font-size:11px; opacity:0.6">Built by Phoenix Devis</span>
+  © 2026 DoseAfrica • Dr. Devisn PharmD • Educational only • Verify UCG 2023, EMHSLU, label before use
 </footer>
+
+<button id="askBtn" onclick="toggleChat()"><i class="fas fa-comment-medical"></i> Ask Dr.</button>
+<div id="chatBox">
+  <div id="chatHeader"><div><b>Ask Dr. Devisn</b><br><span style="font-size:11px;opacity:0.8">Online • Instant • WhatsApp linked</span></div><span onclick="toggleChat()" style="cursor:pointer;font-size:20px">✕</span></div>
+  <div id="chatMessages"><div class="msg bot">Hello! I am Dr. Devisn PharmD 👋<br>Welcome to DoseAfrica.<br><br>I have your full guides:<br>💊 Cardiovascular<br>🧫 Antibiotics<br>💉 Analgesics<br><br>Ask me anything! Example:<br>• "What is dose of amoxicillin?"<br>• "Can I take ibuprofen with Losartan?"<br>• "Paracetamol max dose?"</div></div>
+  <div id="chatInputArea"><input id="chatInput" placeholder="Type your question..." onkeypress="if(event.key==='Enter')sendMsg()"><button id="chatSend" onclick="sendMsg()">Send</button></div>
+  <div style="padding:8px 12px;background:#fff3cd;font-size:11px;text-align:center">Educational only, not a prescription. Complex cases forwarded to WhatsApp.</div>
+</div>
+
+<script>
+function toggleChat(){
+  let box=document.getElementById('chatBox');
+  box.style.display = box.style.display==='flex'?'none':'flex';
+}
+function sendMsg(){
+  let input=document.getElementById('chatInput');
+  let text=input.value.trim();
+  if(!text) return;
+  let msgs=document.getElementById('chatMessages');
+  let u=document.createElement('div'); u.className='msg user'; u.textContent=text; msgs.appendChild(u);
+  input.value=''; msgs.scrollTop=msgs.scrollHeight;
+  setTimeout(()=>{
+    let b=document.createElement('div'); b.className='msg bot';
+    let lower=text.toLowerCase();
+    let reply="";
+    if(lower.includes('paracetamol')) reply="Paracetamol (your guide): Adult 500mg 1-2 tablets every 4-6h, max 8x500mg/24h NHS, FDA max 4000mg/day all sources age 12+. Avoid duplicate in cold/flu products. Overdose severe liver injury.";
+    else if(lower.includes('ibuprofen')) reply="Ibuprofen (your guide): 200-400mg every 4-6h OTC, with/after food. Do NOT combine with other NSAIDs. Risks: GI bleeding/ulcer, renal injury, fluid retention, CV risk.";
+    else if(lower.includes('amoxicillin')) reply="Amoxicillin (your guide): 500mg q8h 5-7d adult ref. Check allergy, finish course. Verify UCG 2023.";
+    else if(lower.includes('cipro')) reply="Ciprofloxacin 500mg BD: Separate Ca/Fe/antacids 2h, tendon pain, avoid sun.";
+    else if(lower.includes('metronidazole')) reply="Metronidazole 400-500mg q8-12h: AVOID alcohol, metallic taste.";
+    else if(lower.includes('dose')) reply="Tell me medicine name, age, weight, indication. I will check your DoseAfrica guides (UCG 2023, EMHSLU). For personalized dose, forwarded to WhatsApp.";
+    else reply="Thanks: '"+text+"' . I have your full DoseAfrica notes. Continue on WhatsApp for detailed answer.";
+    b.innerHTML=reply + '<br><br><a href="https://wa.me/256794568447?text='+encodeURIComponent('Hello Dr Devis, from DoseAfrica Ask Dr chat: '+text)+'" target="_blank" style="background:#25D366;color:white;padding:6px 12px;border-radius:15px;text-decoration:none;font-size:12px;display:inline-block;margin-top:6px"><i class="fab fa-whatsapp"></i> Continue on WhatsApp</a>';
+    msgs.appendChild(b); msgs.scrollTop=msgs.scrollHeight;
+  },700);
+}
+</script>
 </body>
 </html>

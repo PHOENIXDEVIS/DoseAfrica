@@ -1,1 +1,55 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>DoseAfrica</title><style>body{margin:0;font-family:Arial;background:#f6f8fb}header{background:#0a2540;color:#fff;padding:14px 6%;display:flex;justify-content:space-between}header a{color:#fff;text-decoration:none;margin-left:15px}.hero{background:#0a2540;color:#fff;padding:60px 8%;text-align:center}.hero h1{font-size:38px}.btn{background:#00d4ff;color:#000;padding:12px 24px;border-radius:25px;text-decoration:none;display:inline-block;margin-top:15px;font-weight:bold}.wrap{padding:25px 6%;max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{background:#fff;padding:20px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.06);border-left:5px solid #0a2540}footer{background:#0a2540;color:#fff;text-align:center;padding:30px;margin-top:30px}</style></head><body><header><b>DoseAfrica</b><nav><a href="#">Home</a></nav></header><section class="hero"><h1>Master Pharmacology, Faster.</h1><p>Free PharmaLearn notes for Ugandan nursing & pharmacy students</p><a class="btn" href="#mods">Start Learning</a></section><div class="wrap" id="mods"><div class="card"><h3>CARDIOVASCULAR DRUGS</h3><p>Hypertension, Heart Failure - doses, counseling, NDA storage.</p></div><div class="card"><h3>ANTIBIOTICS</h3><p>Classification, doses, resistance tips.</p></div><div class="card"><h3>ANALGESICS</h3><p>Paracetamol, NSAIDs, opioids safety.</p></div></div><footer>© 2026 DoseAfrica - Educational only</footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DoseAfrica - Clickable</title>
+<style>
+body{margin:0;font-family:Arial;background:#f6f8fb}
+header{background:#0a2540;color:#fff;padding:14px 6%;display:flex;justify-content:space-between;position:sticky;top:0}
+.hero{background:#0a2540;color:#fff;padding:60px 8%;text-align:center}
+.hero h1{font-size:38px;margin:0}
+.btn{background:#00d4ff;color:#000;padding:12px 24px;border-radius:25px;text-decoration:none;display:inline-block;margin-top:18px;font-weight:bold}
+.wrap{padding:20px 6%;max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:#fff;padding:20px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.06);border-left:5px solid #0a2540;display:block;text-decoration:none;color:inherit;transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(0,0,0,.1);border-left-color:#00d4ff}
+.card h3{margin:0 0 6px;color:#0a2540}
+.detail{display:none;padding:25px 6%;max-width:900px;margin:auto;background:#fff;border-radius:12px;margin-top:20px}
+.detail:target{display:block}
+.back{display:inline-block;margin:10px 0;background:#0a2540;color:#fff;padding:8px 14px;border-radius:20px;text-decoration:none;font-size:13px}
+footer{background:#0a2540;color:#fff;text-align:center;padding:30px;margin-top:30px}
+</style>
+</head>
+<body>
+<header><b>DoseAfrica</b></header>
+<section class="hero"><h1>Master Pharmacology, Faster.</h1><p>Free PharmaLearn notes for Ugandan nursing & pharmacy students</p><a class="btn" href="#modules">Start Learning</a></section>
+
+<div class="wrap" id="modules">
+<a class="card" href="#cardiovascular"><h3>CARDIOVASCULAR DRUGS</h3><p>Hypertension, Heart Failure - doses, counseling, NDA storage. ➜ Tap to open</p></a>
+<a class="card" href="#antibiotics"><h3>ANTIBIOTICS</h3><p>Classification, doses, resistance tips. ➜ Tap to open</p></a>
+<a class="card" href="#analgesics"><h3>ANALGESICS</h3><p>Paracetamol, NSAIDs, opioids safety. ➜ Tap to open</p></a>
+</div>
+
+<div id="cardiovascular" class="detail">
+<a class="back" href="#modules">← Back</a>
+<h2>CARDIOVASCULAR DRUGS</h2>
+<p><b>Example: Amlodipine 5mg</b> - Hypertension. Dose: 5mg once daily. Counseling: take same time, watch ankle swelling. Storage: below 30°C. Check expiry NDA.</p>
+<p><b>Furosemide 40mg</b> - Heart failure, edema. Dose: 20-40mg morning. Counseling: may increase urination, take in morning. Monitor potassium.</p>
+<p>Full notes in your file: Basic_Cardiovascular_Drugs_Guide.docx</p>
+</div>
+
+<div id="antibiotics" class="detail">
+<a class="back" href="#modules">← Back</a>
+<h2>ANTIBIOTICS</h2>
+<p><b>Amoxicillin 500mg</b> - Dose: 500mg 8-hourly 5-7 days. Complete dose. Storage: dry place.</p>
+<p>Remember antimicrobial resistance - use only when prescribed.</p>
+</div>
+
+<div id="analgesics" class="detail">
+<a class="back" href="#modules">← Back</a>
+<h2>ANALGESICS</h2>
+<p><b>Paracetamol 500mg</b> - Dose: 1-2 tabs 6-8hrly, max 4g/day. Counseling: avoid alcohol, check other meds containing paracetamol.</p>
+</div>
+
+<footer>© 2026 DoseAfrica</footer>
+</body>
+  </html>

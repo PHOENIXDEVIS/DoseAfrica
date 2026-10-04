@@ -1,55 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DoseAfrica - Clickable</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DoseAfrica - Pharmacy Reference 2026</title>
 <style>
-body{margin:0;font-family:Arial;background:#f6f8fb}
-header{background:#0a2540;color:#fff;padding:14px 6%;display:flex;justify-content:space-between;position:sticky;top:0}
-.hero{background:#0a2540;color:#fff;padding:60px 8%;text-align:center}
-.hero h1{font-size:38px;margin:0}
-.btn{background:#00d4ff;color:#000;padding:12px 24px;border-radius:25px;text-decoration:none;display:inline-block;margin-top:18px;font-weight:bold}
-.wrap{padding:20px 6%;max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.card{background:#fff;padding:20px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.06);border-left:5px solid #0a2540;display:block;text-decoration:none;color:inherit;transition:.2s}
-.card:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(0,0,0,.1);border-left-color:#00d4ff}
-.card h3{margin:0 0 6px;color:#0a2540}
-.detail{display:none;padding:25px 6%;max-width:900px;margin:auto;background:#fff;border-radius:12px;margin-top:20px}
-.detail:target{display:block}
-.back{display:inline-block;margin:10px 0;background:#0a2540;color:#fff;padding:8px 14px;border-radius:20px;text-decoration:none;font-size:13px}
-footer{background:#0a2540;color:#fff;text-align:center;padding:30px;margin-top:30px}
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{font-family: Inter, system-ui, sans-serif; background:#f4f6f9; color:#1a2332; line-height:1.7}
+  header{background:#0a2342; color:white; padding:18px 3%; position:sticky; top:0; z-index:100; display:flex; justify-content:space-between; align-items:center}
+  header h1{font-size:22px}
+  .wrapper{width:95%; max-width:1450px; margin:0 auto; padding:25px 0}
+  .cards{display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:22px; margin-bottom:35px}
+  .card{background:white; border-radius:14px; padding:22px 24px; box-shadow:0 4px 18px rgba(0,0,0,0.06); border-left:5px solid; cursor:pointer; transition:0.2s; text-decoration:none; display:block; color:inherit}
+  .card:hover{transform:translateY(-4px); box-shadow:0 8px 25px rgba(0,0,0,0.12)}
+  .card.c1{border-color:#00b4d8} .card.c2{border-color:#0a2342} .card.c3{border-color:#2ec4b6}
+  .card h3{font-size:16px; color:#0a2342; margin-bottom:8px; text-transform:uppercase}
+  .card p{font-size:14px; color:#475569}
+  .content-box{background:white; border-radius:16px; padding:35px 40px; box-shadow:0 4px 20px rgba(0,0,0,0.05); margin-bottom:40px; width:100%; scroll-margin-top:80px}
+  .content-box h2{font-size:26px; color:#0a2342; border-bottom:3px solid #00b4d8; display:inline-block; padding-bottom:6px; margin-bottom:10px}
+  .badge{display:inline-block; background:#e0f7fa; color:#0077b6; padding:4px 12px; border-radius:20px; font-size:12px; font-weight:700; margin:10px 0 20px 0}
+  table{width:100%; border-collapse:collapse; margin:18px 0; font-size:14px}
+  th{background:#0a2342; color:white; text-align:left; padding:12px 10px; position:sticky; top:70px}
+  td{padding:11px 10px; border-bottom:1px solid #e2e8f0; vertical-align:top}
+  tr:nth-child(even) td{background:#f8fafc}
+  .alert{background:#fff3cd; border-left:4px solid #ffc107; padding:12px 16px; border-radius:6px; margin:15px 0; font-size:13.5px}
+  .alert-red{background:#fde2e2; border-left:4px solid #e11d48}
+  .btn{ background:#0a2342; color:white; border:none; padding:8px 18px; border-radius:20px; cursor:pointer; font-size:13px; text-decoration:none; display:inline-block}
+  .drug-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin:20px 0}
+  .drug{background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:16px}
+  .drug h4{color:#0a2342; font-size:14px; margin-bottom:6px}
+  .drug p{font-size:13px; color:#334155}
+  footer{background:#0a2342; color:#94a3b8; text-align:center; padding:20px; font-size:13px}
+  @media(max-width:700px){.content-box{padding:22px 18px} .wrapper{width:98%}}
 </style>
 </head>
 <body>
-<header><b>DoseAfrica</b></header>
-<section class="hero"><h1>Master Pharmacology, Faster.</h1><p>Free PharmaLearn notes for Ugandan nursing & pharmacy students</p><a class="btn" href="#modules">Start Learning</a></section>
+<header>
+  <h1>DoseAfrica</h1>
+  <span style="font-size:13px; opacity:0.8">2026 Edition • Uganda-focused • Click a card</span>
+</header>
 
-<div class="wrap" id="modules">
-<a class="card" href="#cardiovascular"><h3>CARDIOVASCULAR DRUGS</h3><p>Hypertension, Heart Failure - doses, counseling, NDA storage. ➜ Tap to open</p></a>
-<a class="card" href="#antibiotics"><h3>ANTIBIOTICS</h3><p>Classification, doses, resistance tips. ➜ Tap to open</p></a>
-<a class="card" href="#analgesics"><h3>ANALGESICS</h3><p>Paracetamol, NSAIDs, opioids safety. ➜ Tap to open</p></a>
+<div class="wrapper">
+  <!-- CLICKABLE CARDS -->
+  <div class="cards">
+    <a class="card c1" href="#cardiovascular">
+      <h3>💊 Cardiovascular Drugs</h3>
+      <p><b>8 drugs in detail</b><br>HTN, HF, Angina, Antiplatelets, Anticoagulants, Statins. Doses, counseling, NDA storage.<br><b style="color:#00b4d8">→ Click to open</b></p>
+    </a>
+    <a class="card c2" href="#antibiotics">
+      <h3>🧫 Antibiotics</h3>
+      <p><b>Comprehensive Guide</b><br>Classes, WHO AWaRe, reference doses, resistance, stewardship checklist.<br><b style="color:#0a2342">→ Click to open</b></p>
+    </a>
+    <a class="card c3" href="#analgesics">
+      <h3>💉 Analgesics</h3>
+      <p>Paracetamol, NSAIDs, Opioids safety.<br><b style="color:#2ec4b6">→ Click to open (coming soon)</b></p>
+    </a>
+  </div>
+
+  <!-- CARDIOVASCULAR SECTION -->
+  <div id="cardiovascular" class="content-box">
+    <a class="btn" href="#">← Back to top</a>
+    <h2 style="margin-top:12px">CARDIOVASCULAR DRUGS</h2><br>
+    <span class="badge">Basic Guide • Doses • Prescription • Storage • Expiry • Counseling • From your file Basic_Cardiovascular_Drugs_Guide.docx</span>
+    <div class="alert"><strong>WHO Foundation:</strong> Diuretics, ACE inhibitors, beta-blockers, calcium-channel blockers, statins are basic CV medicines. Treatment selection must follow clinical assessment and current Uganda Clinical Guidelines. Educational only.</div>
+    
+    <h3>Drug Classes</h3>
+    <table>
+      <tr><th>Class</th><th>Examples</th><th>Main Use</th><th>Key Safety</th></tr>
+      <tr><td>ACE Inhibitors</td><td>Enalapril, Lisinopril</td><td>HTN, Heart Failure, renal protection</td><td>Monitor BP, K+, creatinine. Cough/angioedema</td></tr>
+      <tr><td>ARBs</td><td>Losartan 50mg, Valsartan</td><td>HTN, HF - alternative if ACE cough</td><td>Monitor BP, K+, renal</td></tr>
+      <tr><td>Calcium-channel blockers</td><td>Amlodipine 5mg, Nifedipine</td><td>HTN, Angina</td><td>Ankle edema, flushing, headache</td></tr>
+      <tr><td>Thiazide-like</td><td>HCTZ 12.5-25mg, Indapamide</td><td>HTN</td><td>Electrolytes, renal, take morning</td></tr>
+      <tr><td>Loop diuretics</td><td>Furosemide 40mg</td><td>Edema/HF fluid overload</td><td>Fluid status, K+, BP</td></tr>
+      <tr><td>Beta-blockers</td><td>Bisoprolol 5-10mg, Metoprolol</td><td>HTN/Angina/Arrhythmia/HF</td><td>Pulse/BP, DO NOT stop abruptly - rebound</td></tr>
+      <tr><td>Nitrates</td><td>GTN 0.5mg SL</td><td>Acute angina relief</td><td>NEVER with Sildenafil/Tadalafil - severe hypotension</td></tr>
+      <tr><td>Antiplatelets</td><td>Aspirin 75-100mg, Clopidogrel 75mg</td><td>Arterial thrombosis prevention</td><td>Bleeding, not for everyone</td></tr>
+      <tr><td>Anticoagulants</td><td>Warfarin, Apixaban 5mg BD, Rivaroxaban</td><td>VTE/cardioembolic</td><td>Bleeding, INR monitoring for warfarin</td></tr>
+      <tr><td>Statins</td><td>Atorvastatin 10-20mg</td><td>LDL/cardiovascular risk</td><td>Muscle symptoms, LFTs</td></tr>
+    </table>
+
+    <h3>Typical Adult Doses - Your Content Widened</h3>
+    <div class="drug-grid">
+      <div class="drug"><h4>Amlodipine 5mg - Hypertension</h4><p><b>Dose:</b> 5mg OD, may increase to 10mg OD. <b>How:</b> Swallow with water, with/without food same time daily. <b>Counsel:</b> Ankle swelling, flushing. <b>Storage:</b> Room temp, protect from heat/moisture. Original container.</p></div>
+      <div class="drug"><h4>Furosemide 40mg - Heart failure/edema</h4><p><b>Dose:</b> 20-40mg initially morning, individualized. <b>Counsel:</b> Increased urine, take morning to avoid nocturia. Monitor K+.</p></div>
+      <div class="drug"><h4>Enalapril 5mg</h4><p><b>Dose:</b> 5mg OD initially titrated by clinician. <b>Counsel:</b> Dry cough possible, report lip/tongue swelling immediately.</p></div>
+      <div class="drug"><h4>Losartan 50mg</h4><p><b>Dose:</b> 50mg OD, may adjust. <b>Note:</b> Use if ACE cough.</p></div>
+      <div class="drug"><h4>Bisoprolol 5mg</h4><p><b>Dose:</b> HF start very low titrate; HTN/angina 5-10mg OD. <b>Warning:</b> Do not stop abruptly.</p></div>
+      <div class="drug"><h4>GTN SL 0.3-0.6mg</h4><p><b>Dose:</b> Place under tongue, sit down. Do not swallow. If pain persists after dose per emergency guidance, seek urgent help. <b>Storage:</b> Tightly closed, heat/light sensitive.</p></div>
+      <div class="drug"><h4>Atorvastatin 10-20mg</h4><p><b>Dose:</b> 10-20mg OD titrated. <b>Counsel:</b> Heart-healthy diet, avoid tobacco, exercise as advised.</p></div>
+      <div class="drug"><h4>Warfarin - Highly individualized</h4><p><b>Dose:</b> By INR. Same time daily, consistent vitamin K intake, regular INR. Check interactions.</p></div>
+    </div>
+    <div class="alert alert-red"><strong>Urgent referral:</strong> Severe chest pain with sweating/SOB/nausea, one-sided weakness/facial droop/speech difficulty, severe breathing difficulty, major bleeding/black tarry stool on antithrombotics, severe lip/tongue/throat swelling after ACE inhibitor.</div>
+  </div>
+
+  <!-- ANTIBIOTICS SECTION -->
+  <div id="antibiotics" class="content-box">
+    <a class="btn" href="#">← Back to top</a>
+    <h2 style="margin-top:12px">ANTIBIOTICS & ANTIMICROBIAL STEWARDSHIP GUIDE</h2><br>
+    <span class="badge">2026 Edition • Doses • Indications • Storage • Expiry • Safety • Counseling • Resistance • From COMPREHENSIVE_ANTIBIOTICS_GUIDE.docx</span>
+    <div class="alert alert-red"><strong>DO NOT SELF-PRESCRIBE:</strong> Doses below are representative educational references only, not automatic prescriptions. Same antibiotic has very different doses by infection. Always verify indication, age/weight, allergy, pregnancy, renal/hepatic, interactions, culture.</div>
+    
+    <h3>Major Classes</h3>
+    <table>
+      <tr><th>Class</th><th>Examples</th><th>Mechanism</th><th>Key Note</th></tr>
+      <tr><td>Penicillins</td><td>Amoxicillin, Benzylpenicillin, Phenoxymethylpenicillin V</td><td>Cell-wall β-lactam</td><td>Allergy history essential</td></tr>
+      <tr><td>β-lactam + Inhibitor</td><td>Amoxicillin/clavulanate 625mg, Piperacillin/tazo</td><td>Cell-wall + enzyme inhibition</td><td>Broader spectrum</td></tr>
+      <tr><td>Cephalosporins</td><td>Cefalexin 250mg, Cefuroxime, Ceftriaxone 1-2g</td><td>Cell-wall</td><td>Generation = spectrum</td></tr>
+      <tr><td>Macrolides</td><td>Azithromycin 250mg</td><td>50S ribosomal</td><td>QT prolongation, CYP interactions</td></tr>
+      <tr><td>Tetracyclines</td><td>Doxycycline 100mg</td><td>30S</td><td>Photosensitivity, separate from Ca/Fe</td></tr>
+      <tr><td>Fluoroquinolones</td><td>Ciprofloxacin 500mg, Levofloxacin</td><td>DNA gyrase</td><td>Reserve - tendon, neuro, QT</td></tr>
+      <tr><td>Aminoglycosides</td><td>Gentamicin, Amikacin</td><td>30S</td><td>Nephro/ototoxic - monitor</td></tr>
+      <tr><td>Nitroimidazoles</td><td>Metronidazole 400-500mg</td><td>DNA damage anaerobes</td><td>Avoid alcohol during + after</td></tr>
+      <tr><td>Carbapenems</td><td>Meropenem 1g q8h, Imipenem</td><td>Cell-wall broad</td><td>Reserve/specialist</td></tr>
+      <tr><td>Glycopeptides</td><td>Vancomycin</td><td>Cell-wall Gram+ve</td><td>IV monitoring, infusion reaction</td></tr>
+    </table>
+
+    <h3>WHO AWaRe Framework</h3>
+    <table><tr><th>Group</th><th>Purpose</th><th>How to use</th></tr><tr><td>ACCESS</td><td>First-line, lower resistance potential</td><td>Use when appropriate</td></tr><tr><td>WATCH</td><td>Higher resistance potential</td><td>Specific indications, justify</td></tr><tr><td>RESERVE</td><td>Last-line MDR</td><td>Specialist/institutional oversight</td></tr></table>
+
+    <h3>Reference Dosing (Educational)</h3>
+    <table><tr><th>Antibiotic</th><th>Adult Ref</th><th>Paediatric Ref</th><th>Administration / Cautions</th></tr><tr><td>Amoxicillin</td><td>500mg q8h</td><td>25-50mg/kg/day divided</td><td>Check penicillin allergy</td></tr><tr><td>Amoxy/clav 625mg</td><td>625mg q8h</td><td>Weight-based on amoxy</td><td>Take with food, GI upset</td></tr><tr><td>Cefalexin</td><td>500mg q6-12h</td><td>25-50mg/kg/day</td><td>Renal adjustment</td></tr><tr><td>Ceftriaxone</td><td>1-2g IV/IM OD</td><td>50-100mg/kg/day</td><td>Hospital, Ca incompatibility warning</td></tr><tr><td>Azithromycin</td><td>500mg day1 then 250mg days2-5 OR 500mg x3 days</td><td>Weight-based</td><td>QT, avoid routine use where resistance high</td></tr><tr><td>Ciprofloxacin</td><td>500mg BD</td><td>Not routine in children</td><td>Tendon, neuro, separate antacids/minerals</td></tr><tr><td>Metronidazole</td><td>400-500mg q8-12h</td><td>Weight-based</td><td>Avoid alcohol during + period after</td></tr><tr><td>Doxycycline</td><td>100mg BD</td><td>Avoid young children unless specific indication</td><td>Photosensitivity, pregnancy</td></tr><tr><td>Gentamicin</td><td>Weight + renal based, extended-interval</td><td>Specialist-guided</td><td>TDM, renal + hearing monitoring</td></tr><tr><td>Meropenem</td><td>1g q8h selected severe infections</td><td>Weight-based specialist</td><td>Reserve, renal adjustment</td></tr><tr><td>Vancomycin</td><td>Weight + renal + TDM based</td><td>Specialist</td><td>Therapeutic drug monitoring</td></tr></table>
+
+    <h3>Infection-Based Overview (UCG 2023 Principle: antimicrobials only when necessary, avoid broad/last-generation as first-line, correct dose/duration)</h3>
+    <table><tr><th>Syndrome</th><th>Approach</th><th>Key Point</th></tr><tr><td>Acute uncomplicated bronchitis</td><td>Usually NO antibiotic</td><td>Colored sputum alone ≠ bacteria</td></tr><tr><td>Suspected bacterial sinusitis</td><td>Amoxicillin or Amoxy/clav</td><td>Distinguish severe/persistent/worsening from viral</td></tr><tr><td>Strep pharyngitis</td><td>Penicillin/Amoxicillin if confirmed</td><td>Don't treat viral sore throat</td></tr><tr><td>Uncomplicated cystitis</td><td>Local guideline agent per resistance</td><td>Pregnancy changes choice/follow-up</td></tr><tr><td>Pneumonia</td><td>Severity/setting/age/comorbidity based</td><td>Severe = hospital/parentéral</td></tr><tr><td>Skin/soft tissue</td><td>Organism/purulence/severity</td><td>Drainage essential for abscess</td></tr><tr><td>Meningitis/Sepsis</td><td>Emergency parenteral + supportive</td><td>Do NOT delay referral</td></tr><tr><td>Gonorrhoea/STI</td><td>National/STI protocol</td><td>Resistance, partner management</td></tr></table>
+
+    <h3>Prescription Must Include</h3>
+    <div class="alert">Patient name/ID, Date, Diagnosis/indication, Generic name + form + strength, Dose, Route, Frequency, Duration/Qty, Food/water/separation instructions, Prescriber ID/signature, Allergy/safety record. <b>Dispensing 5 Rights + :</b> Right product, strength, patient, expiry, storage, prescription, dose, route, interval, duration, counseling, documentation.</div>
+
+    <h3>Storage, Expiry, Safety - Full Text from Your File</h3>
+    <p><b>Expiry principle:</b> FDA: expiration is period product retains strength/quality/purity under labeled conditions. Stability data dependent. EXP 2028-06-30 = do not use after that date. Month/year only = follow manufacturer convention, not guess. MFG ≠ EXP. Lot/batch for traceability. Opened/reconstituted = shorter usable period. Never extend expiry because looks normal. Do NOT use expired antibiotics: less effective, sub-potent exposure drives resistance and treatment failure.</p>
+    <p style="margin-top:8px"><b>Storage:</b> Tablets/capsules - labeled room temp, dry, original packaging, away from children. Do not transfer to unlabelled containers. Oral suspensions - reconstitute exactly to mark, shake before each dose, follow post-reconstitution storage. Injectables - verify dilution/compatibility/route/infusion time. Refrigerated - maintain range, don't freeze unless permitted. Keep away from heat/moisture/light if label states.</p>
+    <p style="margin-top:8px"><b>Emergency warning signs:</b> Difficulty breathing/swallowing, face/lip/tongue swelling, collapse/fainting, severe blistering/peeling skin, severe persistent diarrhea with blood/dehydration, confusion/severe weakness/worsening infection, severe tendon pain (fluoroquinolones), jaundice/dark urine (liver), QT risk - palpitations.</p>
+    <p style="margin-top:8px"><b>Interactions to Counsel:</b> Doxycycline & Ciprofloxacin + Ca/Fe/Mg/Al antacids = reduced absorption - separate. Metronidazole + alcohol = unpleasant reaction - avoid during + product-specific period after. Warfarin + many antibiotics = INR change - monitor. Macrolides/Fluoroquinolones = QT prolongation. Rifampicin = strong enzyme inducer - major interactions. Aminoglycosides + other nephro/ototoxic = increased risk.</p>
+    
+    <h3>Stewardship & Counseling Checklist (Your File)</h3>
+    <p>Confirm prescription completeness/legality, verify identity/age/weight, ask allergies/previous serious reactions, check indication plausibility, check dose/frequency/route/duration/formulation, renal/hepatic, interactions/contraindications, expiry/batch/integrity/storage, give clear instructions in simple language, use teach-back: <em>"Just so I know I explained clearly, can you tell me how you will take these and what you do if you miss a dose?"</em>, explain common adverse effects + emergency signs, explain storage + leftover disposal, document & communicate with prescriber.</p>
+    <p style="margin-top:10px"><b>Patient counseling simple language:</b> Why - bacterial infection, How - exact amount/times, Do not share, Food/water per label, Missed dose - do not automatically double, Side effects - mild stomach upset possible but severe rash/breathing difficulty = urgent help, Storage - original container, Expiry - do not use after date/reconstitution period, Follow-up - return if worsening/no improvement/serious symptoms.</p>
+  </div>
+
+  <div id="analgesics" class="content-box">
+    <a class="btn" href="#">← Back to top</a>
+    <h2 style="margin-top:12px">ANALGESICS</h2><br>
+    <span class="badge">Placeholder - Upload your analgesics file and I'll fill this</span>
+    <p>Will include Paracetamol, Ibuprofen, Diclofenac, Tramadol, Morphine - doses, max daily, counseling, storage, red flags, interactions.</p>
+  </div>
 </div>
 
-<div id="cardiovascular" class="detail">
-<a class="back" href="#modules">← Back</a>
-<h2>CARDIOVASCULAR DRUGS</h2>
-<p><b>Example: Amlodipine 5mg</b> - Hypertension. Dose: 5mg once daily. Counseling: take same time, watch ankle swelling. Storage: below 30°C. Check expiry NDA.</p>
-<p><b>Furosemide 40mg</b> - Heart failure, edema. Dose: 20-40mg morning. Counseling: may increase urination, take in morning. Monitor potassium.</p>
-<p>Full notes in your file: Basic_Cardiovascular_Drugs_Guide.docx</p>
-</div>
+<footer>© 2026 DoseAfrica • Educational reference • Always verify current UCG 2023, EMHSLU 2023, product insert, and antimicrobial susceptibility before real patient use • phoenixdevis.github.io/DoseAfrica</footer>
 
-<div id="antibiotics" class="detail">
-<a class="back" href="#modules">← Back</a>
-<h2>ANTIBIOTICS</h2>
-<p><b>Amoxicillin 500mg</b> - Dose: 500mg 8-hourly 5-7 days. Complete dose. Storage: dry place.</p>
-<p>Remember antimicrobial resistance - use only when prescribed.</p>
-</div>
-
-<div id="analgesics" class="detail">
-<a class="back" href="#modules">← Back</a>
-<h2>ANALGESICS</h2>
-<p><b>Paracetamol 500mg</b> - Dose: 1-2 tabs 6-8hrly, max 4g/day. Counseling: avoid alcohol, check other meds containing paracetamol.</p>
-</div>
-
-<footer>© 2026 DoseAfrica</footer>
+<script>
+// smooth scroll for clickable cards
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', function(e){
+    e.preventDefault();
+    const id=this.getAttribute('href');
+    if(id==='#'){ window.scrollTo({top:0, behavior:'smooth'}); return; }
+    document.querySelector(id)?.scrollIntoView({behavior:'smooth', block:'start'});
+    history.pushState(null,null,id);
+  });
+});
+</script>
 </body>
-  </html>
+</html>

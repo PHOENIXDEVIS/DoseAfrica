@@ -1,5 +1,7 @@
 <footer style="background:#0a2540; color:white; padding:30px; text-align:center; margin-top:40px;">
-  <img src="logo.png" alt="DoseAfrica" style="height:40px; margin-bottom:10px;"><br>
+  <img src="<img width="1248" height="832" alt="create_for_me_a_loge_for_DoseAfrica_website" src="https://github.com/user-attachments/assets/17814f5c-ac68-4a17-baab-4046022efb1d" />
+<img width="1248" height="832" alt="image" src="https://github.com/user-attachments/assets/6ba1d201-78c6-4a27-b9da-fa4309401856" />
+" alt="DoseAfrica" style="height:40px; margin-bottom:10px;"><br>
   <b>DoseAfrica - PharmaLearn</b><br>
   Free drug notes for Uganda health students<br><br>
   

@@ -1,899 +1,688 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>DRUG UNIVERSE, Dr. DEVIS | Pharmacy & Medicine Information</title>
+
 <meta name="description"
-content="DRUG UNIVERSE, Dr. DEVIS - Pharmacy, Medicine and Drug Information Platform">
-
-<meta name="theme-color" content="#087f8c">
-
-<title>DRUG UNIVERSE, Dr. DEVIS | Pharmacy & Medicine</title>
+content="DRUG UNIVERSE, Dr. DEVIS - pharmacy, medicine, drug information, anticancer medicines, health resources and pharmaceutical education.">
 
 <style>
-
-:root{
---primary:#087f8c;
---primary-dark:#075765;
---secondary:#12a39b;
---gold:#f4b942;
---danger:#d64550;
---success:#159957;
---dark:#10232d;
---text:#182a34;
---muted:#65747d;
---bg:#f3f7f9;
---white:#ffffff;
---border:#dce7eb;
---shadow:0 12px 35px rgba(10,40,50,.10);
-}
-
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:var(--bg);
-color:var(--text);
-line-height:1.6;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f8fb;
+    color:#17202a;
+    line-height:1.6;
 }
 
-/* =========================================================
-   PROFESSIONAL DRUG UNIVERSE, DR DEVIS LOGO
-========================================================= */
+a{
+    text-decoration:none;
+}
+
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
 
 header{
-position:sticky;
-top:0;
-z-index:1000;
-background:rgba(255,255,255,.97);
-backdrop-filter:blur(12px);
-border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#063970;
+    color:white;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
 }
 
-.header-inner{
-width:94%;
-max-width:1450px;
-margin:auto;
-min-height:78px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:25px;
+.navbar{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding:12px 20px;
 }
 
 .brand{
-display:flex;
-align-items:center;
-gap:13px;
-text-decoration:none;
-color:var(--dark);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:white;
+    font-weight:bold;
 }
 
 .logo{
-width:56px;
-height:56px;
-border-radius:17px;
-background:linear-gradient(145deg,#063b4a,#087f8c 60%,#12a39b);
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
-box-shadow:0 9px 24px rgba(8,127,140,.25);
-overflow:hidden;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:white;
+    color:#063970;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    border:3px solid #16a085;
+    box-shadow:0 0 0 3px rgba(255,255,255,.15);
 }
 
-.logo::before{
-content:"✚";
-font-size:29px;
-font-weight:900;
-color:white;
-position:absolute;
-top:3px;
-left:14px;
+.brand-text{
+    font-size:20px;
 }
 
-.logo::after{
-content:"D";
-font-size:22px;
-font-weight:900;
-color:#ffe08a;
-position:absolute;
-bottom:2px;
-right:9px;
+.brand-text small{
+    display:block;
+    font-size:11px;
+    opacity:.85;
+    font-weight:normal;
 }
 
-.brand-text strong{
-display:block;
-font-size:21px;
-letter-spacing:.5px;
+.nav-links{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
 }
 
-.brand-text span{
-display:block;
-color:var(--muted);
-font-size:11px;
+.nav-links a{
+    color:white;
+    padding:8px 11px;
+    border-radius:7px;
+    font-size:14px;
 }
 
-nav{
-display:flex;
-align-items:center;
-gap:5px;
+.nav-links a:hover{
+    background:rgba(255,255,255,.15);
 }
 
-nav a{
-text-decoration:none;
-color:var(--text);
-padding:9px 11px;
-border-radius:9px;
-font-size:13px;
-font-weight:700;
+.social-links{
+    display:flex;
+    gap:6px;
 }
 
-nav a:hover{
-background:#eaf7f7;
-color:var(--primary-dark);
+.social-links a{
+    width:36px;
+    height:36px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
 }
 
-.mobile-menu{
-display:none;
-border:0;
-background:var(--primary);
-color:white;
-padding:10px 14px;
-border-radius:9px;
-cursor:pointer;
+.tiktok{
+    background:#111;
 }
 
-
-/* =========================================================
-   GENERAL
-========================================================= */
-
-.container{
-width:94%;
-max-width:1450px;
-margin:auto;
+.whatsapp{
+    background:#25D366;
 }
 
-section{
-padding:55px 0;
+.instagram{
+    background:#C13584;
 }
 
-.btn{
-border:0;
-border-radius:12px;
-padding:12px 18px;
-cursor:pointer;
-font-weight:800;
-transition:.2s;
-}
-
-.btn:hover{
-transform:translateY(-2px);
-}
-
-.btn-primary{
-background:var(--primary);
-color:white;
-}
-
-.btn-gold{
-background:var(--gold);
-color:#17252c;
-}
-
-.btn-light{
-background:white;
-color:var(--primary-dark);
-}
-
-.btn-danger{
-background:var(--danger);
-color:white;
-}
-
-.btn-dark{
-background:var(--dark);
-color:white;
-}
-
-.section-title{
-margin-bottom:25px;
-}
-
-.section-title h2{
-font-size:32px;
-margin-bottom:5px;
-}
-
-.section-title p{
-color:var(--muted);
-}
-
-
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero{
-padding-top:65px;
-}
-
-.hero-box{
-background:
-radial-gradient(circle at 90% 10%,rgba(255,255,255,.16),transparent 30%),
-linear-gradient(135deg,#063b4a,#087f8c 60%,#12a39b);
-border-radius:32px;
-padding:65px;
-color:white;
-box-shadow:0 25px 55px rgba(7,65,76,.20);
-overflow:hidden;
-position:relative;
-}
-
-.hero-box:after{
-content:"Rx";
-position:absolute;
-right:5%;
-bottom:-50px;
-font-size:220px;
-font-weight:900;
-opacity:.05;
+    background:linear-gradient(135deg,#063970,#087f8c);
+    color:white;
+    padding:70px 20px;
 }
 
 .hero-content{
-max-width:850px;
-position:relative;
-z-index:2;
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
 }
 
 .hero h1{
-font-size:clamp(38px,6vw,72px);
-line-height:1.05;
-margin-bottom:20px;
+    font-size:46px;
+    margin-bottom:12px;
 }
 
 .hero h1 span{
-color:#ffe08a;
+    color:#7fffd4;
 }
 
 .hero p{
-color:#d9f3f4;
-font-size:18px;
-max-width:780px;
+    max-width:850px;
+    margin:0 auto 25px;
+    font-size:18px;
 }
 
-.search-panel{
-margin-top:32px;
-background:white;
-border-radius:20px;
-padding:9px;
-display:flex;
-gap:8px;
-box-shadow:0 15px 35px rgba(0,0,0,.16);
-position:relative;
-z-index:5;
+.search-box{
+    max-width:850px;
+    margin:auto;
+    display:flex;
+    background:white;
+    border-radius:50px;
+    padding:7px;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
 }
 
-.search-panel input{
-flex:1;
-border:0;
-outline:0;
-padding:15px;
-font-size:16px;
+.search-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    padding:15px 20px;
+    border-radius:40px;
+    font-size:16px;
 }
 
-.search-panel button{
-min-width:110px;
+.search-box button{
+    border:none;
+    background:#16a085;
+    color:white;
+    padding:0 25px;
+    border-radius:40px;
+    cursor:pointer;
+    font-weight:bold;
 }
 
-.search-results{
-margin-top:10px;
-background:white;
-border-radius:15px;
-color:var(--text);
-overflow:hidden;
-box-shadow:var(--shadow);
+.search-box button:hover{
+    background:#117864;
 }
 
-.search-result{
-padding:13px 17px;
-border-bottom:1px solid #edf1f2;
-cursor:pointer;
+.quick-buttons{
+    margin-top:22px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
 }
 
-.search-result:hover{
-background:#f1fafa;
+.quick-buttons a,
+.quick-buttons button{
+    border:none;
+    padding:11px 18px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+    background:white;
+    color:#063970;
 }
 
+/* =========================
+   GENERAL
+========================= */
 
-/* =========================================================
-   FEATURE CARDS
-========================================================= */
+.container{
+    max-width:1400px;
+    margin:auto;
+    padding:45px 20px;
+}
 
-.card-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:18px;
+.section-title{
+    text-align:center;
+    color:#063970;
+    margin-bottom:30px;
+}
+
+.section-title h2{
+    font-size:32px;
+}
+
+.section-title p{
+    max-width:850px;
+    margin:7px auto;
+    color:#607080;
 }
 
 .card{
-background:var(--white);
-border:1px solid var(--border);
-border-radius:20px;
-padding:23px;
-box-shadow:var(--shadow);
+    background:white;
+    border-radius:14px;
+    padding:22px;
+    box-shadow:0 4px 18px rgba(0,0,0,.08);
 }
 
-.feature-card{
-transition:.25s;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
 }
 
-.feature-card:hover{
-transform:translateY(-5px);
-border-color:#a7d6d9;
+.btn{
+    display:inline-block;
+    border:none;
+    padding:11px 17px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
 }
 
-.card-icon{
-width:48px;
-height:48px;
-display:grid;
-place-items:center;
-border-radius:14px;
-background:#e8f7f7;
-font-size:24px;
-margin-bottom:14px;
+.btn-primary{
+    background:#063970;
+    color:white;
 }
 
-.card h3{
-margin-bottom:8px;
+.btn-success{
+    background:#16a085;
+    color:white;
 }
 
-.card p{
-color:var(--muted);
+.btn-whatsapp{
+    background:#25D366;
+    color:white;
 }
 
+.btn-danger{
+    background:#c0392b;
+    color:white;
+}
 
-/* =========================================================
+.btn-light{
+    background:#ecf0f1;
+    color:#17202a;
+}
+
+/* =========================
    AI
-========================================================= */
+========================= */
 
-.ai-layout{
-display:grid;
-grid-template-columns:.8fr 1.2fr;
-gap:20px;
+.ai-section{
+    background:#eaf6f8;
 }
 
-.ai-info{
-background:linear-gradient(145deg,#082f3a,#0a5965);
-color:white;
-border-radius:24px;
-padding:30px;
+.ai-box{
+    max-width:950px;
+    margin:auto;
 }
 
-.ai-info p{
-color:#d6ecee;
-}
-
-.ai-info ul{
-margin:18px 0 20px 20px;
-}
-
-.ai-info li{
-margin-bottom:9px;
-}
-
-.chat-box{
-height:480px;
-background:#102831;
-border-radius:20px;
-padding:18px;
-overflow-y:auto;
+.chat-window{
+    background:white;
+    min-height:260px;
+    max-height:520px;
+    overflow-y:auto;
+    padding:20px;
+    border-radius:14px 14px 0 0;
+    border:1px solid #dce6ea;
 }
 
 .message{
-padding:13px 16px;
-border-radius:15px;
-margin-bottom:11px;
-white-space:pre-wrap;
-}
-
-.message.bot{
-background:#1b3b45;
-color:#ecffff;
-margin-right:12%;
+    margin-bottom:14px;
+    padding:12px 15px;
+    border-radius:12px;
+    max-width:85%;
 }
 
 .message.user{
-background:#087f8c;
-color:white;
-margin-left:12%;
+    margin-left:auto;
+    background:#063970;
+    color:white;
 }
 
-.chat-input{
-display:flex;
-gap:8px;
-margin-top:10px;
+.message.bot{
+    background:#eef3f5;
+    color:#17202a;
 }
 
-.chat-input input{
-flex:1;
-border:1px solid var(--border);
-border-radius:12px;
-padding:13px;
-outline:0;
+.ai-input{
+    display:flex;
+    gap:8px;
+    background:white;
+    padding:12px;
+    border:1px solid #dce6ea;
+    border-top:none;
+    border-radius:0 0 14px 14px;
 }
 
+.ai-input input{
+    flex:1;
+    padding:13px;
+    border:1px solid #ccd7dc;
+    border-radius:8px;
+    outline:none;
+}
 
-/* =========================================================
+.ai-actions{
+    display:flex;
+    gap:8px;
+    margin-top:12px;
+    flex-wrap:wrap;
+}
+
+/* =========================
    DRUG LIBRARY
-========================================================= */
+========================= */
 
-.drug-tools{
-display:flex;
-gap:10px;
-margin-bottom:20px;
-flex-wrap:wrap;
+.library-tools{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:25px;
 }
 
-.drug-tools input,
-.drug-tools select{
-padding:12px;
-border:1px solid var(--border);
-border-radius:10px;
-background:white;
-}
-
-.drug-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
+.library-tools input,
+.library-tools select{
+    padding:12px;
+    border:1px solid #ccd7dc;
+    border-radius:8px;
+    background:white;
+    outline:none;
 }
 
 .drug-card{
-background:white;
-border:1px solid var(--border);
-border-radius:18px;
-padding:21px;
-cursor:pointer;
-transition:.2s;
-}
-
-.drug-card:hover{
-transform:translateY(-4px);
-border-color:#8cccd0;
-box-shadow:var(--shadow);
-}
-
-.drug-class{
-display:inline-block;
-padding:5px 9px;
-border-radius:50px;
-background:#e8f7f7;
-color:#07616a;
-font-size:11px;
-font-weight:800;
+    position:relative;
 }
 
 .drug-card h3{
-margin:12px 0 6px;
+    color:#063970;
+    margin-bottom:5px;
+}
+
+.drug-class{
+    display:inline-block;
+    background:#dff5ef;
+    color:#087f67;
+    padding:4px 8px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:10px;
 }
 
 .drug-card p{
-color:var(--muted);
-font-size:14px;
+    margin:7px 0;
 }
 
 .drug-detail{
-margin-top:20px;
-background:white;
-border-radius:22px;
-padding:30px;
-border:1px solid var(--border);
-box-shadow:var(--shadow);
-display:none;
+    display:none;
+    margin-top:15px;
+    padding-top:15px;
+    border-top:1px solid #e5e5e5;
 }
 
-.drug-detail.active{
-display:block;
+.drug-detail.show{
+    display:block;
 }
 
-.detail-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:14px;
-margin-top:18px;
+.info-row{
+    margin-bottom:10px;
 }
 
-.detail-item{
-background:#f6fafb;
-padding:15px;
-border-radius:12px;
+.info-row strong{
+    color:#063970;
 }
 
-.detail-item strong{
-display:block;
-color:var(--primary-dark);
-margin-bottom:4px;
+/* =========================
+   ANTICANCER
+========================= */
+
+.cancer-section{
+    background:#fff;
 }
 
-
-/* =========================================================
-   UPLOAD AREA
-========================================================= */
-
-.upload-zone{
-border:2px dashed #9bbac1;
-border-radius:22px;
-padding:42px;
-text-align:center;
-background:white;
-transition:.2s;
+.cancer-intro{
+    background:linear-gradient(135deg,#4b134f,#063970);
+    color:white;
+    border-radius:16px;
+    padding:30px;
+    margin-bottom:30px;
 }
 
-.upload-zone.dragover{
-background:#eaf8f8;
-border-color:var(--primary);
+.cancer-intro h3{
+    margin-bottom:10px;
 }
 
-.upload-zone input{
-margin:15px auto;
+.cancer-card{
+    border-left:5px solid #8e44ad;
 }
 
-.upload-categories{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px;
-margin-top:20px;
+.cancer-card h3{
+    color:#063970;
 }
 
-.upload-category{
-padding:20px;
-background:#f7fafb;
-border-radius:15px;
-text-align:center;
+.cancer-category{
+    color:#8e44ad;
+    font-weight:bold;
+    font-size:13px;
+    margin-bottom:8px;
 }
 
-.file-list{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-margin-top:25px;
+.cancer-card details{
+    margin-top:12px;
 }
 
-.file-card{
-background:white;
-border:1px solid var(--border);
-border-radius:18px;
-padding:18px;
-box-shadow:var(--shadow);
+.cancer-card summary{
+    cursor:pointer;
+    font-weight:bold;
+    color:#063970;
 }
 
-.file-card-header{
-display:flex;
-align-items:center;
-gap:13px;
+.warning{
+    background:#fff3cd;
+    border-left:5px solid #f39c12;
+    padding:15px;
+    margin-top:20px;
+    border-radius:8px;
 }
 
-.file-icon{
-width:48px;
-height:48px;
-border-radius:13px;
-background:#e8f7f7;
-display:grid;
-place-items:center;
-font-size:24px;
-flex-shrink:0;
+/* =========================
+   UPLOAD DASHBOARD
+========================= */
+
+.dashboard{
+    background:#eef5f8;
 }
 
-.file-card h3{
-font-size:15px;
-word-break:break-word;
+.dashboard-stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:15px;
+    margin-bottom:25px;
 }
 
-.file-meta{
-font-size:12px;
-color:var(--muted);
-margin-top:4px;
+.stat{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 3px 15px rgba(0,0,0,.07);
 }
 
-.file-actions{
-display:flex;
-gap:8px;
-margin-top:15px;
-flex-wrap:wrap;
+.stat strong{
+    display:block;
+    font-size:30px;
+    color:#063970;
 }
 
-.download-btn{
-background:var(--success);
-color:white;
-text-decoration:none;
-padding:9px 13px;
-border-radius:9px;
-font-size:12px;
-font-weight:800;
-display:inline-block;
+.upload-box{
+    border:2px dashed #16a085;
+    background:white;
+    padding:35px;
+    text-align:center;
+    border-radius:14px;
 }
 
-.preview-btn{
-background:#eaf4f6;
-color:var(--primary-dark);
-text-decoration:none;
-padding:9px 13px;
-border-radius:9px;
-font-size:12px;
-font-weight:800;
-display:inline-block;
+.upload-box.dragover{
+    background:#e8fff8;
 }
 
-.delete-btn{
-border:0;
-background:#fff0f1;
-color:var(--danger);
-padding:9px 13px;
-border-radius:9px;
-font-weight:800;
-cursor:pointer;
+.upload-box input{
+    margin:15px 0;
 }
 
-.public-resource{
-border:2px solid #d9ecee;
-background:linear-gradient(135deg,#ffffff,#f2fbfb);
+.upload-status{
+    margin-top:10px;
+    color:#063970;
+    font-weight:bold;
 }
 
-.public-badge{
-display:inline-block;
-background:#dff7eb;
-color:#087341;
-padding:4px 8px;
-border-radius:50px;
-font-size:10px;
-font-weight:900;
-margin-bottom:10px;
+.resource-card{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:15px;
+    background:white;
+    border-radius:10px;
+    border:1px solid #e1e8eb;
 }
 
-
-/* =========================================================
-   DASHBOARD
-========================================================= */
-
-.dashboard-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:18px;
+.resource-info{
+    flex:1;
 }
 
-.metric{
-position:relative;
-overflow:hidden;
+.resource-info h4{
+    color:#063970;
 }
 
-.metric small{
-color:var(--muted);
+.resource-meta{
+    color:#6b7780;
+    font-size:12px;
 }
 
-.metric strong{
-display:block;
-font-size:34px;
-margin-top:7px;
+.resource-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
 }
 
-.metric-icon{
-position:absolute;
-right:18px;
-top:18px;
-font-size:30px;
-}
-
-
-/* =========================================================
+/* =========================
    ACCOUNTING
-========================================================= */
+========================= */
 
-.account-layout{
-display:grid;
-grid-template-columns:1.2fr .8fr;
-gap:20px;
+.accounting{
+    background:#063970;
+    color:white;
 }
 
-.account-box{
-background:linear-gradient(135deg,#082f3a,#087f8c);
-color:white;
-border-radius:24px;
-padding:32px;
+.accounting .section-title{
+    color:white;
 }
 
-.balance{
-font-size:48px;
-font-weight:900;
-margin:15px 0;
+.account-card{
+    background:white;
+    color:#17202a;
+    border-radius:14px;
+    padding:25px;
 }
 
-.progress{
-background:rgba(255,255,255,.18);
-height:10px;
-border-radius:20px;
-overflow:hidden;
+.money{
+    font-size:38px;
+    font-weight:bold;
+    color:#16a085;
 }
 
-.progress span{
-display:block;
-width:0%;
-height:100%;
-background:var(--gold);
+/* =========================
+   SOCIAL
+========================= */
+
+.social-section{
+    background:white;
 }
 
-.account-table{
-width:100%;
-border-collapse:collapse;
+.social-card{
+    text-align:center;
+    padding:30px;
 }
 
-.account-table th,
-.account-table td{
-text-align:left;
-padding:12px;
-border-bottom:1px solid var(--border);
+.social-icon{
+    width:70px;
+    height:70px;
+    margin:auto auto 15px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:28px;
+    font-weight:bold;
 }
 
+/* =========================
+   DISCLAIMER
+========================= */
 
-/* =========================================================
-   NOTICES
-========================================================= */
-
-.notice{
-background:#fff7dc;
-border-left:5px solid var(--gold);
-padding:17px;
-border-radius:10px;
-color:#55451b;
-margin-top:20px;
+.disclaimer{
+    background:#fff3cd;
+    padding:20px;
+    border-left:6px solid #f39c12;
+    border-radius:8px;
 }
 
-.danger-notice{
-background:#fff0f1;
-border-left:5px solid var(--danger);
-padding:17px;
-border-radius:10px;
-color:#67252c;
-}
-
-
-/* =========================================================
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
 footer{
-background:#08232d;
-color:#d5e6e9;
-margin-top:50px;
-padding:45px 0;
+    background:#041f3d;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
 }
 
-.footer-grid{
-display:grid;
-grid-template-columns:2fr 1fr 1fr;
-gap:30px;
+.footer-social{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin:15px 0;
 }
 
-footer a{
-color:#c8e9ec;
-text-decoration:none;
-display:block;
-margin:5px 0;
+.footer-social a{
+    color:white;
+    padding:8px 13px;
+    border-radius:7px;
 }
 
-.footer-bottom{
-border-top:1px solid rgba(255,255,255,.12);
-margin-top:30px;
-padding-top:20px;
-color:#9fb8bd;
-font-size:13px;
+@media(max-width:850px){
+
+    .navbar{
+        flex-direction:column;
+    }
+
+    .nav-links{
+        width:100%;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .search-box{
+        flex-direction:column;
+        border-radius:12px;
+    }
+
+    .search-box button{
+        padding:13px;
+        border-radius:8px;
+    }
+
+    .ai-input{
+        flex-direction:column;
+    }
+
+    .resource-card{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 }
-
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media(max-width:1050px){
-
-.card-grid,
-.dashboard-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.drug-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.file-list{
-grid-template-columns:1fr;
-}
-
-.upload-categories{
-grid-template-columns:repeat(2,1fr);
-}
-
-.ai-layout,
-.account-layout{
-grid-template-columns:1fr;
-}
-
-}
-
-@media(max-width:700px){
-
-.header-inner{
-min-height:65px;
-}
-
-nav{
-display:none;
-position:absolute;
-top:65px;
-left:0;
-width:100%;
-background:white;
-padding:10px;
-border-bottom:1px solid var(--border);
-flex-direction:column;
-}
-
-nav.open{
-display:flex;
-}
-
-nav a{
-width:100%;
-text-align:center;
-}
-
-.mobile-menu{
-display:block;
-}
-
-.hero-box{
-padding:35px 25px;
-}
-
-.search-panel{
-flex-direction:column;
-}
-
-.card-grid,
-.dashboard-grid,
-.drug-grid,
-.upload-categories,
-.file-list{
-grid-template-columns:1fr;
-}
-
-.detail-grid{
-grid-template-columns:1fr;
-}
-
-.footer-grid{
-grid-template-columns:1fr;
-}
-
-.chat-box{
-height:400px;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
@@ -904,121 +693,178 @@ height:400px;
 
 <header>
 
-<div class="header-inner">
+<div class="navbar">
 
 <a href="#home" class="brand">
 
-<div class="logo">
-</div>
+<div class="logo">⚕</div>
 
 <div class="brand-text">
-
-<strong>ASK Dr. DEVIS</strong>
-
-<span>
-Pharmacy • Medicine • Health Information
-</span>
-
+Ask Dr. DEVIS
+<small>Pharmacy • Medicine • Health</small>
 </div>
 
 </a>
 
-<nav id="navigation">
+<nav class="nav-links">
 
 <a href="#home">Home</a>
-
-<a href="#ai">Ask AI</a>
-
-<a href="#drugs">Drugs</a>
-
-<a href="#uploads">Uploads</a>
-
-<a href="#resources">Resources</a>
-
+<a href="#ai">Ask Dr. DEVIS</a>
+<a href="#drugs">Drug Library</a>
+<a href="#anticancer">Anticancer Drugs</a>
+<a href="#resources">Downloads</a>
 <a href="#dashboard">Dashboard</a>
-
 <a href="#accounting">Accounting</a>
 
 </nav>
 
-<button
-class="mobile-menu"
-onclick="toggleMenu()">
+<div class="social-links">
 
-☰
+<a class="tiktok"
+href="https://www.tiktok.com/@dr.devis.n.pharma"
+target="_blank"
+rel="noopener noreferrer"
+title="TikTok">
+♪ 
+</a>
 
-</button>
+<a class="whatsapp"
+href="https://wa.me/256794568447"
+target="_blank"
+rel="noopener noreferrer"
+title="WhatsApp">
+☎
+</a>
+
+<a class="instagram"
+href="https://www.instagram.com/dr.devisnpharmd/"
+target="_blank"
+rel="noopener noreferrer"
+title="Instagram">
+◎
+</a>
+
+</div>
 
 </div>
 
 </header>
 
-<main>
 
 <!-- =========================================================
      HERO
 ========================================================= -->
 
-<section id="home" class="hero">
-
-<div class="container">
-
-<div class="hero-box">
+<section class="hero" id="home">
 
 <div class="hero-content">
 
-<h1>
-Welcome to <span>Ask Dr. DEVIS</span>
-</h1>
+<h1>Welcome to <span>Ask Dr. DEVIS</span></h1>
 
 <p>
-A modern pharmacy and medicine information platform designed to help
-students, patients, healthcare professionals and other users quickly
-find understandable information about medicines, diseases,
-pharmacology and healthcare.
+A pharmacy and medicine information platform for pharmaceutical
+education, drug information, health resources and responsible
+medicine use.
 </p>
 
-<div class="search-panel">
+<div class="search-box">
 
 <input
+type="search"
+id="globalSearch"
+placeholder="Search for a drug, disease, medicine or topic..."
+oninput="globalSearch()">
+
+<button onclick="globalSearch()">Search</button>
+
+</div>
+
+<div id="searchResults" style="margin-top:20px;"></div>
+
+<div class="quick-buttons">
+
+<a href="#ai">Ask Dr. DEVIS AI</a>
+
+<a href="#drugs">Browse Drugs</a>
+
+<a href="#anticancer">Anticancer Drugs</a>
+
+<a href="#resources">Download Resources</a>
+
+<a
+href="https://wa.me/256794568447"
+target="_blank"
+rel="noopener noreferrer">
+Chat on WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     AI SECTION
+========================================================= -->
+
+<section class="ai-section" id="ai">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>🤖 Ask Dr. DEVIS</h2>
+
+<p>
+Ask a pharmacy or medicine-related question and receive an
+educational response. You can also send the question directly
+to Dr. DEVIS on WhatsApp.
+</p>
+
+</div>
+
+<div class="ai-box">
+
+<div class="chat-window" id="chatWindow">
+
+<div class="message bot">
+<b>Dr. DEVIS:</b><br>
+Hello! I am Ask Dr. DEVIS. Ask me about medicines,
+pharmacy, pharmacology, drug classes, adverse effects,
+drug counselling or pharmaceutical education.
+</div>
+
+</div>
+
+<div class="ai-input">
+
+<input
+id="aiQuestion"
 type="text"
-id="mainSearch"
-placeholder="Search medicine, drug class, condition, mechanism, indication..."
-oninput="performSearch()"
+placeholder="Type your question here..."
+onkeydown="if(event.key==='Enter') askDrDevis()">
 
->
-
-<button
-class="btn btn-gold"
-onclick="performSearch()">
-
-Search
-
+<button class="btn btn-primary" onclick="askDrDevis()">
+Ask
 </button>
 
 </div>
 
-<div id="searchResults"></div>
+<div class="ai-actions">
 
-<div style="margin-top:25px;display:flex;gap:10px;flex-wrap:wrap;">
+<button
+class="btn btn-whatsapp"
+onclick="sendQuestionToWhatsApp()">
+💬 Send Question to WhatsApp
+</button>
 
 <button
 class="btn btn-light"
-onclick="document.getElementById('ai').scrollIntoView()">
-
-🤖 Ask Dr. DEVIS AI
-
+onclick="clearChat()">
+Clear Chat
 </button>
-
-<button
-class="btn btn-gold"
-onclick="document.getElementById('drugs').scrollIntoView()">
-
-💊 Explore Drugs
-
-</button>
-
-</div>
 
 </div>
 
@@ -1028,191 +874,9 @@ onclick="document.getElementById('drugs').scrollIntoView()">
 
 </section>
 
-<!-- =========================================================
-     FEATURES
-========================================================= -->
-
-<section>
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Everything in One Place</h2>
-
-<p>
-Explore the main functions of Ask Dr. DEVIS.
-</p>
-
-</div>
-
-<div class="card-grid">
-
-<div class="card feature-card">
-
-<div class="card-icon">🔎</div>
-
-<h3>Smart Search</h3>
-
-<p>
-Search the drug library and automatically locate relevant information.
-</p>
-
-</div>
-
-<div class="card feature-card">
-
-<div class="card-icon">🤖</div>
-
-<h3>AI Medical Assistant</h3>
-
-<p>
-Ask natural-language pharmacy and medicine questions.
-</p>
-
-</div>
-
-<div class="card feature-card">
-
-<div class="card-icon">💊</div>
-
-<h3>Drug Library</h3>
-
-<p>
-Explore medicines, therapeutic classes, mechanisms, warnings,
-adverse effects and counselling points.
-</p>
-
-</div>
-
-<div class="card feature-card">
-
-<div class="card-icon">📥</div>
-
-<h3>Download Centre</h3>
-
-<p>
-Visitors can view and download resources uploaded to the public
-resource area.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================================================
-     AI
-========================================================= -->
-
-<section id="ai">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🤖 Ask Dr. DEVIS AI</h2>
-
-<p>
-Your intelligent pharmacy and medicine information assistant.
-</p>
-
-</div>
-
-<div class="ai-layout">
-
-<div class="ai-info">
-
-<h2>Ask Dr. DEVIS</h2>
-
-<p>
-Ask questions about pharmacy, pharmacology, medicines, drug classes,
-mechanisms, adverse effects, interactions and healthcare.
-</p>
-
-<ul>
-
-<li>Explain medicines in simple language</li>
-
-<li>Compare two medicines</li>
-
-<li>Explain mechanisms of action</li>
-
-<li>Explain pharmacology concepts</li>
-
-<li>Generate study explanations</li>
-
-<li>Organize pharmaceutical information</li>
-
-<li>Answer general health-information questions</li>
-
-</ul>
-
-<div class="notice">
-
-<b>Important:</b>
-
-AI-generated information is educational.
-Patient-specific treatment decisions should be confirmed with
-a qualified healthcare professional.
-
-</div>
-
-</div>
-
-<div>
-
-<div id="chatBox" class="chat-box">
-
-<div class="message bot">
-
-Hello 👋.
-
-I am <b>Ask Dr. DEVIS</b>.
-
-Ask me about medicines, pharmacology, drug classes, mechanisms,
-adverse effects, interactions or other pharmacy topics.
-
-How can I help you today?
-
-</div>
-
-</div>
-
-<div class="chat-input">
-
-<input
-type="text"
-id="aiQuestion"
-placeholder="Ask Dr. DEVIS a question..."
-onkeydown="if(event.key==='Enter') askDrDevis()"
-
->
-
-<button
-class="btn btn-primary"
-onclick="askDrDevis()">
-
-Ask
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
 
 <!-- =========================================================
      DRUG LIBRARY
-     THE DRUG CONTENT IS MAINTAINED
 ========================================================= -->
 
 <section id="drugs">
@@ -1221,205 +885,186 @@ Ask
 
 <div class="section-title">
 
-<h2>💊 Comprehensive Drug Information</h2>
+<h2>💊 Drug Information Library</h2>
 
 <p>
-Select a medicine to view its educational information.
+Search the existing Ask Dr. DEVIS drug database.
 </p>
 
 </div>
 
-<div class="drug-tools">
+<div class="library-tools">
 
 <input
+type="search"
 id="drugSearch"
-placeholder="Search drugs..."
-oninput="filterDrugs()"
+placeholder="Search drug..."
+oninput="renderDrugs()">
 
->
+<select id="drugCategory" onchange="renderDrugs()">
 
-<select
-id="drugClassFilter"
-onchange="filterDrugs()">
-
-<option value="">All classes</option>
-
-<option>Analgesic</option>
-
-<option>NSAID</option>
-
-<option>Antibiotic</option>
-
-<option>Antihypertensive</option>
-
-<option>Antidiabetic</option>
-
-<option>Antihistamine</option>
-
-<option>Antimalarial</option>
-
-<option>Anticoagulant</option>
-
-<option>Diuretic</option>
-
-<option>Antifungal</option>
-
-<option>Respiratory</option>
-
-<option>Gastrointestinal</option>
+<option value="all">All categories</option>
+<option value="Analgesic">Analgesic</option>
+<option value="NSAID">NSAID</option>
+<option value="Antibiotic">Antibiotic</option>
+<option value="Antidiabetic">Antidiabetic</option>
+<option value="Antihypertensive">Antihypertensive</option>
+<option value="Antihyperlipidaemic">Antihyperlipidaemic</option>
+<option value="Gastrointestinal">Gastrointestinal</option>
+<option value="Respiratory">Respiratory</option>
+<option value="Antihistamine">Antihistamine</option>
+<option value="Antimalarial">Antimalarial</option>
+<option value="Anticoagulant">Anticoagulant</option>
+<option value="Diuretic">Diuretic</option>
+<option value="Antifungal">Antifungal</option>
+<option value="Corticosteroid">Corticosteroid</option>
 
 </select>
 
-<button
-class="btn btn-primary"
-onclick="showAllDrugs()">
+</div>
 
-More Drugs
-
-</button>
+<div class="grid" id="drugGrid"></div>
 
 </div>
 
-<div id="drugGrid" class="drug-grid">
+</section>
+
+
+<!-- =========================================================
+     ANTICANCER DRUGS
+========================================================= -->
+
+<section class="cancer-section" id="anticancer">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>🎗️ Comprehensive Anticancer Drug Information</h2>
+
+<p>
+A broad educational reference covering major anticancer drug
+classes, mechanisms, common uses, important adverse effects,
+monitoring considerations and pharmaceutical counselling points.
+</p>
+
 </div>
 
-<div
-id="drugDetail"
-class="drug-detail">
+<div class="cancer-intro">
+
+<h3>Understanding Anticancer Therapy</h3>
+
+<p>
+Anticancer medicines are drugs used to treat malignant diseases.
+They may act by damaging DNA, blocking cell division, interfering
+with hormone signalling, inhibiting specific molecular targets,
+stimulating the immune system, or delivering toxic substances
+selectively to cancer cells.
+</p>
+
+<br>
+
+<p>
+Cancer treatment is highly individualised. The selected medicine,
+dose, treatment cycle and combination depend on the cancer type,
+stage, molecular characteristics, organ function, previous therapy,
+patient factors and treatment protocol.
+</p>
+
+</div>
+
+<div class="grid" id="anticancerGrid"></div>
+
+<div class="warning">
+
+<strong>Important clinical safety notice:</strong>
+
+The doses shown in this educational database are NOT universal
+prescriptions. Many anticancer medicines require specialist
+oncology protocols, body-surface-area or weight-based calculations,
+renal/hepatic adjustment, laboratory monitoring and combination
+regimens. Patients should never start, stop or change anticancer
+therapy without their oncology/medical team.
+
 </div>
 
 </div>
 
 </section>
 
+
 <!-- =========================================================
-     UPLOAD DASHBOARD
+     DASHBOARD / UPLOAD
 ========================================================= -->
 
-<section id="uploads">
+<section class="dashboard" id="dashboard">
 
 <div class="container">
 
 <div class="section-title">
 
-<h2>📁 Upload Dashboard</h2>
+<h2>📁 Ask Dr. DEVIS Resource Dashboard</h2>
 
 <p>
-Upload documents, images, videos and educational resources.
+Upload educational resources such as documents, presentations,
+images, videos and other files.
 </p>
 
 </div>
 
-<div
-class="upload-zone"
-id="uploadZone"
-ondragover="dragOver(event)"
-ondragleave="dragLeave(event)"
-ondrop="dropFiles(event)"
->
+<div class="dashboard-stats">
 
-<div style="font-size:50px">
-☁️
+<div class="stat">
+<strong id="viewCount">0</strong>
+Website Views
 </div>
 
-<h2>
-Upload Your Resources
-</h2>
+<div class="stat">
+<strong id="uploadCount">0</strong>
+Uploaded Files
+</div>
+
+<div class="stat">
+<strong id="drugCount">0</strong>
+Drug Records
+</div>
+
+<div class="stat">
+<strong id="aiCount">0</strong>
+AI Questions
+</div>
+
+</div>
+
+<div class="upload-box" id="uploadBox">
+
+<h3>📤 Upload a Resource</h3>
 
 <p>
-Documents • PDFs • Word files • PowerPoint • Excel • Images • Videos
-• Text files • Other resources
+Select any file type including PDF, DOC, DOCX, PPT, PPTX,
+XLS, XLSX, images, videos, ZIP and other files.
 </p>
 
 <input
 type="file"
 id="fileInput"
 multiple
-accept="*/*"
-onchange="handleFiles(this.files)"
-
->
+accept="*/*">
 
 <br>
 
-<button
-class="btn btn-primary"
-onclick="document.getElementById('fileInput').click()">
-
-Choose Files
-
+<button class="btn btn-success" onclick="uploadFiles()">
+Upload Files
 </button>
 
-<div class="upload-categories">
+<div class="upload-status" id="uploadStatus"></div>
 
-<div class="upload-category">
-
-<div style="font-size:30px">
-📄
-</div>
-
-<b>Documents</b>
-
-<p>
-PDF, DOC, DOCX, TXT
-</p>
-
-</div>
-
-<div class="upload-category">
-
-<div style="font-size:30px">
-🖼️
-</div>
-
-<b>Images</b>
-
-<p>
-JPG, PNG, WEBP, GIF
-</p>
-
-</div>
-
-<div class="upload-category">
-
-<div style="font-size:30px">
-🎥
-</div>
-
-<b>Videos</b>
-
-<p>
-MP4, MOV, WEBM
-</p>
-
-</div>
-
-<div class="upload-category">
-
-<div style="font-size:30px">
-📊
-</div>
-
-<b>Other Files</b>
-
-<p>
-XLS, XLSX, PPT, CSV
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div
-id="fileList"
-class="file-list">
 </div>
 
 </div>
 
 </section>
+
 
 <!-- =========================================================
      PUBLIC DOWNLOAD CENTRE
@@ -1431,151 +1076,26 @@ class="file-list">
 
 <div class="section-title">
 
-<h2>📚 Public Resource & Download Centre</h2>
+<h2>📥 Public Resource & Download Centre</h2>
 
 <p>
-Visitors can open or download resources made available by Ask Dr. DEVIS.
+Visitors can open or download resources published by Ask Dr. DEVIS.
 </p>
 
 </div>
 
-<div class="card public-resource">
-
-<div class="public-badge">
-PUBLIC DOWNLOADS
-</div>
-
-<h2>
-📥 Educational Resources
-</h2>
-
-<p>
-Download pharmacy notes, study materials, documents, images and
-other resources made available on the website.
-</p>
-
-<div
-id="publicResources"
-class="file-list">
-</div>
-
-</div>
+<div id="resourceList" class="grid"></div>
 
 </div>
 
 </section>
 
-<!-- =========================================================
-     DASHBOARD
-========================================================= -->
-
-<section id="dashboard">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>📊 Website Dashboard</h2>
-
-<p>
-Monitor your website activity.
-</p>
-
-</div>
-
-<div class="dashboard-grid">
-
-<div class="card metric">
-
-<span>
-Website Views
-</span>
-
-<strong id="viewCount">
-0
-</strong>
-
-<small>
-Total recorded views
-</small>
-
-<div class="metric-icon">
-👁️
-</div>
-
-</div>
-
-<div class="card metric">
-
-<span>
-Uploaded Files
-</span>
-
-<strong id="fileCount">
-0
-</strong>
-
-<small>
-Files available
-</small>
-
-<div class="metric-icon">
-📁
-</div>
-
-</div>
-
-<div class="card metric">
-
-<span>
-Drug Records
-</span>
-
-<strong id="drugCount">
-0
-</strong>
-
-<small>
-Available drug cards
-</small>
-
-<div class="metric-icon">
-💊
-</div>
-
-</div>
-
-<div class="card metric">
-
-<span>
-AI Questions
-</span>
-
-<strong id="questionCount">
-0
-</strong>
-
-<small>
-Questions asked
-</small>
-
-<div class="metric-icon">
-🤖
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
 
 <!-- =========================================================
      ACCOUNTING
 ========================================================= -->
 
-<section id="accounting">
+<section class="accounting" id="accounting">
 
 <div class="container">
 
@@ -1584,122 +1104,50 @@ Questions asked
 <h2>💰 Website Accounting</h2>
 
 <p>
-Track views and calculated website commission.
+Website performance and illustrative commission dashboard.
 </p>
 
 </div>
 
-<div class="account-layout">
+<div class="grid">
 
-<div class="account-box">
+<div class="account-card">
 
-<h3>
-Available Commission
-</h3>
+<h3>Total Website Views</h3>
 
-<div class="balance">
+<div class="money" id="accountViews">
+0
+</div>
 
-$<span id="commissionBalance">
-0.00 </span>
+</div>
 
+<div class="account-card">
+
+<h3>Illustrative Commission</h3>
+
+<div class="money" id="commission">
+$0.00
 </div>
 
 <p>
-Estimated commission based on the configured rate per website view.
+Illustrative calculation: $0.01 per recorded website view.
 </p>
 
-<br>
-
-<div class="progress">
-
-<span id="commissionProgress">
-</span>
-
 </div>
 
-<br>
+<div class="account-card">
+
+<h3>Withdrawable Amount</h3>
+
+<div class="money" id="withdrawable">
+$0.00
+</div>
 
 <button
-class="btn btn-gold"
+class="btn btn-success"
 onclick="withdrawCommission()">
-
-Withdraw Commission
-
+Request Withdrawal
 </button>
-
-</div>
-
-<div class="card">
-
-<h3>
-Accounting Summary
-</h3>
-
-<table class="account-table">
-
-<tr>
-
-<th>
-Website Views
-</th>
-
-<td id="accountViews">
-0
-</td>
-
-</tr>
-
-<tr>
-
-<th>
-Commission Rate
-</th>
-
-<td>
-$0.01 / view
-</td>
-
-</tr>
-
-<tr>
-
-<th>
-Estimated Commission
-</th>
-
-<td>
-$<span id="accountCommission">
-0.00
-</span>
-</td>
-
-</tr>
-
-<tr>
-
-<th>
-Status
-</th>
-
-<td>
-
-<span class="drug-class">
-ACTIVE
-</span>
-
-</td>
-
-</tr>
-
-</table>
-
-<div class="notice">
-
-The displayed commission is a website calculation.
-Actual advertising revenue must come from a legitimate
-advertising, affiliate or payment provider.
-
-</div>
 
 </div>
 
@@ -1709,37 +1157,123 @@ advertising, affiliate or payment provider.
 
 </section>
 
+
 <!-- =========================================================
-     SAFETY
+     SOCIAL MEDIA
+========================================================= -->
+
+<section class="social-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>🌐 Follow Ask Dr. DEVIS</h2>
+
+<p>
+Connect with Dr. DEVIS through the official social accounts.
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="social-card card">
+
+<div class="social-icon tiktok">
+♪
+</div>
+
+<h3>TikTok</h3>
+
+<p>@dr.devis.n.pharma</p>
+
+<br>
+
+<a
+class="btn btn-primary"
+href="https://www.tiktok.com/@dr.devis.n.pharma"
+target="_blank"
+rel="noopener noreferrer">
+Open TikTok
+</a>
+
+</div>
+
+
+<div class="social-card card">
+
+<div class="social-icon whatsapp">
+☎
+</div>
+
+<h3>WhatsApp</h3>
+
+<p>+256 794 568 447</p>
+
+<br>
+
+<a
+class="btn btn-whatsapp"
+href="https://wa.me/256794568447"
+target="_blank"
+rel="noopener noreferrer">
+Open WhatsApp
+</a>
+
+</div>
+
+
+<div class="social-card card">
+
+<div class="social-icon instagram">
+◎
+</div>
+
+<h3>Instagram</h3>
+
+<p>@dr.devisnpharmd</p>
+
+<br>
+
+<a
+class="btn btn-primary"
+href="https://www.instagram.com/dr.devisnpharmd/"
+target="_blank"
+rel="noopener noreferrer">
+Open Instagram
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     DISCLAIMER
 ========================================================= -->
 
 <section>
 
 <div class="container">
 
-<div class="danger-notice">
+<div class="disclaimer">
 
-<h3>
-⚠️ Medical Information Notice
-</h3>
+<strong>Medical and pharmaceutical information disclaimer:</strong>
 
-<p>
+The information on Ask Dr. DEVIS is intended for education and
+general pharmaceutical information. It does not replace diagnosis,
+a prescription, a clinical examination or advice from a qualified
+health professional. Anticancer medicines, antibiotics,
+anticoagulants, insulin and other high-risk medicines require
+appropriate professional supervision.
 
-Ask Dr. DEVIS is designed for educational and informational purposes.
-
-Information about medicines must not be interpreted as an individual
-prescription or diagnosis.
-
-Drug selection, dose, route, duration, interactions and monitoring
-depend on the individual patient and the specific product.
-
-Always verify important medicine information using current official
-product information, national treatment guidelines, institutional
-protocols and qualified healthcare professionals.
-
-In an emergency, seek immediate medical care.
-
-</p>
+Always verify medicines, doses, contraindications, interactions,
+patient factors and local treatment guidelines before clinical use.
 
 </div>
 
@@ -1747,7 +1281,6 @@ In an emergency, seek immediate medical care.
 
 </section>
 
-</main>
 
 <!-- =========================================================
      FOOTER
@@ -1755,98 +1288,52 @@ In an emergency, seek immediate medical care.
 
 <footer>
 
-<div class="container">
-
-<div class="footer-grid">
-
-<div>
-
-<h2>
-ASK Dr. DEVIS
-</h2>
+<h2>⚕ Ask Dr. DEVIS</h2>
 
 <p>
-Pharmacy, medicine and health information platform.
+Pharmacy • Medicine • Pharmaceutical Education • Health Information
 </p>
 
-<br>
+<div class="footer-social">
+
+<a
+class="tiktok"
+href="https://www.tiktok.com/@dr.devis.n.pharma"
+target="_blank"
+rel="noopener noreferrer">
+TikTok
+</a>
+
+<a
+class="whatsapp"
+href="https://wa.me/256794568447"
+target="_blank"
+rel="noopener noreferrer">
+WhatsApp
+</a>
+
+<a
+class="instagram"
+href="https://www.instagram.com/dr.devisnpharmd/"
+target="_blank"
+rel="noopener noreferrer">
+Instagram
+</a>
+
+</div>
 
 <p>
-💊 Learn • 🔎 Search • 🤖 Ask • 📥 Download
+© <span id="year"></span> Ask Dr. DEVIS. All rights reserved.
 </p>
-
-</div>
-
-<div>
-
-<h3>
-Explore
-</h3>
-
-<a href="#home">
-Home
-</a>
-
-<a href="#ai">
-Ask AI
-</a>
-
-<a href="#drugs">
-Drug Library
-</a>
-
-<a href="#resources">
-Downloads
-</a>
-
-</div>
-
-<div>
-
-<h3>
-Dashboard
-</h3>
-
-<a href="#uploads">
-Upload Resources
-</a>
-
-<a href="#dashboard">
-Analytics
-</a>
-
-<a href="#accounting">
-Accounting
-</a>
-
-</div>
-
-</div>
-
-<div class="footer-bottom">
-
-© <span id="year"></span>
-Ask Dr. DEVIS.
-
-Pharmacy and medicine information platform.
-
-</div>
-
-</div>
 
 </footer>
+
 
 <script>
 
 /* =========================================================
-   ASK DR DEVIS
-   UPDATED DOWNLOAD SYSTEM
-========================================================= */
-
-
-/* =========================================================
-   DRUG DATABASE
-   MAINTAINED FROM PREVIOUS VERSION
+   EXISTING DRUG DATABASE
+   PRESERVED FROM THE PREVIOUS ASK DR. DEVIS VERSION
 ========================================================= */
 
 const drugs = [
@@ -1854,1105 +1341,1731 @@ const drugs = [
 {
 name:"Paracetamol",
 class:"Analgesic",
-category:"Pain / Fever",
-uses:"Relief of mild to moderate pain and reduction of fever.",
-mechanism:"Its analgesic and antipyretic effects are mainly associated with central mechanisms affecting prostaglandin-related pathways.",
-dose:"Dose must be individualized according to age, weight, formulation and local product guidance. Avoid exceeding the recommended total daily dose.",
-route:"Oral, rectal and intravenous formulations exist.",
-sideEffects:"Usually well tolerated at appropriate doses. Excessive exposure can cause serious liver injury.",
-contra:"Severe hepatic impairment and previous serious hypersensitivity require specialist consideration.",
-interactions:"Important interactions can occur with some anticoagulants and other medicines. Avoid duplicate paracetamol-containing products.",
-storage:"Store according to the product label, generally away from excessive heat and moisture.",
-counselling:"Check combination cold/flu products to avoid accidental duplication."
+category:"Analgesic",
+uses:"Mild to moderate pain and fever.",
+mechanism:"Reduces central prostaglandin synthesis and produces analgesic and antipyretic effects.",
+dose:"Adults commonly use 500–1000 mg per dose at appropriate intervals; maximum daily dose depends on patient factors and product guidance.",
+route:"Oral; also available in other formulations.",
+sideEffects:"Usually well tolerated at recommended doses. Excessive doses can cause severe liver injury.",
+contra:"Severe hepatic disease or previous serious reaction.",
+interactions:"Alcohol and medicines affecting hepatic metabolism may increase risk of toxicity.",
+storage:"Store according to product label, protected from excessive heat and moisture.",
+counselling:"Do not exceed the recommended total daily dose or combine several products containing paracetamol."
 },
 
 {
 name:"Ibuprofen",
 class:"NSAID",
-category:"Pain / Inflammation",
-uses:"Pain, inflammation and fever in appropriate patients.",
-mechanism:"Inhibits cyclooxygenase enzymes, reducing prostaglandin synthesis.",
-dose:"Use the lowest effective dose for the shortest appropriate duration. Dose depends on age, indication and formulation.",
-route:"Usually oral; other formulations may exist.",
-sideEffects:"Dyspepsia, nausea, gastrointestinal irritation, kidney effects and cardiovascular risks may occur.",
-contra:"Important contraindications include certain gastrointestinal bleeding/ulcer conditions, severe renal disease and NSAID hypersensitivity.",
-interactions:"May interact with anticoagulants, ACE inhibitors, diuretics and other medicines.",
-storage:"Store according to product instructions.",
-counselling:"Seek advice if there is a history of ulcers, kidney disease, heart disease or anticoagulant use."
+category:"NSAID",
+uses:"Pain, fever and inflammatory conditions.",
+mechanism:"Reversibly inhibits cyclooxygenase enzymes and reduces prostaglandin synthesis.",
+dose:"Dose varies by age, indication and formulation. Use the lowest effective dose for the shortest appropriate period.",
+route:"Oral; topical forms are also available.",
+sideEffects:"Dyspepsia, nausea, gastrointestinal irritation, renal effects and increased cardiovascular risk in susceptible patients.",
+contra:"Active gastrointestinal ulcer/bleeding, serious NSAID hypersensitivity and certain severe renal or cardiovascular conditions.",
+interactions:"Anticoagulants, antiplatelets, corticosteroids, ACE inhibitors, diuretics and other NSAIDs.",
+storage:"Store at room temperature in the original container.",
+counselling:"Take with food if appropriate and avoid combining with another NSAID unless advised by a healthcare professional."
 },
 
 {
 name:"Amoxicillin",
 class:"Antibiotic",
-category:"Penicillin",
+category:"Antibiotic",
 uses:"Treatment of susceptible bacterial infections.",
 mechanism:"Beta-lactam antibiotic that interferes with bacterial cell-wall synthesis.",
-dose:"The correct dose depends on infection, age, weight, renal function and local guidelines.",
-route:"Oral and injectable formulations exist.",
-sideEffects:"Nausea, diarrhoea, rash and allergic reactions may occur.",
-contra:"Serious immediate hypersensitivity to penicillins is an important contraindication.",
-interactions:"Some medicines can alter effects or increase adverse-event risks.",
-storage:"Follow the product label. Reconstituted suspension may have specific storage requirements.",
-counselling:"Use only when indicated and take the prescribed course as directed."
+dose:"Dose depends on infection, age, renal function and formulation; use the prescribed regimen.",
+route:"Oral; injectable beta-lactam preparations are available in healthcare settings.",
+sideEffects:"Nausea, diarrhoea, rash and allergic reactions.",
+contra:"Serious immediate hypersensitivity to penicillins or relevant beta-lactams.",
+interactions:"Some anticoagulants and other medicines may require monitoring.",
+storage:"Follow the product label. Reconstituted suspensions have specific storage and discard instructions.",
+counselling:"Complete the prescribed course unless a healthcare professional tells you otherwise. Seek urgent help for severe allergic reactions."
 },
 
 {
 name:"Azithromycin",
 class:"Antibiotic",
-category:"Macrolide",
-uses:"Selected susceptible bacterial infections.",
-mechanism:"Inhibits bacterial protein synthesis by binding to the bacterial ribosomal subunit.",
-dose:"Depends on infection, age, formulation and clinical guidelines.",
-route:"Oral and intravenous formulations exist.",
-sideEffects:"Gastrointestinal effects are common. QT prolongation and liver-related effects are important considerations.",
-contra:"Hypersensitivity to macrolides and certain previous hepatic reactions require consideration.",
-interactions:"May interact with medicines affecting cardiac rhythm and other drugs.",
-storage:"Follow product-specific instructions.",
-counselling:"Use only when clinically appropriate."
+category:"Antibiotic",
+uses:"Treatment of susceptible respiratory, skin and other bacterial infections.",
+mechanism:"Macrolide antibiotic that inhibits bacterial protein synthesis.",
+dose:"Regimen depends on infection, age and formulation.",
+route:"Oral; intravenous use may occur in hospital settings.",
+sideEffects:"Nausea, diarrhoea, abdominal discomfort and possible QT prolongation.",
+contra:"Previous serious macrolide hypersensitivity and selected serious cardiac conditions.",
+interactions:"Other QT-prolonging medicines and certain drugs metabolised through hepatic pathways.",
+storage:"Store according to product instructions.",
+counselling:"Use only for a diagnosed or strongly suspected susceptible bacterial infection."
 },
 
 {
 name:"Metformin",
 class:"Antidiabetic",
-category:"Biguanide",
-uses:"Type 2 diabetes management alongside lifestyle measures.",
+category:"Antidiabetic",
+uses:"Type 2 diabetes mellitus and selected insulin-resistance conditions.",
 mechanism:"Reduces hepatic glucose production and improves insulin sensitivity.",
-dose:"Individualized according to glycaemic response, formulation and kidney function.",
+dose:"Started and adjusted according to glucose control, renal function and formulation.",
 route:"Oral.",
-sideEffects:"Nausea, diarrhoea, abdominal discomfort and reduced appetite are common. Rare serious lactic acidosis can occur in specific high-risk situations.",
-contra:"Severe renal impairment and certain acute clinical conditions require avoidance or temporary withholding.",
-interactions:"Kidney function and interacting medicines should be considered.",
-storage:"Store according to label.",
-counselling:"Taking with food may improve gastrointestinal tolerance."
+sideEffects:"Gastrointestinal upset, diarrhoea and reduced vitamin B12 levels with long-term use; rare lactic acidosis.",
+contra:"Severe renal impairment and situations associated with significant hypoxia or acute illness.",
+interactions:"Some contrast agents and medicines affecting renal function require special consideration.",
+storage:"Room temperature according to product label.",
+counselling:"Take with meals if directed to reduce gastrointestinal effects and follow glucose-monitoring advice."
 },
 
 {
 name:"Amlodipine",
 class:"Antihypertensive",
-category:"Calcium-channel blocker",
-uses:"Hypertension and selected forms of angina.",
-mechanism:"Blocks L-type calcium channels in vascular smooth muscle, producing vasodilation.",
-dose:"Individualized according to response, age and clinical condition.",
+category:"Antihypertensive",
+uses:"Hypertension and angina.",
+mechanism:"Calcium-channel blocker causing vascular smooth-muscle relaxation.",
+dose:"Dose is individualised according to age, indication and response.",
 route:"Oral.",
-sideEffects:"Ankle oedema, headache, flushing, dizziness and palpitations can occur.",
-contra:"Use requires clinical assessment in patients with specific cardiovascular conditions.",
-interactions:"Other blood-pressure-lowering medicines can increase hypotensive effects.",
-storage:"Store according to product instructions.",
-counselling:"Take consistently and monitor blood pressure."
+sideEffects:"Ankle oedema, headache, flushing, dizziness and palpitations.",
+contra:"Serious hypersensitivity; use caution in selected cardiovascular conditions.",
+interactions:"Other antihypertensives and medicines affecting CYP3A4 may alter exposure.",
+storage:"Store at room temperature.",
+counselling:"Take regularly and do not stop antihypertensive therapy without professional advice."
 },
 
 {
 name:"Losartan",
 class:"Antihypertensive",
-category:"ARB",
-uses:"Hypertension and selected cardiovascular or renal indications.",
-mechanism:"Blocks angiotensin II AT1 receptors.",
-dose:"Individualized according to indication, response and kidney function.",
+category:"Antihypertensive",
+uses:"Hypertension and selected cardiovascular/renal indications.",
+mechanism:"Angiotensin II receptor blocker.",
+dose:"Individualised according to indication, renal function and response.",
 route:"Oral.",
-sideEffects:"Dizziness, changes in potassium and kidney function may occur.",
-contra:"Pregnancy is an important contraindication because of fetal toxicity.",
-interactions:"Potassium supplements, potassium-sparing medicines and certain other medicines require consideration.",
-storage:"Store in a dry place according to label.",
-counselling:"Regular blood pressure and appropriate laboratory monitoring may be required."
+sideEffects:"Dizziness, hyperkalaemia and renal-function changes.",
+contra:"Pregnancy and serious hypersensitivity; caution in renal or hepatic disease.",
+interactions:"Potassium supplements, potassium-sparing medicines, NSAIDs and other renin-angiotensin system medicines.",
+storage:"Room temperature in the original container.",
+counselling:"Monitor blood pressure and follow laboratory monitoring when requested."
 },
 
 {
 name:"Enalapril",
 class:"Antihypertensive",
-category:"ACE inhibitor",
+category:"Antihypertensive",
 uses:"Hypertension and heart failure.",
-mechanism:"Inhibits angiotensin-converting enzyme, reducing formation of angiotensin II.",
-dose:"Individualized according to indication and patient factors.",
+mechanism:"ACE inhibitor reducing formation of angiotensin II.",
+dose:"Individualised based on indication, renal function and response.",
 route:"Oral.",
-sideEffects:"Dry cough, dizziness, hyperkalaemia and changes in kidney function can occur.",
-contra:"Pregnancy is an important contraindication. Previous ACE-inhibitor-related angioedema is also important.",
-interactions:"Potassium-increasing medicines and certain renal-active medicines require monitoring.",
-storage:"Store according to product instructions.",
-counselling:"Report facial or tongue swelling immediately."
+sideEffects:"Cough, dizziness, hyperkalaemia, renal changes and rare angioedema.",
+contra:"Previous ACE-inhibitor-associated angioedema and pregnancy.",
+interactions:"Potassium-containing products, potassium-sparing diuretics, NSAIDs and other antihypertensives.",
+storage:"Room temperature according to product label.",
+counselling:"Seek urgent medical help for swelling of the face, lips, tongue or difficulty breathing."
 },
 
 {
 name:"Atorvastatin",
 class:"Antihyperlipidaemic",
-category:"Statin",
+category:"Antihyperlipidaemic",
 uses:"Reduction of LDL cholesterol and cardiovascular risk.",
-mechanism:"Inhibits HMG-CoA reductase, reducing hepatic cholesterol synthesis.",
-dose:"Dose is individualized according to cardiovascular risk and lipid response.",
+mechanism:"Inhibits HMG-CoA reductase and increases hepatic LDL clearance.",
+dose:"Dose depends on cardiovascular risk and treatment target.",
 route:"Oral.",
-sideEffects:"Muscle symptoms and liver enzyme abnormalities can occur.",
-contra:"Certain active liver conditions and specific interactions require consideration.",
-interactions:"Some antibiotics, antifungals and other medicines can increase statin exposure.",
-storage:"Store according to product instructions.",
+sideEffects:"Muscle symptoms, gastrointestinal effects and increased liver enzymes.",
+contra:"Active liver disease and pregnancy.",
+interactions:"Certain antibiotics, antifungals and other medicines can increase statin exposure.",
+storage:"Room temperature.",
 counselling:"Report unexplained severe muscle pain or weakness."
 },
 
 {
 name:"Omeprazole",
 class:"Gastrointestinal",
-category:"Proton-pump inhibitor",
-uses:"Acid-related gastrointestinal disorders.",
-mechanism:"Suppresses gastric acid secretion by inhibiting the H+/K+ ATPase proton pump in gastric parietal cells.",
-dose:"Depends on indication and formulation.",
-route:"Oral and some other formulations.",
-sideEffects:"Headache and gastrointestinal effects may occur. Long-term use has additional considerations.",
-contra:"Check hypersensitivity and important medicine interactions.",
-interactions:"Can affect absorption or metabolism of selected medicines.",
-storage:"Follow product-specific instructions.",
-counselling:"Use for the duration recommended by a qualified healthcare professional."
+category:"Gastrointestinal",
+uses:"Peptic ulcer disease, gastro-oesophageal reflux and acid-related disorders.",
+mechanism:"Proton-pump inhibitor that suppresses gastric acid secretion.",
+dose:"Depends on indication and treatment protocol.",
+route:"Oral; other formulations exist.",
+sideEffects:"Headache, abdominal discomfort, diarrhoea and, with prolonged use, selected nutrient/electrolyte effects.",
+contra:"Serious hypersensitivity.",
+interactions:"Some medicines require monitoring because gastric acidity or CYP metabolism is affected.",
+storage:"According to product label.",
+counselling:"Take at the recommended time and do not use long-term without appropriate review."
 },
 
 {
 name:"Salbutamol",
 class:"Respiratory",
-category:"Short-acting beta-2 agonist",
-uses:"Relief of bronchospasm in conditions such as asthma.",
-mechanism:"Stimulates beta-2 receptors causing relaxation of bronchial smooth muscle.",
-dose:"Depends on age, formulation and clinical plan.",
-route:"Inhaled and other formulations.",
-sideEffects:"Tremor, palpitations, headache and tachycardia may occur.",
-contra:"Clinical assessment is required in patients with significant cardiovascular conditions.",
-interactions:"Other sympathomimetic or cardiovascular medicines may affect adverse effects.",
-storage:"Store inhalers according to product instructions.",
-counselling:"Frequent rescue-inhaler use may indicate inadequate disease control."
+category:"Respiratory",
+uses:"Relief of bronchospasm in asthma and other obstructive airway conditions.",
+mechanism:"Selective beta-2 adrenergic agonist producing bronchodilation.",
+dose:"Depends on inhaler/nebuliser formulation and clinical situation.",
+route:"Inhalation; oral/parenteral forms are less commonly used.",
+sideEffects:"Tremor, palpitations, headache and transient tachycardia.",
+contra:"Hypersensitivity; use carefully in cardiovascular disease.",
+interactions:"Other sympathomimetics and non-selective beta blockers.",
+storage:"Follow inhaler product instructions.",
+counselling:"Use the inhaler correctly. Increasing reliance on a reliever may indicate poor disease control."
 },
 
 {
 name:"Cetirizine",
 class:"Antihistamine",
-category:"Allergy",
+category:"Antihistamine",
 uses:"Allergic rhinitis and urticaria.",
-mechanism:"Blocks peripheral H1 histamine receptors.",
-dose:"Depends on age and formulation.",
+mechanism:"Selective peripheral H1 receptor antagonist.",
+dose:"Dose depends on age and renal function.",
 route:"Oral.",
-sideEffects:"Drowsiness, headache and dry mouth may occur.",
-contra:"Dose adjustment may be required with significant renal impairment.",
-interactions:"Alcohol and other sedating medicines may increase drowsiness.",
-storage:"Store according to label.",
-counselling:"Assess response before driving if drowsiness occurs."
+sideEffects:"Drowsiness, dry mouth and headache.",
+contra:"Serious hypersensitivity.",
+interactions:"Other sedating medicines or alcohol may increase drowsiness.",
+storage:"Room temperature.",
+counselling:"Avoid driving if the medicine makes you drowsy."
 },
 
 {
 name:"Artemether/Lumefantrine",
 class:"Antimalarial",
-category:"Malaria",
-uses:"Treatment of uncomplicated malaria caused by susceptible Plasmodium species.",
-mechanism:"Combination of antimalarial mechanisms targeting parasite survival.",
-dose:"Must follow the current national malaria guideline and product-specific dosing schedule.",
+category:"Antimalarial",
+uses:"Treatment of uncomplicated Plasmodium falciparum malaria according to local treatment guidelines.",
+mechanism:"Artemether rapidly reduces parasite burden while lumefantrine provides complementary antimalarial activity.",
+dose:"Weight-based regimen according to the specific product and national malaria guidelines.",
 route:"Oral.",
-sideEffects:"Headache, dizziness, gastrointestinal symptoms and other effects may occur.",
-contra:"Specific contraindications depend on patient factors and formulation.",
-interactions:"Medicines affecting cardiac rhythm or hepatic metabolism may be important.",
-storage:"Protect from excessive heat and moisture and follow product label.",
-counselling:"Complete the prescribed regimen and seek care if symptoms worsen."
+sideEffects:"Headache, dizziness, gastrointestinal symptoms and possible cardiac effects.",
+contra:"Relevant hypersensitivity and selected significant cardiac risks.",
+interactions:"Strong enzyme inducers/inhibitors and other QT-prolonging medicines require consideration.",
+storage:"Protect from heat and moisture according to product label.",
+counselling:"Take doses at the correct times and with appropriate food according to product instructions."
 },
 
 {
 name:"Doxycycline",
 class:"Antibiotic",
-category:"Tetracycline",
-uses:"Selected susceptible bacterial infections and other specific indications.",
-mechanism:"Inhibits bacterial protein synthesis.",
-dose:"Depends on indication, age and patient factors.",
-route:"Oral and injectable formulations exist.",
-sideEffects:"Gastrointestinal irritation and photosensitivity may occur.",
-contra:"Pregnancy and young children require specific clinical consideration.",
-interactions:"Antacids, iron and calcium can reduce absorption when taken together.",
-storage:"Store according to label.",
-counselling:"Take with adequate water and follow product-specific administration instructions."
+category:"Antibiotic",
+uses:"Susceptible bacterial infections and selected prophylactic indications.",
+mechanism:"Tetracycline antibiotic inhibiting bacterial protein synthesis.",
+dose:"Indication and patient dependent.",
+route:"Oral; intravenous formulations exist.",
+sideEffects:"Gastrointestinal irritation, photosensitivity and oesophageal irritation.",
+contra:"Tetracycline hypersensitivity; restrictions apply in pregnancy and young children depending on clinical context.",
+interactions:"Antacids, iron, calcium and other polyvalent cations can reduce absorption.",
+storage:"Room temperature away from excessive moisture.",
+counselling:"Take with adequate water and remain upright when appropriate; separate from mineral-containing products."
 },
 
 {
 name:"Warfarin",
 class:"Anticoagulant",
-category:"Vitamin K antagonist",
-uses:"Prevention and treatment of selected thromboembolic conditions.",
-mechanism:"Reduces synthesis of vitamin K-dependent clotting factors.",
-dose:"Highly individualized and determined using appropriate coagulation monitoring.",
+category:"Anticoagulant",
+uses:"Prevention and treatment of thromboembolic disorders.",
+mechanism:"Inhibits vitamin K epoxide reductase and reduces production of vitamin K-dependent clotting factors.",
+dose:"Highly individualised and adjusted using INR monitoring.",
 route:"Oral.",
-sideEffects:"Bleeding is the major safety concern.",
-contra:"Active serious bleeding and certain clinical circumstances require avoidance.",
-interactions:"Many medicines, foods and illnesses can affect anticoagulant response.",
-storage:"Store according to product instructions.",
-counselling:"Regular INR monitoring is essential when clinically indicated."
+sideEffects:"Bleeding and, rarely, skin/tissue complications.",
+contra:"Active major bleeding and selected high-risk situations.",
+interactions:"Numerous drug, food and herbal interactions.",
+storage:"Room temperature.",
+counselling:"Regular INR monitoring is essential. Maintain a consistent dietary vitamin K pattern and report bleeding."
 },
 
 {
 name:"Insulin",
 class:"Antidiabetic",
-category:"Hormone",
-uses:"Treatment of diabetes requiring insulin therapy.",
-mechanism:"Promotes glucose uptake and storage while reducing hepatic glucose production.",
-dose:"Individualized according to insulin type, meals, glucose monitoring and clinical plan.",
-route:"Usually subcutaneous; some specialized formulations/routes exist.",
-sideEffects:"Hypoglycaemia, injection-site reactions and weight changes may occur.",
-contra:"Insulin type and dose must be matched carefully to the patient's condition.",
-interactions:"Other glucose-lowering medicines and changes in food/activity can alter requirements.",
-storage:"Many insulin products require refrigeration before use. Follow the exact product label.",
-counselling:"Never interchange insulin products or concentrations without professional guidance."
+category:"Antidiabetic",
+uses:"Type 1 diabetes and selected type 2 diabetes situations.",
+mechanism:"Replaces or supplements insulin and promotes cellular glucose uptake.",
+dose:"Individualised according to insulin type, glucose readings, meals and clinical plan.",
+route:"Usually subcutaneous; some formulations/routes are used in specialist settings.",
+sideEffects:"Hypoglycaemia, weight gain and injection-site reactions.",
+contra:"Hypoglycaemia.",
+interactions:"Other glucose-lowering medicines and substances affecting glucose control.",
+storage:"Unopened insulin usually requires refrigeration; exact storage depends on product. Do not freeze.",
+counselling:"Learn injection technique, glucose monitoring and recognition/treatment of hypoglycaemia."
 },
 
 {
 name:"Furosemide",
 class:"Diuretic",
-category:"Loop diuretic",
-uses:"Oedema and selected cardiovascular or renal conditions.",
-mechanism:"Inhibits sodium and chloride reabsorption in the thick ascending limb of the loop of Henle.",
-dose:"Individualized according to indication, renal function and response.",
-route:"Oral and injectable forms.",
-sideEffects:"Dehydration, low potassium, low sodium, dizziness and other effects.",
-contra:"Severe electrolyte depletion and certain conditions require caution or avoidance.",
-interactions:"Other medicines affecting kidney function or electrolytes require consideration.",
-storage:"Store according to product label.",
-counselling:"Monitoring of fluid status and electrolytes may be necessary."
+category:"Diuretic",
+uses:"Oedema and hypertension in selected patients.",
+mechanism:"Loop diuretic inhibiting sodium and chloride reabsorption in the thick ascending limb.",
+dose:"Individualised according to indication and response.",
+route:"Oral or intravenous.",
+sideEffects:"Dehydration, hypotension, electrolyte disturbances and increased uric acid.",
+contra:"Severe dehydration and selected electrolyte disorders.",
+interactions:"Other antihypertensives, NSAIDs, lithium and medicines affecting electrolytes.",
+storage:"Room temperature according to product label.",
+counselling:"Monitor fluid balance and electrolytes where indicated."
 },
 
 {
 name:"Hydrochlorothiazide",
 class:"Diuretic",
-category:"Thiazide",
-uses:"Hypertension and selected oedematous states.",
-mechanism:"Reduces sodium reabsorption in the distal convoluted tubule.",
-dose:"Individualized according to indication and patient response.",
+category:"Diuretic",
+uses:"Hypertension and oedema.",
+mechanism:"Thiazide diuretic reducing sodium/chloride reabsorption in the distal convoluted tubule.",
+dose:"Individualised.",
 route:"Oral.",
-sideEffects:"Electrolyte disturbances, dizziness and metabolic effects may occur.",
-contra:"Severe renal impairment and certain electrolyte disorders require assessment.",
-interactions:"Other antihypertensives and medicines affecting electrolytes may interact.",
-storage:"Store according to label.",
-counselling:"Regular blood pressure and appropriate laboratory monitoring may be needed."
+sideEffects:"Electrolyte abnormalities, dehydration, hyperuricaemia and photosensitivity.",
+contra:"Severe hypersensitivity to thiazides and selected severe renal conditions.",
+interactions:"Lithium, digoxin and other antihypertensives.",
+storage:"Room temperature.",
+counselling:"Take consistently and follow blood pressure/electrolyte monitoring advice."
 },
 
 {
 name:"Fluconazole",
 class:"Antifungal",
-category:"Azole",
-uses:"Selected fungal infections.",
+category:"Antifungal",
+uses:"Selected Candida and other susceptible fungal infections.",
 mechanism:"Inhibits fungal ergosterol synthesis.",
-dose:"Depends on fungal infection, patient factors and clinical guideline.",
-route:"Oral and intravenous.",
-sideEffects:"Nausea, headache and liver-related adverse effects may occur.",
-contra:"Hypersensitivity and certain interacting medicines require consideration.",
-interactions:"Fluconazole can interact with many medicines through enzyme inhibition.",
-storage:"Store according to product instructions.",
-counselling:"Report severe rash or symptoms suggestive of liver injury."
+dose:"Depends strongly on infection and patient factors.",
+route:"Oral or intravenous.",
+sideEffects:"Nausea, headache, abdominal discomfort and liver enzyme abnormalities.",
+contra:"Relevant azole hypersensitivity and selected serious interactions.",
+interactions:"Important CYP-mediated interactions with several medicines.",
+storage:"According to product label.",
+counselling:"Complete the prescribed regimen and report signs of liver injury or serious rash."
 },
 
 {
 name:"Aspirin",
 class:"NSAID",
-category:"Analgesic / Antiplatelet",
-uses:"Pain and fever at some doses; antiplatelet therapy in selected cardiovascular indications.",
-mechanism:"Irreversibly inhibits cyclooxygenase and platelet thromboxane production.",
-dose:"Dose varies greatly by indication and should not be generalized.",
+category:"NSAID",
+uses:"Pain/fever in selected settings and antiplatelet therapy at low doses.",
+mechanism:"Irreversibly inhibits cyclooxygenase and platelet thromboxane formation.",
+dose:"Dose depends on indication; antiplatelet doses differ from analgesic doses.",
 route:"Oral.",
-sideEffects:"Gastrointestinal irritation and bleeding can occur.",
-contra:"Certain bleeding disorders, active ulcers and hypersensitivity require consideration.",
-interactions:"Anticoagulants and other NSAIDs can increase bleeding risks.",
-storage:"Store according to product instructions.",
-counselling:"Do not use aspirin for children with viral illness unless specifically directed by a qualified professional."
+sideEffects:"Gastrointestinal irritation/bleeding and hypersensitivity.",
+contra:"Active bleeding, serious salicylate hypersensitivity and selected clinical situations.",
+interactions:"Anticoagulants, other NSAIDs and medicines affecting bleeding risk.",
+storage:"Room temperature away from moisture.",
+counselling:"Do not use for cardiovascular prevention unless appropriately advised by a healthcare professional."
 },
 
 {
 name:"Ciprofloxacin",
 class:"Antibiotic",
-category:"Fluoroquinolone",
-uses:"Selected bacterial infections when clinically appropriate.",
-mechanism:"Inhibits bacterial DNA gyrase and topoisomerase IV.",
-dose:"Depends on indication, renal function and local antimicrobial guidelines.",
-route:"Oral and intravenous.",
-sideEffects:"Gastrointestinal effects, CNS effects and potentially serious tendon or neurological adverse effects may occur.",
-contra:"Use requires careful clinical assessment, particularly in certain age groups and conditions.",
-interactions:"Antacids and mineral supplements can reduce absorption.",
-storage:"Store according to product instructions.",
-counselling:"Use only when appropriate because antimicrobial resistance is an important concern."
+category:"Antibiotic",
+uses:"Selected susceptible bacterial infections.",
+mechanism:"Fluoroquinolone inhibiting bacterial DNA gyrase and topoisomerase IV.",
+dose:"Indication and patient dependent.",
+route:"Oral or intravenous.",
+sideEffects:"Gastrointestinal effects, CNS effects, QT prolongation and tendon injury risk.",
+contra:"Selected serious hypersensitivity and specific risk situations.",
+interactions:"Antacids/mineral products, certain cardiac medicines and other interacting drugs.",
+storage:"Room temperature.",
+counselling:"Separate from certain mineral-containing products and report tendon pain promptly."
 },
 
 {
 name:"Clotrimazole",
 class:"Antifungal",
-category:"Azole",
-uses:"Selected superficial fungal infections.",
-mechanism:"Interferes with fungal ergosterol synthesis.",
+category:"Antifungal",
+uses:"Superficial fungal infections and selected mucosal Candida infections.",
+mechanism:"Disrupts fungal cell-membrane ergosterol synthesis.",
 dose:"Depends on formulation and site of infection.",
-route:"Topical and vaginal formulations.",
-sideEffects:"Local irritation, burning or itching may occur.",
-contra:"Hypersensitivity to the product.",
-interactions:"Usually limited with topical use but depends on formulation.",
-storage:"Store according to label.",
-counselling:"Complete the recommended topical treatment period."
+route:"Topical or local vaginal/oral-mucosal formulations depending on product.",
+sideEffects:"Local irritation, burning or redness.",
+contra:"Hypersensitivity.",
+interactions:"Usually limited for topical use, but formulation-specific interactions may occur.",
+storage:"Room temperature.",
+counselling:"Use for the full recommended duration and keep affected areas clean and dry."
 },
 
 {
 name:"Hydrocortisone",
 class:"Corticosteroid",
-category:"Anti-inflammatory",
-uses:"Selected inflammatory and allergic conditions depending on formulation.",
-mechanism:"Modifies gene transcription and suppresses inflammatory and immune responses.",
-dose:"Highly formulation- and indication-dependent.",
-route:"Topical, oral, injectable and other formulations exist.",
-sideEffects:"Depend on route, dose and duration. Topical use can cause skin thinning with inappropriate prolonged use.",
-contra:"Certain infections and conditions require professional assessment.",
-interactions:"Many interactions are possible with systemic corticosteroids.",
-storage:"Follow formulation-specific instructions.",
-counselling:"Do not use prolonged systemic corticosteroids without professional supervision."
+category:"Corticosteroid",
+uses:"Inflammatory and allergic conditions; topical formulations treat selected skin disorders.",
+mechanism:"Glucocorticoid receptor agonist that suppresses inflammatory gene expression.",
+dose:"Depends on route, formulation and condition.",
+route:"Topical, oral, injectable and other formulations.",
+sideEffects:"Skin thinning with prolonged topical use; systemic effects depend on dose and duration.",
+contra:"Depends on formulation and clinical situation.",
+interactions:"Several medicines can interact with systemic corticosteroids.",
+storage:"Follow the product-specific instructions.",
+counselling:"Do not use prolonged topical therapy or systemic therapy without appropriate medical supervision."
 }
 
 ];
 
 
 /* =========================================================
-   INITIALIZATION
+   LARGE ANTICANCER DATABASE
 ========================================================= */
 
-document.getElementById("year").textContent =
-new Date().getFullYear();
+const anticancerDrugs = [
 
-document.getElementById("drugCount").textContent =
-drugs.length;
+{
+name:"Cyclophosphamide",
+category:"Alkylating agent",
+mechanism:"Forms DNA cross-links after metabolic activation, interfering with DNA replication and transcription.",
+uses:"Used in several haematological and solid malignancies and in selected combination chemotherapy protocols.",
+adverse:"Myelosuppression, nausea, alopecia, infertility and haemorrhagic cystitis.",
+monitoring:"CBC, renal function, hydration and signs of infection; protocol-specific monitoring.",
+counselling:"Patients should follow the oncology protocol and promptly report fever, bleeding or urinary symptoms."
+},
 
-renderDrugs();
+{
+name:"Ifosfamide",
+category:"Alkylating agent",
+mechanism:"Produces DNA cross-linking after hepatic activation.",
+uses:"Used in selected sarcomas and other malignancies, commonly in combination regimens.",
+adverse:"Myelosuppression, haemorrhagic cystitis, encephalopathy and renal toxicity.",
+monitoring:"CBC, renal function, urinalysis and neurological status.",
+counselling:"Adequate hydration and protocol-specific protective therapy are important."
+},
 
-updateDashboard();
+{
+name:"Cisplatin",
+category:"Platinum compound",
+mechanism:"Forms platinum-DNA adducts and cross-links that interfere with DNA replication.",
+uses:"Several solid tumours including selected testicular, ovarian, bladder, lung and head-and-neck cancers.",
+adverse:"Nephrotoxicity, ototoxicity, peripheral neuropathy, nausea/vomiting and myelosuppression.",
+monitoring:"Renal function, electrolytes, hearing where appropriate and blood counts.",
+counselling:"Hydration and antiemetic therapy are commonly incorporated into treatment protocols."
+},
 
-displayFiles();
+{
+name:"Carboplatin",
+category:"Platinum compound",
+mechanism:"Creates DNA cross-links that inhibit replication.",
+uses:"Ovarian, lung and other cancers in combination protocols.",
+adverse:"Myelosuppression, nausea, hypersensitivity and less renal toxicity than cisplatin in many settings.",
+monitoring:"CBC, renal function and hypersensitivity reactions.",
+counselling:"Attend scheduled laboratory tests before treatment cycles."
+},
 
-displayPublicResources();
+{
+name:"Oxaliplatin",
+category:"Platinum compound",
+mechanism:"Forms DNA cross-links and disrupts DNA replication.",
+uses:"Commonly used in colorectal cancer regimens and selected other cancers.",
+adverse:"Peripheral sensory neuropathy, myelosuppression, nausea and hypersensitivity.",
+monitoring:"Neurological symptoms, CBC and treatment-related reactions.",
+counselling:"Cold-triggered acute neuropathic symptoms can occur; follow oncology advice."
+},
 
-trackPageView();
+{
+name:"Doxorubicin",
+category:"Anthracycline",
+mechanism:"Intercalates DNA, inhibits topoisomerase II and generates free radicals.",
+uses:"Breast cancer, lymphomas, sarcomas and numerous other malignancies.",
+adverse:"Myelosuppression, alopecia, mucositis and dose-related cardiotoxicity.",
+monitoring:"CBC and cardiac function when clinically indicated.",
+counselling:"Report breathlessness, swelling, fever or other concerning symptoms."
+},
 
+{
+name:"Daunorubicin",
+category:"Anthracycline",
+mechanism:"Intercalates DNA and inhibits topoisomerase II.",
+uses:"Important component of selected acute leukaemia treatment protocols.",
+adverse:"Myelosuppression, mucositis, alopecia and cardiotoxicity.",
+monitoring:"CBC and cardiac assessment according to protocol.",
+counselling:"Treatment is administered under specialist oncology/haematology supervision."
+},
 
-/* =========================================================
-   NAVIGATION
-========================================================= */
+{
+name:"Epirubicin",
+category:"Anthracycline",
+mechanism:"Interferes with DNA replication and topoisomerase II activity.",
+uses:"Breast cancer and other selected malignancies.",
+adverse:"Myelosuppression, nausea, alopecia and cardiotoxicity.",
+monitoring:"Blood counts and cardiac function where indicated.",
+counselling:"Follow cycle schedules and report infection symptoms promptly."
+},
 
-function toggleMenu(){
+{
+name:"Paclitaxel",
+category:"Taxane",
+mechanism:"Stabilises microtubules and prevents normal mitotic spindle function.",
+uses:"Breast, ovarian, lung and several other cancers.",
+adverse:"Peripheral neuropathy, myelosuppression, hypersensitivity reactions and alopecia.",
+monitoring:"CBC, neurological symptoms and infusion reactions.",
+counselling:"Premedication may be required to reduce infusion-related hypersensitivity."
+},
 
-document
-.getElementById("navigation")
-.classList.toggle("open");
+{
+name:"Docetaxel",
+category:"Taxane",
+mechanism:"Promotes microtubule stabilisation and blocks cell division.",
+uses:"Breast, prostate, lung, gastric and other cancers.",
+adverse:"Neutropenia, fluid retention, neuropathy, nail changes and hypersensitivity.",
+monitoring:"CBC, liver function and infusion reactions.",
+counselling:"Report fever, swelling or breathing difficulty promptly."
+},
 
+{
+name:"Vincristine",
+category:"Vinca alkaloid",
+mechanism:"Prevents microtubule formation and disrupts mitosis.",
+uses:"Acute leukaemias, lymphomas and other haematological malignancies.",
+adverse:"Peripheral neuropathy, constipation and SIADH; severe tissue injury if extravasated.",
+monitoring:"Neurological status, bowel function and administration safety.",
+counselling:"It is administered intravenously under specialist protocols and must never be given intrathecally."
+},
+
+{
+name:"Vinblastine",
+category:"Vinca alkaloid",
+mechanism:"Inhibits microtubule assembly and cell division.",
+uses:"Hodgkin lymphoma and selected solid/haematological cancers.",
+adverse:"Myelosuppression, neuropathy, mucositis and gastrointestinal effects.",
+monitoring:"CBC and neurological assessment.",
+counselling:"Attend scheduled blood-count monitoring."
+},
+
+{
+name:"Etoposide",
+category:"Topoisomerase inhibitor",
+mechanism:"Inhibits topoisomerase II and produces DNA strand breaks.",
+uses:"Lung cancer, testicular cancer and selected haematological malignancies.",
+adverse:"Myelosuppression, alopecia, nausea and hypersensitivity.",
+monitoring:"CBC and infusion reactions.",
+counselling:"Report fever, unusual bleeding or severe allergic symptoms."
+},
+
+{
+name:"Irinotecan",
+category:"Topoisomerase I inhibitor",
+mechanism:"Inhibits topoisomerase I, causing DNA damage during replication.",
+uses:"Commonly used in colorectal cancer regimens.",
+adverse:"Diarrhoea, neutropenia, nausea and cholinergic symptoms.",
+monitoring:"CBC, diarrhoea severity and liver function.",
+counselling:"Early or late diarrhoea requires prompt management according to the oncology protocol."
+},
+
+{
+name:"Topotecan",
+category:"Topoisomerase I inhibitor",
+mechanism:"Inhibits topoisomerase I and causes DNA damage.",
+uses:"Selected ovarian, cervical and small-cell lung cancers.",
+adverse:"Myelosuppression, fatigue, nausea and diarrhoea.",
+monitoring:"CBC and organ function as indicated.",
+counselling:"Infection and bleeding symptoms require urgent assessment."
+},
+
+{
+name:"5-Fluorouracil",
+category:"Antimetabolite",
+mechanism:"A pyrimidine analogue that inhibits thymidylate synthase and interferes with RNA/DNA synthesis.",
+uses:"Colorectal, gastric, pancreatic, breast and other cancers.",
+adverse:"Mucositis, diarrhoea, myelosuppression, hand-foot syndrome and cardiotoxicity.",
+monitoring:"CBC and clinical toxicity assessment.",
+counselling:"Report severe diarrhoea, mouth ulcers, chest pain or fever."
+},
+
+{
+name:"Capecitabine",
+category:"Oral fluoropyrimidine",
+mechanism:"Orally administered prodrug converted to 5-fluorouracil in tissues.",
+uses:"Colorectal, breast and other cancers.",
+adverse:"Hand-foot syndrome, diarrhoea, mucositis and myelosuppression.",
+monitoring:"CBC, renal function and toxicity.",
+counselling:"Take exactly according to the prescribed cycle and report severe hand-foot symptoms."
+},
+
+{
+name:"Methotrexate",
+category:"Antimetabolite",
+mechanism:"Inhibits dihydrofolate reductase and disrupts folate-dependent nucleotide synthesis.",
+uses:"Leukaemias, lymphomas, osteosarcoma and other cancers; also has non-cancer indications.",
+adverse:"Myelosuppression, mucositis, hepatotoxicity and renal toxicity at high doses.",
+monitoring:"CBC, liver and renal function according to protocol.",
+counselling:"High-dose therapy may require specialised rescue and monitoring."
+},
+
+{
+name:"Cytarabine",
+category:"Antimetabolite",
+mechanism:"Pyrimidine analogue that inhibits DNA synthesis.",
+uses:"Acute myeloid leukaemia and other haematological malignancies.",
+adverse:"Myelosuppression, mucositis, gastrointestinal effects and neurological toxicity at high doses.",
+monitoring:"CBC, neurological status and organ function.",
+counselling:"Treatment requires specialist haematology monitoring."
+},
+
+{
+name:"Gemcitabine",
+category:"Antimetabolite",
+mechanism:"Pyrimidine analogue that interferes with DNA synthesis.",
+uses:"Pancreatic, lung, bladder, breast and other cancers.",
+adverse:"Myelosuppression, fatigue, flu-like symptoms and liver abnormalities.",
+monitoring:"CBC and liver function.",
+counselling:"Report fever and unusual bleeding."
+},
+
+{
+name:"Pemetrexed",
+category:"Antifolate",
+mechanism:"Inhibits several folate-dependent enzymes required for nucleotide synthesis.",
+uses:"Selected non-small-cell lung cancer and mesothelioma.",
+adverse:"Myelosuppression, fatigue, mucositis and skin reactions.",
+monitoring:"CBC, renal function and protocol-specific vitamin supplementation.",
+counselling:"Folic acid and vitamin B12 supplementation may be required before and during therapy."
+},
+
+{
+name:"Imatinib",
+category:"Targeted tyrosine kinase inhibitor",
+mechanism:"Inhibits BCR-ABL and other selected tyrosine kinases.",
+uses:"Chronic myeloid leukaemia, gastrointestinal stromal tumours and selected other malignancies.",
+adverse:"Oedema, nausea, muscle cramps, cytopenias and liver abnormalities.",
+monitoring:"CBC, liver function and disease-specific molecular monitoring.",
+counselling:"Take consistently and report severe swelling, bleeding or jaundice."
+},
+
+{
+name:"Dasatinib",
+category:"Tyrosine kinase inhibitor",
+mechanism:"Inhibits BCR-ABL and several SRC-family kinases.",
+uses:"Selected chronic myeloid and acute lymphoblastic leukaemias.",
+adverse:"Myelosuppression, pleural effusion and QT/cardiac effects.",
+monitoring:"CBC and respiratory/cardiac assessment.",
+counselling:"Report shortness of breath or chest discomfort."
+},
+
+{
+name:"Osimertinib",
+category:"EGFR tyrosine kinase inhibitor",
+mechanism:"Irreversibly inhibits mutant EGFR signalling.",
+uses:"Selected EGFR-mutated non-small-cell lung cancer.",
+adverse:"Diarrhoea, rash, nail changes and potential QT prolongation or interstitial lung disease.",
+monitoring:"ECG and pulmonary assessment when indicated.",
+counselling:"Report new or worsening cough and breathing difficulty."
+},
+
+{
+name:"Trastuzumab",
+category:"Monoclonal antibody",
+mechanism:"Targets HER2 and inhibits HER2-mediated signalling.",
+uses:"HER2-positive breast and selected gastric cancers.",
+adverse:"Infusion reactions and potential cardiotoxicity.",
+monitoring:"Cardiac function and infusion reactions.",
+counselling:"Cardiac monitoring may be required during treatment."
+},
+
+{
+name:"Rituximab",
+category:"Monoclonal antibody",
+mechanism:"Targets CD20 on B lymphocytes, producing antibody-mediated cell depletion.",
+uses:"Selected B-cell lymphomas and leukaemias and some immune disorders.",
+adverse:"Infusion reactions, infections and hepatitis B reactivation risk.",
+monitoring:"Infection risk and appropriate screening before therapy.",
+counselling:"Patients should report fever or signs of infection."
+},
+
+{
+name:"Bevacizumab",
+category:"Anti-VEGF monoclonal antibody",
+mechanism:"Blocks vascular endothelial growth factor signalling and inhibits tumour angiogenesis.",
+uses:"Several colorectal, renal, lung, ovarian and other cancers.",
+adverse:"Hypertension, bleeding, thrombosis, impaired wound healing and proteinuria.",
+monitoring:"Blood pressure, urine protein and bleeding/wound status.",
+counselling:"Surgical procedures may require special timing around therapy."
+},
+
+{
+name:"Pembrolizumab",
+category:"Immune checkpoint inhibitor",
+mechanism:"Blocks PD-1, restoring T-cell activity against tumour cells.",
+uses:"Many cancers with appropriate biomarker/clinical indications.",
+adverse:"Immune-mediated inflammation affecting organs such as skin, bowel, liver, lungs or endocrine glands.",
+monitoring:"Clinical symptoms and organ-specific laboratory tests.",
+counselling:"New diarrhoea, cough, rash, jaundice or unusual fatigue should be reported promptly."
+},
+
+{
+name:"Nivolumab",
+category:"Immune checkpoint inhibitor",
+mechanism:"Blocks PD-1-mediated immune suppression.",
+uses:"Multiple solid and haematological cancers.",
+adverse:"Immune-related adverse events affecting multiple organs.",
+monitoring:"Thyroid, liver, renal and clinical assessments according to protocol.",
+counselling:"Immune-related toxicity can occur even after treatment; report new symptoms."
+},
+
+{
+name:"Tamoxifen",
+category:"Selective estrogen receptor modulator",
+mechanism:"Blocks estrogen action in breast tissue.",
+uses:"Hormone-receptor-positive breast cancer and prevention in selected high-risk patients.",
+adverse:"Hot flushes, thromboembolic events and endometrial changes.",
+monitoring:"Clinical assessment for thromboembolism and abnormal uterine bleeding.",
+counselling:"Report leg swelling, chest pain or unusual vaginal bleeding."
+},
+
+{
+name:"Anastrozole",
+category:"Aromatase inhibitor",
+mechanism:"Reduces peripheral conversion of androgens to oestrogens.",
+uses:"Hormone-receptor-positive breast cancer, especially in postmenopausal patients.",
+adverse:"Joint pain, reduced bone mineral density and menopausal symptoms.",
+monitoring:"Bone health and cardiovascular risk factors.",
+counselling:"Bone-health measures and monitoring may be recommended."
+},
+
+{
+name:"Letrozole",
+category:"Aromatase inhibitor",
+mechanism:"Suppresses aromatase and decreases estrogen synthesis.",
+uses:"Hormone-receptor-positive breast cancer in appropriate patients.",
+adverse:"Arthralgia, hot flushes, osteoporosis and lipid changes.",
+monitoring:"Bone density and cardiovascular risk factors.",
+counselling:"Adherence is important because hormonal therapy is often long-term."
+},
+
+{
+name:"Bicalutamide",
+category:"Androgen receptor antagonist",
+mechanism:"Blocks androgen receptor signalling.",
+uses:"Selected prostate cancer treatment protocols.",
+adverse:"Hot flushes, breast tenderness and liver abnormalities.",
+monitoring:"Liver function and prostate cancer response.",
+counselling:"Take consistently and follow the hormonal treatment protocol."
+},
+
+{
+name:"Enzalutamide",
+category:"Androgen receptor inhibitor",
+mechanism:"Blocks androgen receptor signalling at several stages.",
+uses:"Selected advanced prostate cancers.",
+adverse:"Fatigue, hypertension, falls and seizure risk in susceptible patients.",
+monitoring:"Blood pressure, neurological symptoms and treatment response.",
+counselling:"Report seizures or severe neurological symptoms."
+},
+
+{
+name:"Hydroxyurea",
+category:"Antimetabolite",
+mechanism:"Inhibits ribonucleotide reductase and reduces DNA synthesis.",
+uses:"Selected myeloproliferative disorders and other haematological conditions.",
+adverse:"Myelosuppression, skin changes and gastrointestinal effects.",
+monitoring:"CBC and renal function.",
+counselling:"Regular blood tests are essential."
+},
+
+{
+name:"Temozolomide",
+category:"Alkylating agent",
+mechanism:"Produces methylation damage to DNA.",
+uses:"Glioblastoma and selected brain tumours.",
+adverse:"Myelosuppression, nausea, fatigue and infection risk.",
+monitoring:"CBC and liver function according to protocol.",
+counselling:"Follow exact treatment cycles and antiemetic instructions."
+},
+
+{
+name:"Procarbazine",
+category:"Alkylating-like agent",
+mechanism:"Produces reactive metabolites that damage DNA.",
+uses:"Selected lymphoma treatment regimens.",
+adverse:"Myelosuppression, nausea and CNS effects.",
+monitoring:"CBC and neurological/clinical assessment.",
+counselling:"Important dietary and drug interactions may apply; follow oncology instructions carefully."
+},
+
+{
+name:"Melphalan",
+category:"Alkylating agent",
+mechanism:"Cross-links DNA and prevents replication.",
+uses:"Multiple myeloma and selected other malignancies.",
+adverse:"Myelosuppression, nausea and infertility.",
+monitoring:"CBC and organ function.",
+counselling:"Infection precautions and laboratory monitoring are important."
+},
+
+{
+name:"Bendamustine",
+category:"Alkylating agent",
+mechanism:"Produces DNA damage and has purine-analogue properties.",
+uses:"Selected lymphomas and chronic lymphocytic leukaemia.",
+adverse:"Myelosuppression, infections, nausea and infusion reactions.",
+monitoring:"CBC and infection status.",
+counselling:"Report fever and other signs of infection promptly."
+},
+
+{
+name:"Bortezomib",
+category:"Proteasome inhibitor",
+mechanism:"Inhibits the proteasome, disrupting protein degradation and causing malignant plasma-cell death.",
+uses:"Multiple myeloma and selected lymphomas.",
+adverse:"Peripheral neuropathy, thrombocytopenia, herpes zoster reactivation and gastrointestinal effects.",
+monitoring:"Neurological symptoms, CBC and infection risk.",
+counselling:"Antiviral prophylaxis may be used in appropriate protocols."
+},
+
+{
+name:"Lenalidomide",
+category:"Immunomodulatory agent",
+mechanism:"Modifies immune signalling and has anti-neoplastic effects.",
+uses:"Multiple myeloma and selected haematological malignancies.",
+adverse:"Myelosuppression, thrombosis and teratogenicity.",
+monitoring:"CBC and thrombosis risk.",
+counselling:"Strict pregnancy-prevention measures are required where applicable."
+},
+
+{
+name:"Venetoclax",
+category:"BCL-2 inhibitor",
+mechanism:"Inhibits BCL-2 and promotes apoptosis in susceptible malignant cells.",
+uses:"Selected chronic lymphocytic leukaemia and acute myeloid leukaemia protocols.",
+adverse:"Neutropenia, infections and tumour lysis syndrome.",
+monitoring:"Blood counts and tumour lysis laboratory monitoring during initiation.",
+counselling:"Dose escalation schedules must be followed exactly."
+},
+
+{
+name:"Abiraterone",
+category:"Androgen synthesis inhibitor",
+mechanism:"Inhibits CYP17 and reduces androgen production.",
+uses:"Selected advanced prostate cancer regimens.",
+adverse:"Hypertension, hypokalaemia, fluid retention and liver abnormalities.",
+monitoring:"Blood pressure, potassium and liver function.",
+counselling:"Usually used with corticosteroid therapy according to protocol."
+},
+
+{
+name:"Sorafenib",
+category:"Multikinase inhibitor",
+mechanism:"Inhibits several kinases involved in tumour proliferation and angiogenesis.",
+uses:"Selected renal, liver and thyroid cancers.",
+adverse:"Hand-foot skin reaction, hypertension, diarrhoea and fatigue.",
+monitoring:"Blood pressure, skin toxicity and organ function.",
+counselling:"Skin-care measures may reduce hand-foot syndrome."
+},
+
+{
+name:"Sunitinib",
+category:"Multikinase inhibitor",
+mechanism:"Inhibits receptor tyrosine kinases involved in angiogenesis and tumour growth.",
+uses:"Selected renal cell carcinoma and gastrointestinal stromal tumours.",
+adverse:"Hypertension, fatigue, hand-foot syndrome and thyroid abnormalities.",
+monitoring:"Blood pressure, thyroid function and cardiac status when indicated.",
+counselling:"Report severe fatigue, chest symptoms or significant skin reactions."
+},
+
+{
+name:"Everolimus",
+category:"mTOR inhibitor",
+mechanism:"Inhibits mTOR signalling, reducing cellular growth and proliferation.",
+uses:"Selected cancers including renal, breast and neuroendocrine tumours.",
+adverse:"Stomatitis, infections, pneumonitis and metabolic effects.",
+monitoring:"CBC, glucose/lipids and respiratory symptoms.",
+counselling:"Report persistent cough or breathing difficulty."
+},
+
+{
+name:"Erlotinib",
+category:"EGFR tyrosine kinase inhibitor",
+mechanism:"Blocks EGFR signalling.",
+uses:"Selected EGFR-driven non-small-cell lung and pancreatic cancers.",
+adverse:"Acneiform rash, diarrhoea and interstitial lung disease.",
+monitoring:"Skin, gastrointestinal and respiratory symptoms.",
+counselling:"Report new respiratory symptoms promptly."
+},
+
+{
+name:"Gefitinib",
+category:"EGFR tyrosine kinase inhibitor",
+mechanism:"Inhibits EGFR signalling in susceptible tumours.",
+uses:"Selected EGFR-mutated non-small-cell lung cancer.",
+adverse:"Diarrhoea, skin rash and rare interstitial lung disease.",
+monitoring:"Respiratory and liver assessment.",
+counselling:"Take consistently and report breathing difficulties."
 }
 
+];
+
 
 /* =========================================================
-   SEARCH
+   DRUG RENDERING
 ========================================================= */
 
-function performSearch(){
+function renderDrugs(){
 
-const query =
-document.getElementById("mainSearch")
+const grid=document.getElementById("drugGrid");
+
+const search=document.getElementById("drugSearch")
 .value
 .toLowerCase()
 .trim();
 
-const resultBox =
-document.getElementById("searchResults");
+const category=document.getElementById("drugCategory")
+.value;
 
-if(!query){
+const filtered=drugs.filter(drug=>{
 
-resultBox.innerHTML="";
+const matchesSearch=
+drug.name.toLowerCase().includes(search) ||
+drug.class.toLowerCase().includes(search) ||
+drug.category.toLowerCase().includes(search) ||
+drug.uses.toLowerCase().includes(search);
 
-return;
+const matchesCategory=
+category==="all" ||
+drug.category===category;
 
-}
-
-
-const results =
-drugs.filter(drug=>{
-
-const text=(
-
-drug.name+" "+
-drug.class+" "+
-drug.category+" "+
-drug.uses+" "+
-drug.mechanism+" "+
-drug.sideEffects
-
-).toLowerCase();
-
-return text.includes(query);
+return matchesSearch && matchesCategory;
 
 });
 
+grid.innerHTML="";
 
-if(!results.length){
+if(filtered.length===0){
 
-resultBox.innerHTML=`
-
-<div class="search-results">
-
-<div class="search-result">
-
-<b>No local drug record found.</b>
-
-<br>
-
-Try another term or ask Dr. DEVIS AI.
-
-</div>
-
-</div>
-
-`;
+grid.innerHTML=`
+<div class="card">
+<h3>No drug found</h3>
+<p>Try another medicine or drug class.</p>
+</div>`;
 
 return;
-
 }
 
+filtered.forEach((drug,index)=>{
 
-resultBox.innerHTML=`
+const card=document.createElement("div");
 
-<div class="search-results">
+card.className="card drug-card";
 
-${results.slice(0,8).map(drug=>`
+card.innerHTML=`
+
+<h3>${drug.name}</h3>
+
+<span class="drug-class">
+${drug.class}
+</span>
+
+<p>
+<b>Uses:</b> ${drug.uses}
+</p>
+
+<button
+class="btn btn-primary"
+onclick="toggleDrug(${index}, '${drug.name.replace(/'/g,"\\'")}')">
+View full information
+</button>
 
 <div
-class="search-result"
-onclick="openDrug('${escapeQuotes(drug.name)}')">
+class="drug-detail"
+id="drugDetail${index}">
 
-<b>${drug.name}</b>
-
-<br>
-
-<small>
-${drug.class} • ${drug.category}
-</small>
-
+<div class="info-row">
+<strong>Mechanism:</strong>
+${drug.mechanism}
 </div>
 
-`).join("")}
-
+<div class="info-row">
+<strong>Dose:</strong>
+${drug.dose}
 </div>
 
+<div class="info-row">
+<strong>Route:</strong>
+${drug.route}
+</div>
+
+<div class="info-row">
+<strong>Side effects:</strong>
+${drug.sideEffects}
+</div>
+
+<div class="info-row">
+<strong>Contraindications:</strong>
+${drug.contra}
+</div>
+
+<div class="info-row">
+<strong>Interactions:</strong>
+${drug.interactions}
+</div>
+
+<div class="info-row">
+<strong>Storage:</strong>
+${drug.storage}
+</div>
+
+<div class="info-row">
+<strong>Counselling:</strong>
+${drug.counselling}
+</div>
+
+</div>
 `;
+
+grid.appendChild(card);
+
+});
+
+document.getElementById("drugCount").textContent=drugs.length;
 
 }
 
 
 /* =========================================================
-   DRUG FUNCTIONS
+   DRUG DETAILS
 ========================================================= */
 
-function renderDrugs(list=drugs){
+function toggleDrug(index,name){
 
-document.getElementById("drugGrid").innerHTML=
+const detail=document.getElementById("drugDetail"+index);
 
-list.map(drug=>`
+if(detail){
+detail.classList.toggle("show");
+}
 
-<article
-class="drug-card"
-onclick="openDrug('${escapeQuotes(drug.name)}')">
+}
 
-<span class="drug-class">
-${drug.class}
-</span>
+
+/* =========================================================
+   ANTICANCER RENDERING
+========================================================= */
+
+function renderAnticancer(){
+
+const grid=document.getElementById("anticancerGrid");
+
+grid.innerHTML="";
+
+anticancerDrugs.forEach((drug,index)=>{
+
+const card=document.createElement("div");
+
+card.className="card cancer-card";
+
+card.innerHTML=`
+
+<div class="cancer-category">
+${drug.category}
+</div>
 
 <h3>${drug.name}</h3>
 
 <p>
-<b>Category:</b>
-${drug.category}
+<strong>Mechanism:</strong>
+${drug.mechanism}
 </p>
 
 <p>
+<strong>Common uses:</strong>
 ${drug.uses}
 </p>
 
-</article>
-
-`).join("");
-
-}
-
-
-function filterDrugs(){
-
-const query =
-document.getElementById("drugSearch")
-.value.toLowerCase();
-
-const selectedClass =
-document.getElementById("drugClassFilter")
-.value;
-
-
-const filtered =
-drugs.filter(drug=>{
-
-const matchesSearch=(
-
-drug.name+
-" "+
-drug.category+
-" "+
-drug.uses+
-" "+
-drug.mechanism
-
-).toLowerCase().includes(query);
-
-const matchesClass=
-!selectedClass ||
-drug.class===selectedClass;
-
-return matchesSearch &&
-matchesClass;
-
-});
-
-
-renderDrugs(filtered);
-
-}
-
-
-function showAllDrugs(){
-
-document.getElementById("drugSearch").value="";
-
-document.getElementById("drugClassFilter").value="";
-
-renderDrugs(drugs);
-
-}
-
-
-function openDrug(name){
-
-const drug=
-drugs.find(
-item=>item.name===name
-);
-
-if(!drug)return;
-
-
-const detail=
-document.getElementById("drugDetail");
-
-detail.classList.add("active");
-
-
-detail.innerHTML=`
-
-<div
-style="
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:15px;
-">
-
-<div>
-
-<span class="drug-class">
-${drug.class}
-</span>
-
-<h2 style="margin-top:10px">
-${drug.name}
-</h2>
-
-</div>
-
-<button
-class="btn btn-danger"
-onclick="closeDrugDetail()">
-
-Close
-
-</button>
-
-</div>
-
-
-<div class="detail-grid">
-
-
-<div class="detail-item">
-
-<strong>
-Therapeutic category
-</strong>
-
-${drug.category}
-
-</div>
-
-
-<div class="detail-item">
-
-<strong>
-Common uses
-</strong>
-
-${drug.uses}
-
-</div>
-
-
-<div class="detail-item">
-
-<strong>
-Mechanism of action
-</strong>
-
-${drug.mechanism}
-
-</div>
-
-
-<div class="detail-item">
-
-<strong>
-Dosage information
-</strong>
-
-${drug.dose}
-
-</div>
-
-
-<div class="detail-item">
-
-<strong>
-Route of administration
-</strong>
-
-${drug.route}
-
-</div>
-
-
-<div class="detail-item">
-
-<strong>
-Adverse effects
-</strong>
-
-${drug.sideEffects}
-
-</div>
-
-
-<div class="detail-item">
-
-<strong>
-Contraindications / cautions
-</strong>
-
-${drug.contra}
-
-</div>
-
-
-<div class="detail-item">
-
-<strong>
-Important interactions
-</strong>
-
-${drug.interactions}
-
-</div>
-
-
-<div class="detail-item">
-
-<strong>
-Storage
-</strong>
-
-${drug.storage}
-
-</div>
-
-
-<div class="detail-item">
-
-<strong>
-Patient counselling
-</strong>
-
+<details>
+
+<summary>
+More clinical information
+</summary>
+
+<p>
+<strong>Important adverse effects:</strong>
+${drug.adverse}
+</p>
+
+<p>
+<strong>Monitoring:</strong>
+${drug.monitoring}
+</p>
+
+<p>
+<strong>Patient counselling:</strong>
 ${drug.counselling}
+</p>
 
-</div>
-
-
-</div>
-
-
-<div class="notice">
-
-<b>Clinical safety:</b>
-
-Exact dose, frequency, duration and treatment suitability must be
-determined from the patient's age, weight, diagnosis, organ function,
-formulation, other medicines and current clinical guidelines.
-
-</div>
+</details>
 
 `;
 
+grid.appendChild(card);
 
-detail.scrollIntoView({
-behavior:"smooth",
-block:"start"
 });
-
-}
-
-
-function closeDrugDetail(){
-
-document
-.getElementById("drugDetail")
-.classList.remove("active");
 
 }
 
 
 /* =========================================================
-   AI
+   GLOBAL SEARCH
 ========================================================= */
 
-let aiQuestionCount=
-Number(
-localStorage.getItem(
-"devisAIQuestions"
-)||0
+function globalSearch(){
+
+const input=document.getElementById("globalSearch");
+
+const query=input.value.toLowerCase().trim();
+
+const results=document.getElementById("searchResults");
+
+if(!query){
+
+results.innerHTML="";
+
+return;
+
+}
+
+const normalResults=drugs.filter(d=>
+d.name.toLowerCase().includes(query) ||
+d.class.toLowerCase().includes(query) ||
+d.category.toLowerCase().includes(query) ||
+d.uses.toLowerCase().includes(query)
 );
 
+const cancerResults=anticancerDrugs.filter(d=>
+d.name.toLowerCase().includes(query) ||
+d.category.toLowerCase().includes(query) ||
+d.uses.toLowerCase().includes(query)
+);
 
-async function askDrDevis(){
+let html="";
 
-const input=
-document.getElementById("aiQuestion");
+if(normalResults.length){
 
-const question=
-input.value.trim();
+html+=`
+<div style="
+background:white;
+color:#17202a;
+padding:15px;
+border-radius:10px;
+text-align:left;
+max-width:850px;
+margin:auto;
+">
 
-if(!question)return;
-
-
-const chat=
-document.getElementById("chatBox");
-
-
-chat.innerHTML+=`
-
-<div class="message user">
-${escapeHTML(question)}
-</div>
-
+<h3 style="color:#063970;">
+Drug Library Results
+</h3>
 `;
 
+normalResults.slice(0,8).forEach(d=>{
 
-input.value="";
+html+=`
+<p style="margin-top:8px;">
+<b>${d.name}</b> —
+${d.class}
+</p>
+`;
 
-aiQuestionCount++;
+});
+
+html+=`</div>`;
+
+}
+
+if(cancerResults.length){
+
+html+=`
+<div style="
+background:white;
+color:#17202a;
+padding:15px;
+border-radius:10px;
+text-align:left;
+max-width:850px;
+margin:10px auto;
+">
+
+<h3 style="color:#8e44ad;">
+Anticancer Results
+</h3>
+`;
+
+cancerResults.slice(0,8).forEach(d=>{
+
+html+=`
+<p style="margin-top:8px;">
+<b>${d.name}</b> —
+${d.category}
+</p>
+`;
+
+});
+
+html+=`</div>`;
+
+}
+
+if(!html){
+
+html=`
+<div style="
+background:white;
+color:#17202a;
+padding:15px;
+border-radius:10px;
+max-width:850px;
+margin:auto;
+">
+No matching information found.
+</div>
+`;
+
+}
+
+results.innerHTML=html;
+
+}
+
+
+/* =========================================================
+   AI CHAT
+========================================================= */
+
+let aiQuestions=
+parseInt(localStorage.getItem("devisAIQuestions") || "0");
+
+function askDrDevis(){
+
+const input=document.getElementById("aiQuestion");
+
+const question=input.value.trim();
+
+if(!question) return;
+
+addMessage("user",question);
+
+aiQuestions++;
 
 localStorage.setItem(
 "devisAIQuestions",
-aiQuestionCount
+aiQuestions
 );
 
-updateDashboard();
+document.getElementById("aiCount")
+.textContent=aiQuestions;
 
+input.value="";
 
-const id=
-"thinking-"+Date.now();
+/*
+Secure AI backend connection.
 
+If your hosting/server has:
+POST /api/ask
 
-chat.innerHTML+=`
+the question can be sent to your protected AI service.
 
-<div
-class="message bot"
-id="${id}">
+The API should return:
+{
+  "answer":"..."
+}
 
-Dr. DEVIS is preparing an answer...
+The API key must NEVER be placed directly in this HTML file.
+*/
 
-</div>
-
-`;
-
-chat.scrollTop=
-chat.scrollHeight;
-
-
-try{
-
-const response=
-await fetch("/api/ask",{
+fetch("/api/ask",{
 
 method:"POST",
 
 headers:{
-"Content-Type":
-"application/json"
+"Content-Type":"application/json"
 },
 
 body:JSON.stringify({
 question:question
 })
 
-});
+})
+.then(response=>{
 
-
-if(!response.ok)
-throw new Error();
-
-
-const data=
-await response.json();
-
-
-document
-.getElementById(id)
-?.remove();
-
-
-chat.innerHTML+=`
-
-<div class="message bot">
-
-${escapeHTML(
-data.answer||
-"No response returned."
-)}
-
-</div>
-
-`;
-
-}catch(error){
-
-document
-.getElementById(id)
-?.remove();
-
-
-chat.innerHTML+=`
-
-<div class="message bot">
-
-${escapeHTML(
-localAI(question)
-)}
-
-<br><br>
-
-<small>
-
-Live Meta AI requires the secure
-<code>/api/ask</code> backend connection.
-
-</small>
-
-</div>
-
-`;
-
+if(!response.ok){
+throw new Error("AI backend unavailable");
 }
 
+return response.json();
 
-chat.scrollTop=
-chat.scrollHeight;
+})
+.then(data=>{
+
+addMessage(
+"bot",
+data.answer || localAI(question)
+);
+
+})
+.catch(()=>{
+
+addMessage(
+"bot",
+localAI(question)
+);
+
+});
 
 }
 
 
 /* =========================================================
-   LOCAL FALLBACK
+   LOCAL AI FALLBACK
 ========================================================= */
 
 function localAI(question){
 
-const q=
-question.toLowerCase();
+const q=question.toLowerCase();
 
-
-const drug=
-drugs.find(
-item=>
-q.includes(
-item.name.toLowerCase()
-)
-);
-
-
-if(drug){
-
-return (
-
-drug.name+
-" is classified as "+
-drug.class+
-".\n\n"+
-
-"Common educational uses: "+
-drug.uses+
-"\n\n"+
-
-"Mechanism: "+
-drug.mechanism+
-"\n\n"+
-
-"Important safety information: "+
-drug.sideEffects+
-"\n\n"+
-
-"For patient-specific dosing and treatment, consult a qualified pharmacist or clinician."
-
-);
-
-}
-
-
-if(q.includes("adme")){
+if(
+q.includes("paracetamol") ||
+q.includes("acetaminophen")
+){
 
 return `
-ADME means:
-
-A — Absorption
-D — Distribution
-M — Metabolism
-E — Excretion
-
-It describes the major processes affecting a medicine in the body.
+Paracetamol is an analgesic and antipyretic used for
+pain and fever. Use the dose on the specific product or
+as prescribed, and avoid taking multiple products that
+contain paracetamol. Excessive dosing can cause serious
+liver injury.
 `;
 
 }
 
-
-if(q.includes("pharmacodynamics")){
+if(
+q.includes("antibiotic") ||
+q.includes("amoxicillin")
+){
 
 return `
-Pharmacodynamics describes what a drug does to the body.
-
-It includes receptor interactions, mechanisms of action,
-therapeutic effects and adverse effects.
+Antibiotics are medicines used against susceptible bacterial
+infections. They do not treat viral infections such as most
+common colds. Antibiotics should be taken according to the
+prescribed regimen and should not be shared with another person.
 `;
 
 }
 
-
-if(q.includes("pharmacokinetics")){
+if(
+q.includes("cancer") ||
+q.includes("anticancer") ||
+q.includes("chemotherapy")
+){
 
 return `
-Pharmacokinetics describes what the body does to a drug.
-
-The major processes are absorption, distribution, metabolism and excretion.
+Anticancer treatment includes chemotherapy, targeted therapy,
+hormonal therapy, immunotherapy and other approaches. The
+appropriate medicine depends on the cancer type, stage,
+molecular characteristics and patient factors. Anticancer
+medicines require specialist supervision.
 `;
 
 }
 
-
-if(q.includes("antibiotic")){
+if(
+q.includes("dose") ||
+q.includes("dosage")
+){
 
 return `
-Antibiotics are medicines used to treat susceptible bacterial infections.
-
-They do not treat ordinary viral infections.
-
-Appropriate antibiotic selection depends on the suspected organism,
-site of infection, resistance patterns, allergies, patient factors
-and current treatment guidelines.
+Drug dosage depends on the medicine, indication, age, weight,
+renal function, hepatic function, formulation and other patient
+factors. A safe dose should therefore be taken from the
+appropriate product information or a qualified healthcare
+professional rather than guessed.
 `;
 
 }
 
+if(
+q.includes("side effect") ||
+q.includes("adverse")
+){
 
 return `
-I can explain medicines, pharmacology, drug classes,
-mechanisms, adverse effects, interactions and pharmacy concepts.
+Adverse effects vary between medicines. If a person develops
+difficulty breathing, severe swelling, loss of consciousness,
+severe bleeding or another medical emergency, urgent medical
+care should be sought.
+`;
 
-Try asking:
+}
 
-• What is amoxicillin?
-• Explain pharmacodynamics.
-• What is ADME?
-• Compare paracetamol and ibuprofen.
-• Explain beta blockers.
+return `
+I can provide educational information about medicines,
+pharmacology, drug classes, mechanisms, adverse effects,
+contraindications, interactions and pharmaceutical counselling.
+
+For a patient-specific diagnosis, prescription or treatment
+decision, please consult a qualified healthcare professional.
+
+You can also send this exact question directly to Dr. DEVIS
+through WhatsApp using the button below.
 `;
 
 }
 
 
 /* =========================================================
-   FILE UPLOAD + DOWNLOAD SYSTEM
+   CHAT MESSAGE
 ========================================================= */
 
-function handleFiles(files){
+function addMessage(type,text){
 
-const fileArray=
-Array.from(files);
+const window=document.getElementById("chatWindow");
 
-if(!fileArray.length)return;
+const message=document.createElement("div");
+
+message.className="message "+type;
+
+message.innerHTML=
+(type==="user"
+? "<b>You:</b><br>"
+: "<b>Dr. DEVIS:</b><br>")+
+text;
+
+window.appendChild(message);
+
+window.scrollTop=window.scrollHeight;
+
+}
 
 
-let stored=
+/* =========================================================
+   SEND AI QUESTION TO WHATSAPP
+========================================================= */
+
+function sendQuestionToWhatsApp(){
+
+const input=document.getElementById("aiQuestion");
+
+const question=input.value.trim();
+
+if(!question){
+
+alert("Please type your question first.");
+
+input.focus();
+
+return;
+
+}
+
+const message=
+"Hello Dr. DEVIS. I have a question from the Ask Dr. DEVIS website:\n\n"+
+question;
+
+const whatsappURL=
+"https://wa.me/256794568447?text="+
+encodeURIComponent(message);
+
+window.open(
+whatsappURL,
+"_blank",
+"noopener,noreferrer"
+);
+
+}
+
+
+/* =========================================================
+   CLEAR CHAT
+========================================================= */
+
+function clearChat(){
+
+document.getElementById("chatWindow").innerHTML=`
+
+<div class="message bot">
+
+<b>Dr. DEVIS:</b><br>
+
+Hello! I am Ask Dr. DEVIS. Ask me about medicines,
+pharmacy, pharmacology, drug classes, adverse effects,
+drug counselling or pharmaceutical education.
+
+</div>
+
+`;
+
+}
+
+
+/* =========================================================
+   WEBSITE VIEWS
+========================================================= */
+
+let views=
+parseInt(localStorage.getItem("devisViews") || "0");
+
+views++;
+
+localStorage.setItem(
+"devisViews",
+views
+);
+
+document.getElementById("viewCount")
+.textContent=views;
+
+document.getElementById("accountViews")
+.textContent=views;
+
+
+/* =========================================================
+   ACCOUNTING
+========================================================= */
+
+function updateAccounting(){
+
+const commission=views*0.01;
+
+document.getElementById("commission")
+.textContent="$"+commission.toFixed(2);
+
+document.getElementById("withdrawable")
+.textContent="$"+commission.toFixed(2);
+
+}
+
+function withdrawCommission(){
+
+alert(
+"Withdrawal functionality requires a real payment/ad/affiliate provider and a secure backend. The amount displayed here is an illustrative website calculation and is not automatically real money."
+);
+
+}
+
+
+/* =========================================================
+   LOCAL FILE STORAGE
+========================================================= */
+
+let localFiles=
 JSON.parse(
-localStorage.getItem(
-"devisFiles"
-)||"[]"
+localStorage.getItem("devisFiles") || "[]"
 );
 
 
-fileArray.forEach(file=>{
+/* =========================================================
+   FILE ICON
+========================================================= */
+
+function fileIcon(type,name){
+
+const extension=
+name.includes(".")
+? name.split(".").pop().toLowerCase()
+: "";
+
+if(type.startsWith("image/")) return "🖼️";
+
+if(type.startsWith("video/")) return "🎥";
+
+if(extension==="pdf") return "📕";
+
+if(
+extension==="doc" ||
+extension==="docx"
+) return "📘";
+
+if(
+extension==="ppt" ||
+extension==="pptx"
+) return "📊";
+
+if(
+extension==="xls" ||
+extension==="xlsx"
+) return "📗";
+
+if(
+extension==="zip" ||
+extension==="rar"
+) return "🗜️";
+
+return "📄";
+
+}
+
+
+/* =========================================================
+   FILE SIZE
+========================================================= */
+
+function formatSize(bytes){
+
+if(bytes<1024)
+return bytes+" B";
+
+if(bytes<1024*1024)
+return (bytes/1024).toFixed(1)+" KB";
+
+if(bytes<1024*1024*1024)
+return (bytes/(1024*1024)).toFixed(1)+" MB";
+
+return (bytes/(1024*1024*1024)).toFixed(1)+" GB";
+
+}
+
+
+/* =========================================================
+   UPLOAD FILES
+========================================================= */
+
+async function uploadFiles(){
+
+const input=document.getElementById("fileInput");
+
+const status=document.getElementById("uploadStatus");
+
+const files=Array.from(input.files);
+
+if(!files.length){
+
+alert("Please select at least one file.");
+
+return;
+
+}
+
+status.textContent=
+"Uploading "+files.length+" file(s)...";
+
 
 /*
-IMPORTANT:
-Browser-only storage can store the actual file
-temporarily using IndexedDB.
+===========================================================
+IMPORTANT SERVER API
 
-The metadata is also stored in localStorage.
+For GLOBAL public downloads, create a backend endpoint:
+
+POST /api/upload
+
+It should accept multipart/form-data and return:
+
+{
+  "id":"unique-file-id",
+  "name":"example.pdf",
+  "url":"https://yourdomain.com/uploads/example.pdf",
+  "size":12345,
+  "type":"application/pdf"
+}
+
+The code first attempts this endpoint.
+If it does not exist, it uses browser-local storage.
+===========================================================
 */
 
-const reader=
-new FileReader();
+let serverWorked=false;
 
+for(const file of files){
 
-reader.onload=function(event){
+try{
 
-stored.push({
+const formData=new FormData();
 
-id:
-Date.now()+
-"-"+
-Math.random()
-.toString(36)
-.substring(2),
+formData.append("file",file);
 
-name:file.name,
+const response=await fetch(
+"/api/upload",
+{
+method:"POST",
+body:formData
+}
+);
 
-type:file.type||
-"application/octet-stream",
+if(!response.ok){
+throw new Error();
+}
 
-size:file.size,
+const data=await response.json();
 
-date:
-new Date()
-.toLocaleString(),
+localFiles.push({
 
-data:event.target.result
+id:data.id || Date.now()+"-"+file.name,
+
+name:data.name || file.name,
+
+url:data.url,
+
+size:data.size || file.size,
+
+type:data.type || file.type,
+
+server:true,
+
+uploadedAt:new Date().toISOString()
 
 });
 
+serverWorked=true;
+
+}catch(error){
+
+/*
+Fallback to local browser storage.
+This allows the uploader to work even before
+the website backend is connected.
+*/
+
+try{
+
+const dataURL=
+await readFileAsDataURL(file);
+
+localFiles.push({
+
+id:Date.now()+"-"+Math.random(),
+
+name:file.name,
+
+url:dataURL,
+
+size:file.size,
+
+type:file.type,
+
+server:false,
+
+uploadedAt:new Date().toISOString()
+
+});
+
+}catch(readError){
+
+console.error(readError);
+
+}
+
+}
+
+}
+
+try{
 
 localStorage.setItem(
 "devisFiles",
-JSON.stringify(stored)
+JSON.stringify(localFiles)
 );
 
+}catch(storageError){
 
-displayFiles();
+console.warn(
+"Browser storage limit reached. Use server storage for large files.",
+storageError
+);
 
-displayPublicResources();
+}
 
+status.textContent=
+serverWorked
+? "Upload completed. Server/public storage was used."
+: "Upload completed in this browser. Connect /api/upload for public downloads on all devices.";
+
+input.value="";
+
+renderResources();
+
+}
+
+
+/* =========================================================
+   READ FILE
+========================================================= */
+
+function readFileAsDataURL(file){
+
+return new Promise((resolve,reject)=>{
+
+const reader=new FileReader();
+
+reader.onload=()=>{
+resolve(reader.result);
 };
 
+reader.onerror=reject;
 
 reader.readAsDataURL(file);
 
@@ -2962,338 +3075,218 @@ reader.readAsDataURL(file);
 
 
 /* =========================================================
-   DISPLAY DOWNLOADABLE FILES
+   RESOURCE LIST
 ========================================================= */
 
-function displayFiles(){
+async function renderResources(){
 
-const list=
-document.getElementById(
-"fileList"
+const list=document.getElementById("resourceList");
+
+list.innerHTML="";
+
+let resources=[...localFiles];
+
+/*
+Attempt to obtain globally uploaded files from server.
+GET /api/files should return:
+
+[
+ {
+   id:"123",
+   name:"file.pdf",
+   url:"https://yourdomain.com/uploads/file.pdf",
+   size:12345,
+   type:"application/pdf"
+ }
+]
+*/
+
+try{
+
+const response=await fetch("/api/files");
+
+if(response.ok){
+
+const serverFiles=await response.json();
+
+if(Array.isArray(serverFiles)){
+
+serverFiles.forEach(file=>{
+
+if(
+!resources.some(
+local=>local.id===file.id
+)
+){
+
+resources.push({
+
+...file,
+server:true
+
+});
+
+}
+
+});
+
+}
+
+}
+
+}catch(error){
+
+console.log(
+"Public file server not connected. Showing local resources."
 );
 
-
-const files=
-JSON.parse(
-localStorage.getItem(
-"devisFiles"
-)||"[]"
-);
+}
 
 
-document.getElementById(
-"fileCount"
-).textContent=
-files.length;
-
-
-if(!files.length){
+if(!resources.length){
 
 list.innerHTML=`
 
 <div class="card">
 
-No files uploaded yet.
-
-</div>
-
-`;
-
-return;
-
-}
-
-
-list.innerHTML=
-
-files.map((file,index)=>`
-
-<div class="file-card">
-
-<div class="file-card-header">
-
-<div class="file-icon">
-
-${getFileIcon(file.type)}
-
-</div>
-
-
-<div>
-
-<h3>
-${escapeHTML(file.name)}
-</h3>
-
-<div class="file-meta">
-
-${escapeHTML(file.type)}
-
-•
-
-${formatBytes(file.size)}
-
-•
-
-${escapeHTML(file.date)}
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="file-actions">
-
-<a
-class="download-btn"
-href="${file.data}"
-download="${escapeAttribute(file.name)}">
-
-⬇ Download
-
-</a>
-
-
-<a
-class="preview-btn"
-href="${file.data}"
-target="_blank">
-
-👁 View
-
-</a>
-
-
-<button
-class="delete-btn"
-onclick="deleteFile(${index})">
-
-Delete
-
-</button>
-
-</div>
-
-</div>
-
-`).join("");
-
-}
-
-
-/* =========================================================
-   PUBLIC RESOURCES
-========================================================= */
-
-function displayPublicResources(){
-
-const list=
-document.getElementById(
-"publicResources"
-);
-
-
-const files=
-JSON.parse(
-localStorage.getItem(
-"devisFiles"
-)||"[]"
-);
-
-
-if(!files.length){
-
-list.innerHTML=`
-
-<div class="card">
+<h3>No resources uploaded yet.</h3>
 
 <p>
-
-No public resources have been uploaded yet.
-
+Uploaded documents, videos, images and other resources
+will appear here.
 </p>
 
 </div>
 
 `;
 
+document.getElementById("uploadCount")
+.textContent="0";
+
 return;
 
 }
 
 
-list.innerHTML=
+resources.forEach(file=>{
 
-files.map(file=>`
+const card=document.createElement("div");
 
-<div class="file-card">
+card.className="resource-card";
 
-<div class="file-card-header">
+const icon=fileIcon(
+file.type || "",
+file.name
+);
 
-<div class="file-icon">
+const safeURL=file.url;
 
-${getFileIcon(file.type)}
+card.innerHTML=`
 
-</div>
+<div class="resource-info">
 
+<h4>
+${icon} ${escapeHTML(file.name)}
+</h4>
 
-<div>
+<div class="resource-meta">
 
-<span class="public-badge">
-FREE RESOURCE
-</span>
-
-<h3>
-${escapeHTML(file.name)}
-</h3>
-
-<div class="file-meta">
-
-${formatBytes(file.size)}
+${formatSize(file.size || 0)}
 •
-${escapeHTML(file.type)}
+${file.server ? "Public server file" : "Browser-local file"}
 
 </div>
 
 </div>
 
-</div>
-
-
-<div class="file-actions">
+<div class="resource-actions">
 
 <a
-class="download-btn"
-href="${file.data}"
-download="${escapeAttribute(file.name)}">
-
-⬇ DOWNLOAD RESOURCE
-
+class="btn btn-primary"
+href="${safeURL}"
+target="_blank"
+rel="noopener noreferrer">
+View
 </a>
-
 
 <a
-class="preview-btn"
-href="${file.data}"
-target="_blank">
-
-👁 OPEN
-
+class="btn btn-success"
+href="${safeURL}"
+download="${escapeHTML(file.name)}">
+Download
 </a>
 
-</div>
+${
+!file.server
+?
+`
+<button
+class="btn btn-danger"
+onclick="deleteLocalFile('${file.id}')">
+Delete
+</button>
+`
+:
+""
+}
 
 </div>
 
-`).join("");
+`;
+
+list.appendChild(card);
+
+});
+
+document.getElementById("uploadCount")
+.textContent=resources.length;
 
 }
 
 
 /* =========================================================
-   DELETE FILE
+   ESCAPE HTML
 ========================================================= */
 
-function deleteFile(index){
+function escapeHTML(value){
 
-let files=
-JSON.parse(
-localStorage.getItem(
-"devisFiles"
-)||"[]"
+return String(value)
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+
+}
+
+
+/* =========================================================
+   DELETE LOCAL FILE
+========================================================= */
+
+function deleteLocalFile(id){
+
+if(
+!confirm(
+"Delete this locally stored resource?"
+)
+){
+
+return;
+
+}
+
+localFiles=
+localFiles.filter(
+file=>String(file.id)!==String(id)
 );
-
-
-files.splice(index,1);
-
 
 localStorage.setItem(
 "devisFiles",
-JSON.stringify(files)
+JSON.stringify(localFiles)
 );
 
-
-displayFiles();
-
-displayPublicResources();
-
-updateDashboard();
-
-}
-
-
-/* =========================================================
-   FILE ICON
-========================================================= */
-
-function getFileIcon(type){
-
-if(type.startsWith("image/"))
-return "🖼️";
-
-if(type.startsWith("video/"))
-return "🎥";
-
-if(type.includes("pdf"))
-return "📕";
-
-if(
-type.includes("word") ||
-type.includes("document")
-)
-return "📘";
-
-if(
-type.includes("spreadsheet") ||
-type.includes("excel")
-)
-return "📗";
-
-if(
-type.includes("presentation") ||
-type.includes("powerpoint")
-)
-return "📙";
-
-return "📄";
-
-}
-
-
-/* =========================================================
-   FORMAT FILE SIZE
-========================================================= */
-
-function formatBytes(bytes){
-
-if(bytes===0)
-return "0 Bytes";
-
-
-const units=[
-"Bytes",
-"KB",
-"MB",
-"GB"
-];
-
-
-const i=
-Math.floor(
-Math.log(bytes)/
-Math.log(1024)
-);
-
-
-return(
-(bytes/
-Math.pow(1024,i))
-.toFixed(2)+
-" "+
-units[i]
-);
+renderResources();
 
 }
 
@@ -3302,255 +3295,78 @@ units[i]
    DRAG AND DROP
 ========================================================= */
 
-function dragOver(event){
+const uploadBox=
+document.getElementById("uploadBox");
+
+uploadBox.addEventListener(
+"dragover",
+event=>{
 
 event.preventDefault();
 
-document
-.getElementById("uploadZone")
-.classList.add("dragover");
+uploadBox.classList.add("dragover");
 
 }
+);
 
+uploadBox.addEventListener(
+"dragleave",
+()=>{
 
-function dragLeave(event){
+uploadBox.classList.remove("dragover");
+
+}
+);
+
+uploadBox.addEventListener(
+"drop",
+event=>{
 
 event.preventDefault();
 
-document
-.getElementById("uploadZone")
-.classList.remove("dragover");
-
-}
-
-
-function dropFiles(event){
-
-event.preventDefault();
-
-document
-.getElementById("uploadZone")
-.classList.remove("dragover");
-
-handleFiles(
-event.dataTransfer.files
-);
-
-}
-
-
-/* =========================================================
-   ANALYTICS
-========================================================= */
-
-function trackPageView(){
-
-let views=
-Number(
-localStorage.getItem(
-"devisViews"
-)||0
-);
-
-
-views++;
-
-
-localStorage.setItem(
-"devisViews",
-views
-);
-
-
-updateDashboard();
-
-}
-
-
-function calculateCommission(){
-
-const views=
-Number(
-localStorage.getItem(
-"devisViews"
-)||0
-);
-
-
-const rate=
-0.01;
-
-
-return views*rate;
-
-}
-
-
-function updateDashboard(){
-
-const views=
-Number(
-localStorage.getItem(
-"devisViews"
-)||0
-);
-
+uploadBox.classList.remove("dragover");
 
 const files=
-JSON.parse(
-localStorage.getItem(
-"devisFiles"
-)||"[]"
-);
+Array.from(event.dataTransfer.files);
 
+const input=
+document.getElementById("fileInput");
 
-const commission=
-calculateCommission();
+const dataTransfer=
+new DataTransfer();
 
+files.forEach(file=>{
+dataTransfer.items.add(file);
+});
 
-document.getElementById(
-"viewCount"
-).textContent=
-views.toLocaleString();
+input.files=dataTransfer.files;
 
-
-document.getElementById(
-"accountViews"
-).textContent=
-views.toLocaleString();
-
-
-document.getElementById(
-"commissionBalance"
-).textContent=
-commission.toFixed(2);
-
-
-document.getElementById(
-"accountCommission"
-).textContent=
-commission.toFixed(2);
-
-
-document.getElementById(
-"fileCount"
-).textContent=
-files.length;
-
-
-document.getElementById(
-"questionCount"
-).textContent=
-aiQuestionCount;
-
-
-document.getElementById(
-"drugCount"
-).textContent=
-drugs.length;
-
-
-const progress=
-Math.min(
-commission*10,
-100
-);
-
-
-document.getElementById(
-"commissionProgress"
-).style.width=
-progress+"%";
+document.getElementById("uploadStatus")
+.textContent=
+files.length+
+" file(s) selected. Click Upload Files.";
 
 }
+);
 
 
 /* =========================================================
-   WITHDRAW
+   INITIALISE WEBSITE
 ========================================================= */
 
-function withdrawCommission(){
+document.getElementById("year")
+.textContent=new Date().getFullYear();
 
-const balance=
-calculateCommission();
+renderDrugs();
 
+renderAnticancer();
 
-if(balance<=0){
+renderResources();
 
-alert(
-"There is currently no calculated commission balance."
-);
-
-return;
-
-}
-
-
-alert(
-
-"Your calculated balance is $"+
-balance.toFixed(2)+
-".\n\n"+
-"Connect a verified advertising, affiliate or payment provider "+
-"before enabling real withdrawals."
-
-);
-
-}
-
-
-/* =========================================================
-   SECURITY HELPERS
-========================================================= */
-
-function escapeHTML(value){
-
-return String(value)
-
-.replace(/&/g,"&amp;")
-
-.replace(/</g,"&lt;")
-
-.replace(/>/g,"&gt;")
-
-.replace(/"/g,"&quot;")
-
-.replace(/'/g,"&#039;");
-
-}
-
-
-function escapeAttribute(value){
-
-return String(value)
-
-.replace(/"/g,"%22")
-
-.replace(/'/g,"%27");
-
-}
-
-
-function escapeQuotes(value){
-
-return String(value)
-
-.replace(/\\/g,"\\\\")
-
-.replace(/'/g,"\\'");
-
-}
-
-
-/* =========================================================
-   INITIAL FILE DISPLAY
-========================================================= */
-
-displayFiles();
-
-displayPublicResources();
+updateAccounting();
 
 </script>
 
 </body>
 </html>
+```

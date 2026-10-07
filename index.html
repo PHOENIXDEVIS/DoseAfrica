@@ -4,885 +4,963 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="DRUG UNIVERSE, Dr. DEVIS - Pharmacy, Medicine and Drug Information Platform">
+
+<meta name="description"
+content="DRUG UNIVERSE, Dr. DEVIS - Pharmacy, Medicine and Drug Information Platform">
+
 <meta name="theme-color" content="#087f8c">
+
 <title>DRUG UNIVERSE, Dr. DEVIS | Pharmacy & Medicine</title>
 
 <style>
+
 :root{
-    --primary:#087f8c;
-    --primary-dark:#075765;
-    --secondary:#12a39b;
-    --gold:#f4b942;
-    --danger:#d64550;
-    --success:#159957;
-    --dark:#10232d;
-    --text:#182a34;
-    --muted:#65747d;
-    --bg:#f3f7f9;
-    --white:#ffffff;
-    --border:#dce7eb;
-    --shadow:0 12px 35px rgba(10,40,50,.10);
+--primary:#087f8c;
+--primary-dark:#075765;
+--secondary:#12a39b;
+--gold:#f4b942;
+--danger:#d64550;
+--success:#159957;
+--dark:#10232d;
+--text:#182a34;
+--muted:#65747d;
+--bg:#f3f7f9;
+--white:#ffffff;
+--border:#dce7eb;
+--shadow:0 12px 35px rgba(10,40,50,.10);
 }
 
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
+font-family:Arial,Helvetica,sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* =========================================================
+   PROFESSIONAL DRUG UNIVERSE, DR DEVIS LOGO
+========================================================= */
 
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(255,255,255,.97);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid var(--border);
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(255,255,255,.97);
+backdrop-filter:blur(12px);
+border-bottom:1px solid var(--border);
 }
 
 .header-inner{
-    width:94%;
-    max-width:1450px;
-    margin:auto;
-    min-height:76px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:25px;
+width:94%;
+max-width:1450px;
+margin:auto;
+min-height:78px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:25px;
 }
 
 .brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    text-decoration:none;
-    color:var(--dark);
+display:flex;
+align-items:center;
+gap:13px;
+text-decoration:none;
+color:var(--dark);
 }
 
 .logo{
-    width:52px;
-    height:52px;
-    border-radius:16px;
-    background:linear-gradient(135deg,var(--primary),var(--secondary));
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:25px;
-    font-weight:900;
-    box-shadow:0 8px 22px rgba(8,127,140,.25);
-    position:relative;
+width:56px;
+height:56px;
+border-radius:17px;
+background:linear-gradient(145deg,#063b4a,#087f8c 60%,#12a39b);
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+box-shadow:0 9px 24px rgba(8,127,140,.25);
+overflow:hidden;
 }
 
-.logo:after{
-    content:"+";
-    position:absolute;
-    right:7px;
-    bottom:4px;
-    font-size:15px;
-    color:var(--gold);
+.logo::before{
+content:"✚";
+font-size:29px;
+font-weight:900;
+color:white;
+position:absolute;
+top:3px;
+left:14px;
+}
+
+.logo::after{
+content:"D";
+font-size:22px;
+font-weight:900;
+color:#ffe08a;
+position:absolute;
+bottom:2px;
+right:9px;
 }
 
 .brand-text strong{
-    display:block;
-    font-size:20px;
-    letter-spacing:.4px;
+display:block;
+font-size:21px;
+letter-spacing:.5px;
 }
 
 .brand-text span{
-    display:block;
-    color:var(--muted);
-    font-size:11px;
+display:block;
+color:var(--muted);
+font-size:11px;
 }
 
 nav{
-    display:flex;
-    align-items:center;
-    gap:6px;
+display:flex;
+align-items:center;
+gap:5px;
 }
 
 nav a{
-    text-decoration:none;
-    color:var(--text);
-    padding:9px 11px;
-    border-radius:9px;
-    font-size:13px;
-    font-weight:700;
+text-decoration:none;
+color:var(--text);
+padding:9px 11px;
+border-radius:9px;
+font-size:13px;
+font-weight:700;
 }
 
 nav a:hover{
-    background:#eaf7f7;
-    color:var(--primary-dark);
+background:#eaf7f7;
+color:var(--primary-dark);
 }
 
 .mobile-menu{
-    display:none;
-    border:0;
-    background:var(--primary);
-    color:white;
-    padding:10px 14px;
-    border-radius:9px;
-    cursor:pointer;
+display:none;
+border:0;
+background:var(--primary);
+color:white;
+padding:10px 14px;
+border-radius:9px;
+cursor:pointer;
 }
 
-/* =========================
-   MAIN
-========================= */
+
+/* =========================================================
+   GENERAL
+========================================================= */
 
 .container{
-    width:94%;
-    max-width:1450px;
-    margin:auto;
+width:94%;
+max-width:1450px;
+margin:auto;
 }
 
 section{
-    padding:55px 0;
+padding:55px 0;
 }
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    padding-top:65px;
-}
-
-.hero-box{
-    background:
-      radial-gradient(circle at 90% 10%,rgba(255,255,255,.16),transparent 30%),
-      linear-gradient(135deg,#063b4a,#087f8c 60%,#12a39b);
-    border-radius:32px;
-    padding:65px;
-    color:white;
-    box-shadow:0 25px 55px rgba(7,65,76,.20);
-    overflow:hidden;
-    position:relative;
-}
-
-.hero-box:after{
-    content:"Rx";
-    position:absolute;
-    right:5%;
-    bottom:-50px;
-    font-size:220px;
-    font-weight:900;
-    opacity:.05;
-}
-
-.hero-content{
-    max-width:850px;
-    position:relative;
-    z-index:2;
-}
-
-.hero h1{
-    font-size:clamp(38px,6vw,72px);
-    line-height:1.05;
-    margin-bottom:20px;
-}
-
-.hero h1 span{
-    color:#ffe08a;
-}
-
-.hero p{
-    color:#d9f3f4;
-    font-size:18px;
-    max-width:780px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-    margin-top:28px;
-}
-
-/* =========================
-   BUTTONS
-========================= */
 
 .btn{
-    border:0;
-    border-radius:12px;
-    padding:12px 18px;
-    cursor:pointer;
-    font-weight:800;
-    transition:.2s;
+border:0;
+border-radius:12px;
+padding:12px 18px;
+cursor:pointer;
+font-weight:800;
+transition:.2s;
 }
 
 .btn:hover{
-    transform:translateY(-2px);
+transform:translateY(-2px);
 }
 
 .btn-primary{
-    background:var(--primary);
-    color:white;
+background:var(--primary);
+color:white;
 }
 
 .btn-gold{
-    background:var(--gold);
-    color:#17252c;
+background:var(--gold);
+color:#17252c;
 }
 
 .btn-light{
-    background:white;
-    color:var(--primary-dark);
+background:white;
+color:var(--primary-dark);
 }
 
 .btn-danger{
-    background:var(--danger);
-    color:white;
+background:var(--danger);
+color:white;
 }
 
 .btn-dark{
-    background:var(--dark);
-    color:white;
+background:var(--dark);
+color:white;
 }
-
-/* =========================
-   SEARCH
-========================= */
-
-.search-panel{
-    margin-top:32px;
-    background:white;
-    border-radius:20px;
-    padding:9px;
-    display:flex;
-    gap:8px;
-    box-shadow:0 15px 35px rgba(0,0,0,.16);
-    position:relative;
-    z-index:5;
-}
-
-.search-panel input{
-    flex:1;
-    border:0;
-    outline:0;
-    padding:15px;
-    font-size:16px;
-}
-
-.search-panel button{
-    min-width:110px;
-}
-
-.search-results{
-    margin-top:10px;
-    background:white;
-    border-radius:15px;
-    color:var(--text);
-    overflow:hidden;
-    box-shadow:var(--shadow);
-}
-
-.search-result{
-    padding:13px 17px;
-    border-bottom:1px solid #edf1f2;
-    cursor:pointer;
-}
-
-.search-result:hover{
-    background:#f1fafa;
-}
-
-/* =========================
-   SECTION TITLES
-========================= */
 
 .section-title{
-    margin-bottom:25px;
+margin-bottom:25px;
 }
 
 .section-title h2{
-    font-size:32px;
-    margin-bottom:5px;
+font-size:32px;
+margin-bottom:5px;
 }
 
 .section-title p{
-    color:var(--muted);
+color:var(--muted);
 }
 
-/* =========================
-   CARDS
-========================= */
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+padding-top:65px;
+}
+
+.hero-box{
+background:
+radial-gradient(circle at 90% 10%,rgba(255,255,255,.16),transparent 30%),
+linear-gradient(135deg,#063b4a,#087f8c 60%,#12a39b);
+border-radius:32px;
+padding:65px;
+color:white;
+box-shadow:0 25px 55px rgba(7,65,76,.20);
+overflow:hidden;
+position:relative;
+}
+
+.hero-box:after{
+content:"Rx";
+position:absolute;
+right:5%;
+bottom:-50px;
+font-size:220px;
+font-weight:900;
+opacity:.05;
+}
+
+.hero-content{
+max-width:850px;
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-size:clamp(38px,6vw,72px);
+line-height:1.05;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#ffe08a;
+}
+
+.hero p{
+color:#d9f3f4;
+font-size:18px;
+max-width:780px;
+}
+
+.search-panel{
+margin-top:32px;
+background:white;
+border-radius:20px;
+padding:9px;
+display:flex;
+gap:8px;
+box-shadow:0 15px 35px rgba(0,0,0,.16);
+position:relative;
+z-index:5;
+}
+
+.search-panel input{
+flex:1;
+border:0;
+outline:0;
+padding:15px;
+font-size:16px;
+}
+
+.search-panel button{
+min-width:110px;
+}
+
+.search-results{
+margin-top:10px;
+background:white;
+border-radius:15px;
+color:var(--text);
+overflow:hidden;
+box-shadow:var(--shadow);
+}
+
+.search-result{
+padding:13px 17px;
+border-bottom:1px solid #edf1f2;
+cursor:pointer;
+}
+
+.search-result:hover{
+background:#f1fafa;
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+========================================================= */
 
 .card-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
 }
 
 .card{
-    background:var(--white);
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:23px;
-    box-shadow:var(--shadow);
+background:var(--white);
+border:1px solid var(--border);
+border-radius:20px;
+padding:23px;
+box-shadow:var(--shadow);
 }
 
 .feature-card{
-    transition:.25s;
+transition:.25s;
 }
 
 .feature-card:hover{
-    transform:translateY(-5px);
-    border-color:#a7d6d9;
+transform:translateY(-5px);
+border-color:#a7d6d9;
 }
 
 .card-icon{
-    width:48px;
-    height:48px;
-    display:grid;
-    place-items:center;
-    border-radius:14px;
-    background:#e8f7f7;
-    font-size:24px;
-    margin-bottom:14px;
+width:48px;
+height:48px;
+display:grid;
+place-items:center;
+border-radius:14px;
+background:#e8f7f7;
+font-size:24px;
+margin-bottom:14px;
 }
 
 .card h3{
-    margin-bottom:8px;
+margin-bottom:8px;
 }
 
 .card p{
-    color:var(--muted);
+color:var(--muted);
 }
 
-/* =========================
+
+/* =========================================================
    AI
-========================= */
+========================================================= */
 
 .ai-layout{
-    display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:20px;
+display:grid;
+grid-template-columns:.8fr 1.2fr;
+gap:20px;
 }
 
 .ai-info{
-    background:linear-gradient(145deg,#082f3a,#0a5965);
-    color:white;
-    border-radius:24px;
-    padding:30px;
+background:linear-gradient(145deg,#082f3a,#0a5965);
+color:white;
+border-radius:24px;
+padding:30px;
 }
 
 .ai-info p{
-    color:#d6ecee;
+color:#d6ecee;
 }
 
 .ai-info ul{
-    margin:18px 0 20px 20px;
+margin:18px 0 20px 20px;
 }
 
 .ai-info li{
-    margin-bottom:9px;
+margin-bottom:9px;
 }
 
 .chat-box{
-    height:480px;
-    background:#102831;
-    border-radius:20px;
-    padding:18px;
-    overflow-y:auto;
+height:480px;
+background:#102831;
+border-radius:20px;
+padding:18px;
+overflow-y:auto;
 }
 
 .message{
-    padding:13px 16px;
-    border-radius:15px;
-    margin-bottom:11px;
-    white-space:pre-wrap;
+padding:13px 16px;
+border-radius:15px;
+margin-bottom:11px;
+white-space:pre-wrap;
 }
 
 .message.bot{
-    background:#1b3b45;
-    color:#ecffff;
-    margin-right:12%;
+background:#1b3b45;
+color:#ecffff;
+margin-right:12%;
 }
 
 .message.user{
-    background:#087f8c;
-    color:white;
-    margin-left:12%;
+background:#087f8c;
+color:white;
+margin-left:12%;
 }
 
 .chat-input{
-    display:flex;
-    gap:8px;
-    margin-top:10px;
+display:flex;
+gap:8px;
+margin-top:10px;
 }
 
 .chat-input input{
-    flex:1;
-    border:1px solid var(--border);
-    border-radius:12px;
-    padding:13px;
-    outline:0;
+flex:1;
+border:1px solid var(--border);
+border-radius:12px;
+padding:13px;
+outline:0;
 }
 
-/* =========================
+
+/* =========================================================
    DRUG LIBRARY
-========================= */
+========================================================= */
 
 .drug-tools{
-    display:flex;
-    gap:10px;
-    margin-bottom:20px;
-    flex-wrap:wrap;
+display:flex;
+gap:10px;
+margin-bottom:20px;
+flex-wrap:wrap;
 }
 
 .drug-tools input,
 .drug-tools select{
-    padding:12px;
-    border:1px solid var(--border);
-    border-radius:10px;
-    background:white;
+padding:12px;
+border:1px solid var(--border);
+border-radius:10px;
+background:white;
 }
 
 .drug-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
 }
 
 .drug-card{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:21px;
-    cursor:pointer;
-    transition:.2s;
+background:white;
+border:1px solid var(--border);
+border-radius:18px;
+padding:21px;
+cursor:pointer;
+transition:.2s;
 }
 
 .drug-card:hover{
-    transform:translateY(-4px);
-    border-color:#8cccd0;
-    box-shadow:var(--shadow);
+transform:translateY(-4px);
+border-color:#8cccd0;
+box-shadow:var(--shadow);
 }
 
 .drug-class{
-    display:inline-block;
-    padding:5px 9px;
-    border-radius:50px;
-    background:#e8f7f7;
-    color:#07616a;
-    font-size:11px;
-    font-weight:800;
+display:inline-block;
+padding:5px 9px;
+border-radius:50px;
+background:#e8f7f7;
+color:#07616a;
+font-size:11px;
+font-weight:800;
 }
 
 .drug-card h3{
-    margin:12px 0 6px;
+margin:12px 0 6px;
 }
 
 .drug-card p{
-    color:var(--muted);
-    font-size:14px;
+color:var(--muted);
+font-size:14px;
 }
 
 .drug-detail{
-    margin-top:20px;
-    background:white;
-    border-radius:22px;
-    padding:30px;
-    border:1px solid var(--border);
-    box-shadow:var(--shadow);
-    display:none;
+margin-top:20px;
+background:white;
+border-radius:22px;
+padding:30px;
+border:1px solid var(--border);
+box-shadow:var(--shadow);
+display:none;
 }
 
 .drug-detail.active{
-    display:block;
+display:block;
 }
 
 .detail-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:14px;
-    margin-top:18px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+margin-top:18px;
 }
 
 .detail-item{
-    background:#f6fafb;
-    padding:15px;
-    border-radius:12px;
+background:#f6fafb;
+padding:15px;
+border-radius:12px;
 }
 
 .detail-item strong{
-    display:block;
-    color:var(--primary-dark);
-    margin-bottom:4px;
+display:block;
+color:var(--primary-dark);
+margin-bottom:4px;
 }
 
-/* =========================
-   DASHBOARD
-========================= */
 
-.dashboard-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
-
-.metric{
-    position:relative;
-    overflow:hidden;
-}
-
-.metric small{
-    color:var(--muted);
-}
-
-.metric strong{
-    display:block;
-    font-size:34px;
-    margin-top:7px;
-}
-
-.metric .metric-icon{
-    position:absolute;
-    right:18px;
-    top:18px;
-    font-size:30px;
-}
-
-/* =========================
-   UPLOAD
-========================= */
+/* =========================================================
+   UPLOAD AREA
+========================================================= */
 
 .upload-zone{
-    border:2px dashed #9bbac1;
-    border-radius:22px;
-    padding:42px;
-    text-align:center;
-    background:white;
+border:2px dashed #9bbac1;
+border-radius:22px;
+padding:42px;
+text-align:center;
+background:white;
+transition:.2s;
 }
 
 .upload-zone.dragover{
-    background:#eaf8f8;
-    border-color:var(--primary);
+background:#eaf8f8;
+border-color:var(--primary);
 }
 
 .upload-zone input{
-    margin:15px auto;
+margin:15px auto;
 }
 
 .upload-categories{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    margin-top:20px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:20px;
 }
 
 .upload-category{
-    padding:20px;
-    background:#f7fafb;
-    border-radius:15px;
-    text-align:center;
+padding:20px;
+background:#f7fafb;
+border-radius:15px;
+text-align:center;
 }
 
 .file-list{
-    display:grid;
-    gap:10px;
-    margin-top:20px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:25px;
 }
 
-.file-item{
-    background:white;
-    border:1px solid var(--border);
-    padding:13px;
-    border-radius:12px;
-    display:flex;
-    justify-content:space-between;
-    gap:10px;
-    align-items:center;
+.file-card{
+background:white;
+border:1px solid var(--border);
+border-radius:18px;
+padding:18px;
+box-shadow:var(--shadow);
 }
 
-/* =========================
+.file-card-header{
+display:flex;
+align-items:center;
+gap:13px;
+}
+
+.file-icon{
+width:48px;
+height:48px;
+border-radius:13px;
+background:#e8f7f7;
+display:grid;
+place-items:center;
+font-size:24px;
+flex-shrink:0;
+}
+
+.file-card h3{
+font-size:15px;
+word-break:break-word;
+}
+
+.file-meta{
+font-size:12px;
+color:var(--muted);
+margin-top:4px;
+}
+
+.file-actions{
+display:flex;
+gap:8px;
+margin-top:15px;
+flex-wrap:wrap;
+}
+
+.download-btn{
+background:var(--success);
+color:white;
+text-decoration:none;
+padding:9px 13px;
+border-radius:9px;
+font-size:12px;
+font-weight:800;
+display:inline-block;
+}
+
+.preview-btn{
+background:#eaf4f6;
+color:var(--primary-dark);
+text-decoration:none;
+padding:9px 13px;
+border-radius:9px;
+font-size:12px;
+font-weight:800;
+display:inline-block;
+}
+
+.delete-btn{
+border:0;
+background:#fff0f1;
+color:var(--danger);
+padding:9px 13px;
+border-radius:9px;
+font-weight:800;
+cursor:pointer;
+}
+
+.public-resource{
+border:2px solid #d9ecee;
+background:linear-gradient(135deg,#ffffff,#f2fbfb);
+}
+
+.public-badge{
+display:inline-block;
+background:#dff7eb;
+color:#087341;
+padding:4px 8px;
+border-radius:50px;
+font-size:10px;
+font-weight:900;
+margin-bottom:10px;
+}
+
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.dashboard-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.metric{
+position:relative;
+overflow:hidden;
+}
+
+.metric small{
+color:var(--muted);
+}
+
+.metric strong{
+display:block;
+font-size:34px;
+margin-top:7px;
+}
+
+.metric-icon{
+position:absolute;
+right:18px;
+top:18px;
+font-size:30px;
+}
+
+
+/* =========================================================
    ACCOUNTING
-========================= */
+========================================================= */
 
 .account-layout{
-    display:grid;
-    grid-template-columns:1.2fr .8fr;
-    gap:20px;
+display:grid;
+grid-template-columns:1.2fr .8fr;
+gap:20px;
 }
 
 .account-box{
-    background:linear-gradient(135deg,#082f3a,#087f8c);
-    color:white;
-    border-radius:24px;
-    padding:32px;
+background:linear-gradient(135deg,#082f3a,#087f8c);
+color:white;
+border-radius:24px;
+padding:32px;
 }
 
 .balance{
-    font-size:48px;
-    font-weight:900;
-    margin:15px 0;
+font-size:48px;
+font-weight:900;
+margin:15px 0;
 }
 
 .progress{
-    background:rgba(255,255,255,.18);
-    height:10px;
-    border-radius:20px;
-    overflow:hidden;
+background:rgba(255,255,255,.18);
+height:10px;
+border-radius:20px;
+overflow:hidden;
 }
 
 .progress span{
-    display:block;
-    width:65%;
-    height:100%;
-    background:var(--gold);
+display:block;
+width:0%;
+height:100%;
+background:var(--gold);
 }
 
 .account-table{
-    width:100%;
-    border-collapse:collapse;
+width:100%;
+border-collapse:collapse;
 }
 
 .account-table th,
 .account-table td{
-    text-align:left;
-    padding:12px;
-    border-bottom:1px solid var(--border);
+text-align:left;
+padding:12px;
+border-bottom:1px solid var(--border);
 }
 
-/* =========================
-   SAFETY
-========================= */
+
+/* =========================================================
+   NOTICES
+========================================================= */
 
 .notice{
-    background:#fff7dc;
-    border-left:5px solid var(--gold);
-    padding:17px;
-    border-radius:10px;
-    color:#55451b;
-    margin-top:20px;
+background:#fff7dc;
+border-left:5px solid var(--gold);
+padding:17px;
+border-radius:10px;
+color:#55451b;
+margin-top:20px;
 }
 
 .danger-notice{
-    background:#fff0f1;
-    border-left:5px solid var(--danger);
-    padding:17px;
-    border-radius:10px;
-    color:#67252c;
+background:#fff0f1;
+border-left:5px solid var(--danger);
+padding:17px;
+border-radius:10px;
+color:#67252c;
 }
 
-/* =========================
-   MODAL
-========================= */
 
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    z-index:3000;
-    background:rgba(0,0,0,.65);
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-}
-
-.modal.show{
-    display:flex;
-}
-
-.modal-content{
-    width:min(800px,100%);
-    max-height:90vh;
-    overflow:auto;
-    background:white;
-    border-radius:24px;
-    padding:30px;
-}
-
-.modal-header{
-    display:flex;
-    justify-content:space-between;
-    gap:15px;
-    align-items:center;
-    margin-bottom:20px;
-}
-
-.close{
-    border:0;
-    background:#edf2f3;
-    width:38px;
-    height:38px;
-    border-radius:50%;
-    cursor:pointer;
-    font-size:20px;
-}
-
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer{
-    background:#08232d;
-    color:#d5e6e9;
-    margin-top:50px;
-    padding:45px 0;
+background:#08232d;
+color:#d5e6e9;
+margin-top:50px;
+padding:45px 0;
 }
 
 .footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:30px;
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:30px;
 }
 
 footer a{
-    color:#c8e9ec;
-    text-decoration:none;
-    display:block;
-    margin:5px 0;
+color:#c8e9ec;
+text-decoration:none;
+display:block;
+margin:5px 0;
 }
 
 .footer-bottom{
-    border-top:1px solid rgba(255,255,255,.12);
-    margin-top:30px;
-    padding-top:20px;
-    color:#9fb8bd;
-    font-size:13px;
+border-top:1px solid rgba(255,255,255,.12);
+margin-top:30px;
+padding-top:20px;
+color:#9fb8bd;
+font-size:13px;
 }
 
-/* =========================
+
+/* =========================================================
    RESPONSIVE
-========================= */
+========================================================= */
 
 @media(max-width:1050px){
-    .card-grid,
-    .dashboard-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
 
-    .drug-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+.card-grid,
+.dashboard-grid{
+grid-template-columns:repeat(2,1fr);
+}
 
-    .upload-categories{
-        grid-template-columns:repeat(2,1fr);
-    }
+.drug-grid{
+grid-template-columns:repeat(2,1fr);
+}
 
-    .ai-layout,
-    .account-layout{
-        grid-template-columns:1fr;
-    }
+.file-list{
+grid-template-columns:1fr;
+}
+
+.upload-categories{
+grid-template-columns:repeat(2,1fr);
+}
+
+.ai-layout,
+.account-layout{
+grid-template-columns:1fr;
+}
+
 }
 
 @media(max-width:700px){
 
-    .header-inner{
-        min-height:65px;
-    }
-
-    nav{
-        display:none;
-        position:absolute;
-        top:65px;
-        left:0;
-        width:100%;
-        background:white;
-        padding:10px;
-        border-bottom:1px solid var(--border);
-        flex-direction:column;
-    }
-
-    nav.open{
-        display:flex;
-    }
-
-    nav a{
-        width:100%;
-        text-align:center;
-    }
-
-    .mobile-menu{
-        display:block;
-    }
-
-    .hero-box{
-        padding:35px 25px;
-    }
-
-    .search-panel{
-        flex-direction:column;
-    }
-
-    .card-grid,
-    .dashboard-grid,
-    .drug-grid,
-    .upload-categories{
-        grid-template-columns:1fr;
-    }
-
-    .detail-grid{
-        grid-template-columns:1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-
-    .chat-box{
-        height:400px;
-    }
+.header-inner{
+min-height:65px;
 }
+
+nav{
+display:none;
+position:absolute;
+top:65px;
+left:0;
+width:100%;
+background:white;
+padding:10px;
+border-bottom:1px solid var(--border);
+flex-direction:column;
+}
+
+nav.open{
+display:flex;
+}
+
+nav a{
+width:100%;
+text-align:center;
+}
+
+.mobile-menu{
+display:block;
+}
+
+.hero-box{
+padding:35px 25px;
+}
+
+.search-panel{
+flex-direction:column;
+}
+
+.card-grid,
+.dashboard-grid,
+.drug-grid,
+.upload-categories,
+.file-list{
+grid-template-columns:1fr;
+}
+
+.detail-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.chat-box{
+height:400px;
+}
+
+}
+
 </style>
 
 </head>
 
 <body>
 
-<!-- =========================
+<!-- =========================================================
      HEADER
-========================= -->
+========================================================= -->
 
 <header>
+
 <div class="header-inner">
 
-<a href="#" class="brand">
-    <div class="logo">D</div>
-    <div class="brand-text">
-        <strong>ASK Dr. DEVIS</strong>
-        <span>Pharmacy • Medicine • Health Information</span>
-    </div>
+<a href="#home" class="brand">
+
+<div class="logo">
+</div>
+
+<div class="brand-text">
+
+<strong>ASK Dr. DEVIS</strong>
+
+<span>
+Pharmacy • Medicine • Health Information
+</span>
+
+</div>
+
 </a>
 
 <nav id="navigation">
-    <a href="#home">Home</a>
-    <a href="#ai">Ask AI</a>
-    <a href="#drugs">Drugs</a>
-    <a href="#uploads">Uploads</a>
-    <a href="#dashboard">Dashboard</a>
-    <a href="#accounting">Accounting</a>
+
+<a href="#home">Home</a>
+
+<a href="#ai">Ask AI</a>
+
+<a href="#drugs">Drugs</a>
+
+<a href="#uploads">Uploads</a>
+
+<a href="#resources">Resources</a>
+
+<a href="#dashboard">Dashboard</a>
+
+<a href="#accounting">Accounting</a>
+
 </nav>
 
-<button class="mobile-menu" onclick="toggleMenu()">☰</button>
+<button
+class="mobile-menu"
+onclick="toggleMenu()">
+
+☰
+
+</button>
 
 </div>
+
 </header>
 
 <main>
 
-<!-- =========================
+<!-- =========================================================
      HERO
-========================= -->
+========================================================= -->
 
 <section id="home" class="hero">
+
 <div class="container">
 
 <div class="hero-box">
@@ -910,93 +988,138 @@ oninput="performSearch()"
 
 >
 
-<button class="btn btn-gold" onclick="performSearch()">
+<button
+class="btn btn-gold"
+onclick="performSearch()">
+
 Search
+
 </button>
 
 </div>
 
 <div id="searchResults"></div>
 
-<div class="hero-buttons">
-<button class="btn btn-light" onclick="document.getElementById('ai').scrollIntoView()">
-Ask Dr. DEVIS AI
+<div style="margin-top:25px;display:flex;gap:10px;flex-wrap:wrap;">
+
+<button
+class="btn btn-light"
+onclick="document.getElementById('ai').scrollIntoView()">
+
+🤖 Ask Dr. DEVIS AI
+
 </button>
 
-<button class="btn btn-gold" onclick="document.getElementById('drugs').scrollIntoView()">
-Explore Drugs
+<button
+class="btn btn-gold"
+onclick="document.getElementById('drugs').scrollIntoView()">
+
+💊 Explore Drugs
+
 </button>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
+
 </section>
 
-<!-- =========================
-     FEATURE CARDS
-========================= -->
+<!-- =========================================================
+     FEATURES
+========================================================= -->
 
 <section>
+
 <div class="container">
 
 <div class="section-title">
+
 <h2>Everything in One Place</h2>
-<p>Explore the main functions of Ask Dr. DEVIS.</p>
+
+<p>
+Explore the main functions of Ask Dr. DEVIS.
+</p>
+
 </div>
 
 <div class="card-grid">
 
 <div class="card feature-card">
+
 <div class="card-icon">🔎</div>
+
 <h3>Smart Search</h3>
+
 <p>
-Search the drug library and automatically locate the most relevant
-information.
+Search the drug library and automatically locate relevant information.
 </p>
+
 </div>
 
 <div class="card feature-card">
+
 <div class="card-icon">🤖</div>
+
 <h3>AI Medical Assistant</h3>
+
 <p>
-Ask questions using natural language and receive structured
-educational answers.
+Ask natural-language pharmacy and medicine questions.
 </p>
+
 </div>
 
 <div class="card feature-card">
+
 <div class="card-icon">💊</div>
+
 <h3>Drug Library</h3>
+
 <p>
-Explore medicines, therapeutic classes, uses, mechanisms, warnings,
+Explore medicines, therapeutic classes, mechanisms, warnings,
 adverse effects and counselling points.
 </p>
+
 </div>
 
 <div class="card feature-card">
-<div class="card-icon">📁</div>
-<h3>Document Vault</h3>
+
+<div class="card-icon">📥</div>
+
+<h3>Download Centre</h3>
+
 <p>
-Upload educational documents, images, videos and other files into
-your website dashboard.
+Visitors can view and download resources uploaded to the public
+resource area.
 </p>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
-<!-- =========================
-     AI SECTION
-========================= -->
+<!-- =========================================================
+     AI
+========================================================= -->
 
 <section id="ai">
+
 <div class="container">
 
 <div class="section-title">
+
 <h2>🤖 Ask Dr. DEVIS AI</h2>
-<p>Your intelligent pharmacy and medicine information assistant.</p>
+
+<p>
+Your intelligent pharmacy and medicine information assistant.
+</p>
+
 </div>
 
 <div class="ai-layout">
@@ -1006,24 +1129,36 @@ your website dashboard.
 <h2>Ask Dr. DEVIS</h2>
 
 <p>
-Ask questions about pharmacy, pharmacology, medicines, dosage concepts,
-drug classes, mechanisms, adverse effects, interactions and healthcare.
+Ask questions about pharmacy, pharmacology, medicines, drug classes,
+mechanisms, adverse effects, interactions and healthcare.
 </p>
 
 <ul>
+
 <li>Explain medicines in simple language</li>
+
 <li>Compare two medicines</li>
+
 <li>Explain mechanisms of action</li>
+
 <li>Explain pharmacology concepts</li>
+
 <li>Generate study explanations</li>
-<li>Help organize pharmaceutical information</li>
+
+<li>Organize pharmaceutical information</li>
+
 <li>Answer general health-information questions</li>
+
 </ul>
 
 <div class="notice">
-<b>Important:</b> AI-generated information is educational.
-Patient-specific treatment decisions should be confirmed with a
-qualified healthcare professional.
+
+<b>Important:</b>
+
+AI-generated information is educational.
+Patient-specific treatment decisions should be confirmed with
+a qualified healthcare professional.
+
 </div>
 
 </div>
@@ -1033,7 +1168,10 @@ qualified healthcare professional.
 <div id="chatBox" class="chat-box">
 
 <div class="message bot">
-Hello 👋. I am <b>Ask Dr. DEVIS</b>.
+
+Hello 👋.
+
+I am <b>Ask Dr. DEVIS</b>.
 
 Ask me about medicines, pharmacology, drug classes, mechanisms,
 adverse effects, interactions or other pharmacy topics.
@@ -1054,8 +1192,12 @@ onkeydown="if(event.key==='Enter') askDrDevis()"
 
 >
 
-<button class="btn btn-primary" onclick="askDrDevis()">
+<button
+class="btn btn-primary"
+onclick="askDrDevis()">
+
 Ask
+
 </button>
 
 </div>
@@ -1065,20 +1207,26 @@ Ask
 </div>
 
 </div>
+
 </section>
 
-<!-- =========================
+<!-- =========================================================
      DRUG LIBRARY
-========================= -->
+     THE DRUG CONTENT IS MAINTAINED
+========================================================= -->
 
 <section id="drugs">
+
 <div class="container">
 
 <div class="section-title">
+
 <h2>💊 Comprehensive Drug Information</h2>
+
 <p>
 Select a medicine to view its educational information.
 </p>
+
 </div>
 
 <div class="drug-tools">
@@ -1090,47 +1238,76 @@ oninput="filterDrugs()"
 
 >
 
-<select id="drugClassFilter" onchange="filterDrugs()">
+<select
+id="drugClassFilter"
+onchange="filterDrugs()">
+
 <option value="">All classes</option>
+
 <option>Analgesic</option>
+
 <option>NSAID</option>
+
 <option>Antibiotic</option>
+
 <option>Antihypertensive</option>
+
 <option>Antidiabetic</option>
+
 <option>Antihistamine</option>
+
 <option>Antimalarial</option>
+
 <option>Anticoagulant</option>
+
 <option>Diuretic</option>
+
 <option>Antifungal</option>
+
 <option>Respiratory</option>
+
 <option>Gastrointestinal</option>
+
 </select>
 
-<button class="btn btn-primary" onclick="showAllDrugs()">
+<button
+class="btn btn-primary"
+onclick="showAllDrugs()">
+
 More Drugs
+
 </button>
 
 </div>
 
-<div id="drugGrid" class="drug-grid"></div>
+<div id="drugGrid" class="drug-grid">
+</div>
 
-<div id="drugDetail" class="drug-detail"></div>
+<div
+id="drugDetail"
+class="drug-detail">
+</div>
 
 </div>
+
 </section>
 
-<!-- =========================
+<!-- =========================================================
      UPLOAD DASHBOARD
-========================= -->
+========================================================= -->
 
 <section id="uploads">
+
 <div class="container">
 
 <div class="section-title">
+
 <h2>📁 Upload Dashboard</h2>
+
 <p>
-Manage documents, images, videos and educational resources.
+Upload documents, images, videos and educational resources.
 </p>
+
 </div>
 
 <div
@@ -1141,9 +1318,13 @@ ondragleave="dragLeave(event)"
 ondrop="dropFiles(event)"
 >
 
-<div style="font-size:50px">☁️</div>
+<div style="font-size:50px">
+☁️
+</div>
 
-<h2>Upload Your Files</h2>
+<h2>
+Upload Your Resources
+</h2>
 
 <p>
 Documents • PDFs • Word files • PowerPoint • Excel • Images • Videos
@@ -1161,112 +1342,266 @@ onchange="handleFiles(this.files)"
 
 <br>
 
-<button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+<button
+class="btn btn-primary"
+onclick="document.getElementById('fileInput').click()">
+
 Choose Files
+
 </button>
 
 <div class="upload-categories">
 
 <div class="upload-category">
-<div style="font-size:30px">📄</div>
+
+<div style="font-size:30px">
+📄
+</div>
+
 <b>Documents</b>
-<p>PDF, DOC, DOCX, TXT</p>
+
+<p>
+PDF, DOC, DOCX, TXT
+</p>
+
 </div>
 
 <div class="upload-category">
-<div style="font-size:30px">🖼️</div>
+
+<div style="font-size:30px">
+🖼️
+</div>
+
 <b>Images</b>
-<p>JPG, PNG, WEBP, GIF</p>
+
+<p>
+JPG, PNG, WEBP, GIF
+</p>
+
 </div>
 
 <div class="upload-category">
-<div style="font-size:30px">🎥</div>
+
+<div style="font-size:30px">
+🎥
+</div>
+
 <b>Videos</b>
-<p>MP4, MOV, WEBM</p>
+
+<p>
+MP4, MOV, WEBM
+</p>
+
 </div>
 
 <div class="upload-category">
-<div style="font-size:30px">📊</div>
+
+<div style="font-size:30px">
+📊
+</div>
+
 <b>Other Files</b>
-<p>XLS, XLSX, PPT, CSV etc.</p>
-</div>
+
+<p>
+XLS, XLSX, PPT, CSV
+</p>
 
 </div>
 
 </div>
 
-<div id="fileList" class="file-list"></div>
+</div>
+
+<div
+id="fileList"
+class="file-list">
+</div>
 
 </div>
+
 </section>
 
-<!-- =========================
-     DASHBOARD
-========================= -->
+<!-- =========================================================
+     PUBLIC DOWNLOAD CENTRE
+========================================================= -->
 
-<section id="dashboard">
+<section id="resources">
+
 <div class="container">
 
 <div class="section-title">
+
+<h2>📚 Public Resource & Download Centre</h2>
+
+<p>
+Visitors can open or download resources made available by Ask Dr. DEVIS.
+</p>
+
+</div>
+
+<div class="card public-resource">
+
+<div class="public-badge">
+PUBLIC DOWNLOADS
+</div>
+
+<h2>
+📥 Educational Resources
+</h2>
+
+<p>
+Download pharmacy notes, study materials, documents, images and
+other resources made available on the website.
+</p>
+
+<div
+id="publicResources"
+class="file-list">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+     DASHBOARD
+========================================================= -->
+
+<section id="dashboard">
+
+<div class="container">
+
+<div class="section-title">
+
 <h2>📊 Website Dashboard</h2>
-<p>Monitor your website activity.</p>
+
+<p>
+Monitor your website activity.
+</p>
+
 </div>
 
 <div class="dashboard-grid">
 
 <div class="card metric">
-<span>Website Views</span>
-<strong id="viewCount">0</strong>
-<small>Total recorded views</small>
-<div class="metric-icon">👁️</div>
+
+<span>
+Website Views
+</span>
+
+<strong id="viewCount">
+0
+</strong>
+
+<small>
+Total recorded views
+</small>
+
+<div class="metric-icon">
+👁️
+</div>
+
 </div>
 
 <div class="card metric">
-<span>Uploaded Files</span>
-<strong id="fileCount">0</strong>
-<small>Files in this browser</small>
-<div class="metric-icon">📁</div>
+
+<span>
+Uploaded Files
+</span>
+
+<strong id="fileCount">
+0
+</strong>
+
+<small>
+Files available
+</small>
+
+<div class="metric-icon">
+📁
+</div>
+
 </div>
 
 <div class="card metric">
-<span>Drug Records</span>
-<strong id="drugCount">0</strong>
-<small>Available drug cards</small>
-<div class="metric-icon">💊</div>
+
+<span>
+Drug Records
+</span>
+
+<strong id="drugCount">
+0
+</strong>
+
+<small>
+Available drug cards
+</small>
+
+<div class="metric-icon">
+💊
+</div>
+
 </div>
 
 <div class="card metric">
-<span>AI Questions</span>
-<strong id="questionCount">0</strong>
-<small>Questions asked</small>
-<div class="metric-icon">🤖</div>
+
+<span>
+AI Questions
+</span>
+
+<strong id="questionCount">
+0
+</strong>
+
+<small>
+Questions asked
+</small>
+
+<div class="metric-icon">
+🤖
 </div>
 
 </div>
 
 </div>
+
+</div>
+
 </section>
 
-<!-- =========================
+<!-- =========================================================
      ACCOUNTING
-========================= -->
+========================================================= -->
 
 <section id="accounting">
+
 <div class="container">
 
 <div class="section-title">
+
 <h2>💰 Website Accounting</h2>
-<p>Track views and your calculated website commission.</p>
+
+<p>
+Track views and calculated website commission.
+</p>
+
 </div>
 
 <div class="account-layout">
 
 <div class="account-box">
 
-<h3>Available Commission</h3>
+<h3>
+Available Commission
+</h3>
 
 <div class="balance">
-$<span id="commissionBalance">0.00</span>
+
+$<span id="commissionBalance">
+0.00 </span>
+
 </div>
 
 <p>
@@ -1276,77 +1611,127 @@ Estimated commission based on the configured rate per website view.
 <br>
 
 <div class="progress">
-<span id="commissionProgress"></span>
+
+<span id="commissionProgress">
+</span>
+
 </div>
 
 <br>
 
-<button class="btn btn-gold" onclick="withdrawCommission()">
+<button
+class="btn btn-gold"
+onclick="withdrawCommission()">
+
 Withdraw Commission
+
 </button>
 
 </div>
 
 <div class="card">
 
-<h3>Accounting Summary</h3>
+<h3>
+Accounting Summary
+</h3>
 
 <table class="account-table">
 
 <tr>
-<th>Website Views</th>
-<td id="accountViews">0</td>
-</tr>
 
-<tr>
-<th>Commission Rate</th>
-<td>$0.01 / view</td>
-</tr>
+<th>
+Website Views
+</th>
 
-<tr>
-<th>Estimated Commission</th>
-<td>$<span id="accountCommission">0.00</span></td>
-</tr>
-
-<tr>
-<th>Status</th>
-<td>
-<span class="drug-class">ACTIVE</span>
+<td id="accountViews">
+0
 </td>
+
+</tr>
+
+<tr>
+
+<th>
+Commission Rate
+</th>
+
+<td>
+$0.01 / view
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+Estimated Commission
+</th>
+
+<td>
+$<span id="accountCommission">
+0.00
+</span>
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+Status
+</th>
+
+<td>
+
+<span class="drug-class">
+ACTIVE
+</span>
+
+</td>
+
 </tr>
 
 </table>
 
 <div class="notice">
-The displayed commission is a website calculation. To receive real
-money, connect the site to a legitimate advertising, affiliate or
-payment provider.
-</div>
+
+The displayed commission is a website calculation.
+Actual advertising revenue must come from a legitimate
+advertising, affiliate or payment provider.
 
 </div>
 
 </div>
 
 </div>
+
+</div>
+
 </section>
 
-<!-- =========================
-     MEDICAL DISCLAIMER
-========================= -->
+<!-- =========================================================
+     SAFETY
+========================================================= -->
 
 <section>
+
 <div class="container">
 
 <div class="danger-notice">
 
-<h3>⚠️ Medical Information Notice</h3>
+<h3>
+⚠️ Medical Information Notice
+</h3>
 
 <p>
+
 Ask Dr. DEVIS is designed for educational and informational purposes.
+
 Information about medicines must not be interpreted as an individual
-prescription or diagnosis. Drug selection, dose, route, duration,
-interactions and monitoring depend on the individual patient and the
-specific product.
+prescription or diagnosis.
+
+Drug selection, dose, route, duration, interactions and monitoring
+depend on the individual patient and the specific product.
 
 Always verify important medicine information using current official
 product information, national treatment guidelines, institutional
@@ -1359,13 +1744,14 @@ In an emergency, seek immediate medical care.
 </div>
 
 </div>
+
 </section>
 
 </main>
 
-<!-- =========================
+<!-- =========================================================
      FOOTER
-========================= -->
+========================================================= -->
 
 <footer>
 
@@ -1374,71 +1760,93 @@ In an emergency, seek immediate medical care.
 <div class="footer-grid">
 
 <div>
-<h2>ASK Dr. DEVIS</h2>
+
+<h2>
+ASK Dr. DEVIS
+</h2>
+
 <p>
-A modern pharmacy and medicine information platform for learning,
-medicine education and healthcare information.
+Pharmacy, medicine and health information platform.
 </p>
+
+<br>
+
+<p>
+💊 Learn • 🔎 Search • 🤖 Ask • 📥 Download
+</p>
+
 </div>
 
 <div>
-<h3>Explore</h3>
-<a href="#home">Home</a>
-<a href="#ai">Ask AI</a>
-<a href="#drugs">Drug Library</a>
-<a href="#uploads">Uploads</a>
+
+<h3>
+Explore
+</h3>
+
+<a href="#home">
+Home
+</a>
+
+<a href="#ai">
+Ask AI
+</a>
+
+<a href="#drugs">
+Drug Library
+</a>
+
+<a href="#resources">
+Downloads
+</a>
+
 </div>
 
 <div>
-<h3>Dashboard</h3>
-<a href="#dashboard">Analytics</a>
-<a href="#accounting">Accounting</a>
-<a href="#uploads">Documents</a>
+
+<h3>
+Dashboard
+</h3>
+
+<a href="#uploads">
+Upload Resources
+</a>
+
+<a href="#dashboard">
+Analytics
+</a>
+
+<a href="#accounting">
+Accounting
+</a>
+
 </div>
 
 </div>
 
 <div class="footer-bottom">
-© <span id="year"></span> Ask Dr. DEVIS. Educational pharmacy information platform.
+
+© <span id="year"></span>
+Ask Dr. DEVIS.
+
+Pharmacy and medicine information platform.
+
 </div>
 
 </div>
 
 </footer>
 
-<!-- =========================
-     DRUG MODAL
-========================= -->
-
-<div id="drugModal" class="modal">
-
-<div class="modal-content">
-
-<div class="modal-header">
-
-<h2 id="modalDrugName"></h2>
-
-<button class="close" onclick="closeModal()">
-×
-</button>
-
-</div>
-
-<div id="modalDrugContent"></div>
-
-</div>
-
-</div>
-
 <script>
 
 /* =========================================================
-   ASK DR. DEVIS - SINGLE FILE APPLICATION
+   ASK DR DEVIS
+   UPDATED DOWNLOAD SYSTEM
 ========================================================= */
 
 
 /* =========================================================
    DRUG DATABASE
+   MAINTAINED FROM PREVIOUS VERSION
 ========================================================= */
 
 const drugs = [
@@ -1589,7 +1997,7 @@ route:"Oral and some other formulations.",
 sideEffects:"Headache and gastrointestinal effects may occur. Long-term use has additional considerations.",
 contra:"Check hypersensitivity and important medicine interactions.",
 interactions:"Can affect absorption or metabolism of selected medicines.",
-storage:"Follow product instructions.",
+storage:"Follow product-specific instructions.",
 counselling:"Use for the duration recommended by a qualified healthcare professional."
 },
 
@@ -1795,13 +2203,19 @@ counselling:"Do not use prolonged systemic corticosteroids without professional 
    INITIALIZATION
 ========================================================= */
 
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent =
+new Date().getFullYear();
 
-document.getElementById("drugCount").textContent = drugs.length;
+document.getElementById("drugCount").textContent =
+drugs.length;
 
 renderDrugs();
 
 updateDashboard();
+
+displayFiles();
+
+displayPublicResources();
 
 trackPageView();
 
@@ -1812,614 +2226,650 @@ trackPageView();
 
 function toggleMenu(){
 
-    document.getElementById("navigation")
-    .classList.toggle("open");
+document
+.getElementById("navigation")
+.classList.toggle("open");
 
 }
 
 
 /* =========================================================
-   SEARCH ENGINE
+   SEARCH
 ========================================================= */
 
 function performSearch(){
 
-    const query =
-        document.getElementById("mainSearch")
-        .value
-        .toLowerCase()
-        .trim();
+const query =
+document.getElementById("mainSearch")
+.value
+.toLowerCase()
+.trim();
 
-    const resultBox =
-        document.getElementById("searchResults");
+const resultBox =
+document.getElementById("searchResults");
 
-    if(!query){
+if(!query){
 
-        resultBox.innerHTML = "";
+resultBox.innerHTML="";
 
-        return;
+return;
 
-    }
+}
 
-    const results = drugs.filter(drug => {
 
-        const text = (
+const results =
+drugs.filter(drug=>{
 
-            drug.name + " " +
-            drug.class + " " +
-            drug.category + " " +
-            drug.uses + " " +
-            drug.mechanism + " " +
-            drug.sideEffects
+const text=(
 
-        ).toLowerCase();
+drug.name+" "+
+drug.class+" "+
+drug.category+" "+
+drug.uses+" "+
+drug.mechanism+" "+
+drug.sideEffects
 
-        return text.includes(query);
+).toLowerCase();
 
-    });
+return text.includes(query);
 
-    if(results.length === 0){
+});
 
-        resultBox.innerHTML = `
-        <div class="search-results">
-            <div class="search-result">
-                <b>No local drug record found.</b><br>
-                Try another term or ask Dr. DEVIS AI.
-            </div>
-        </div>
-        `;
 
-        return;
+if(!results.length){
 
-    }
+resultBox.innerHTML=`
 
-    resultBox.innerHTML = `
-    <div class="search-results">
+<div class="search-results">
 
-    ${
-        results.slice(0,8).map(drug => `
+<div class="search-result">
 
-        <div
-        class="search-result"
-        onclick="openDrug('${escapeQuotes(drug.name)}')"
-        >
+<b>No local drug record found.</b>
 
-        <b>${drug.name}</b>
-        <br>
+<br>
 
-        <small>
-        ${drug.class} • ${drug.category}
-        </small>
+Try another term or ask Dr. DEVIS AI.
 
-        </div>
+</div>
 
-        `).join("")
-    }
+</div>
 
-    </div>
-    `;
+`;
+
+return;
+
+}
+
+
+resultBox.innerHTML=`
+
+<div class="search-results">
+
+${results.slice(0,8).map(drug=>`
+
+<div
+class="search-result"
+onclick="openDrug('${escapeQuotes(drug.name)}')">
+
+<b>${drug.name}</b>
+
+<br>
+
+<small>
+${drug.class} • ${drug.category}
+</small>
+
+</div>
+
+`).join("")}
+
+</div>
+
+`;
 
 }
 
 
 /* =========================================================
-   DRUG DISPLAY
+   DRUG FUNCTIONS
 ========================================================= */
 
-function renderDrugs(list = drugs){
+function renderDrugs(list=drugs){
 
-    const grid =
-        document.getElementById("drugGrid");
+document.getElementById("drugGrid").innerHTML=
 
-    grid.innerHTML =
-        list.map(drug => `
+list.map(drug=>`
 
-        <article
-        class="drug-card"
-        onclick="openDrug('${escapeQuotes(drug.name)}')"
-        >
+<article
+class="drug-card"
+onclick="openDrug('${escapeQuotes(drug.name)}')">
 
-        <span class="drug-class">
-        ${drug.class}
-        </span>
+<span class="drug-class">
+${drug.class}
+</span>
 
-        <h3>${drug.name}</h3>
+<h3>${drug.name}</h3>
 
-        <p>
-        <b>Category:</b>
-        ${drug.category}
-        </p>
+<p>
+<b>Category:</b>
+${drug.category}
+</p>
 
-        <p>
-        ${drug.uses}
-        </p>
+<p>
+${drug.uses}
+</p>
 
-        </article>
+</article>
 
-        `).join("");
+`).join("");
 
 }
 
 
 function filterDrugs(){
 
-    const query =
-        document.getElementById("drugSearch")
-        .value
-        .toLowerCase();
+const query =
+document.getElementById("drugSearch")
+.value.toLowerCase();
 
-    const selectedClass =
-        document.getElementById("drugClassFilter")
-        .value;
+const selectedClass =
+document.getElementById("drugClassFilter")
+.value;
 
-    const filtered =
-        drugs.filter(drug => {
 
-            const matchesSearch = (
+const filtered =
+drugs.filter(drug=>{
 
-                drug.name +
-                " " +
-                drug.category +
-                " " +
-                drug.uses +
-                " " +
-                drug.mechanism
+const matchesSearch=(
 
-            ).toLowerCase().includes(query);
+drug.name+
+" "+
+drug.category+
+" "+
+drug.uses+
+" "+
+drug.mechanism
 
-            const matchesClass =
-                !selectedClass ||
-                drug.class === selectedClass;
+).toLowerCase().includes(query);
 
-            return matchesSearch && matchesClass;
+const matchesClass=
+!selectedClass ||
+drug.class===selectedClass;
 
-        });
+return matchesSearch &&
+matchesClass;
 
-    renderDrugs(filtered);
+});
+
+
+renderDrugs(filtered);
 
 }
 
 
 function showAllDrugs(){
 
-    document.getElementById("drugSearch").value = "";
+document.getElementById("drugSearch").value="";
 
-    document.getElementById("drugClassFilter").value = "";
+document.getElementById("drugClassFilter").value="";
 
-    renderDrugs(drugs);
+renderDrugs(drugs);
 
 }
 
 
 function openDrug(name){
 
-    const drug =
-        drugs.find(
-            item => item.name === name
-        );
+const drug=
+drugs.find(
+item=>item.name===name
+);
 
-    if(!drug) return;
-
-    const detail =
-        document.getElementById("drugDetail");
-
-    detail.classList.add("active");
-
-    detail.innerHTML = `
-
-    <div class="modal-header">
-
-        <div>
-
-            <span class="drug-class">
-            ${drug.class}
-            </span>
-
-            <h2 style="margin-top:10px">
-            ${drug.name}
-            </h2>
-
-        </div>
-
-        <button
-        class="close"
-        onclick="closeDrugDetail()">
-        ×
-        </button>
-
-    </div>
+if(!drug)return;
 
 
-    <div class="detail-grid">
+const detail=
+document.getElementById("drugDetail");
 
-        <div class="detail-item">
-        <strong>Therapeutic category</strong>
-        ${drug.category}
-        </div>
+detail.classList.add("active");
 
-        <div class="detail-item">
-        <strong>Common uses</strong>
-        ${drug.uses}
-        </div>
 
-        <div class="detail-item">
-        <strong>Mechanism of action</strong>
-        ${drug.mechanism}
-        </div>
+detail.innerHTML=`
 
-        <div class="detail-item">
-        <strong>Dosage information</strong>
-        ${drug.dose}
-        </div>
+<div
+style="
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:15px;
+">
 
-        <div class="detail-item">
-        <strong>Route of administration</strong>
-        ${drug.route}
-        </div>
+<div>
 
-        <div class="detail-item">
-        <strong>Common / important adverse effects</strong>
-        ${drug.sideEffects}
-        </div>
+<span class="drug-class">
+${drug.class}
+</span>
 
-        <div class="detail-item">
-        <strong>Contraindications / cautions</strong>
-        ${drug.contra}
-        </div>
+<h2 style="margin-top:10px">
+${drug.name}
+</h2>
 
-        <div class="detail-item">
-        <strong>Important interactions</strong>
-        ${drug.interactions}
-        </div>
+</div>
 
-        <div class="detail-item">
-        <strong>Storage</strong>
-        ${drug.storage}
-        </div>
+<button
+class="btn btn-danger"
+onclick="closeDrugDetail()">
 
-        <div class="detail-item">
-        <strong>Patient counselling</strong>
-        ${drug.counselling}
-        </div>
+Close
 
-    </div>
+</button>
 
-    <div class="notice">
+</div>
 
-    <b>Clinical safety:</b>
 
-    Exact dose, frequency, duration and treatment suitability must be
-    determined from the patient's age, weight, diagnosis, organ function,
-    formulation, other medicines and current clinical guidelines.
+<div class="detail-grid">
 
-    </div>
 
-    `;
+<div class="detail-item">
 
-    detail.scrollIntoView({
-        behavior:"smooth",
-        block:"start"
-    });
+<strong>
+Therapeutic category
+</strong>
+
+${drug.category}
+
+</div>
+
+
+<div class="detail-item">
+
+<strong>
+Common uses
+</strong>
+
+${drug.uses}
+
+</div>
+
+
+<div class="detail-item">
+
+<strong>
+Mechanism of action
+</strong>
+
+${drug.mechanism}
+
+</div>
+
+
+<div class="detail-item">
+
+<strong>
+Dosage information
+</strong>
+
+${drug.dose}
+
+</div>
+
+
+<div class="detail-item">
+
+<strong>
+Route of administration
+</strong>
+
+${drug.route}
+
+</div>
+
+
+<div class="detail-item">
+
+<strong>
+Adverse effects
+</strong>
+
+${drug.sideEffects}
+
+</div>
+
+
+<div class="detail-item">
+
+<strong>
+Contraindications / cautions
+</strong>
+
+${drug.contra}
+
+</div>
+
+
+<div class="detail-item">
+
+<strong>
+Important interactions
+</strong>
+
+${drug.interactions}
+
+</div>
+
+
+<div class="detail-item">
+
+<strong>
+Storage
+</strong>
+
+${drug.storage}
+
+</div>
+
+
+<div class="detail-item">
+
+<strong>
+Patient counselling
+</strong>
+
+${drug.counselling}
+
+</div>
+
+
+</div>
+
+
+<div class="notice">
+
+<b>Clinical safety:</b>
+
+Exact dose, frequency, duration and treatment suitability must be
+determined from the patient's age, weight, diagnosis, organ function,
+formulation, other medicines and current clinical guidelines.
+
+</div>
+
+`;
+
+
+detail.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
 
 }
 
 
 function closeDrugDetail(){
 
-    document
-    .getElementById("drugDetail")
-    .classList.remove("active");
+document
+.getElementById("drugDetail")
+.classList.remove("active");
 
 }
 
 
 /* =========================================================
-   AI ASSISTANT
+   AI
 ========================================================= */
 
-let aiQuestionCount =
-    Number(localStorage.getItem("devisAIQuestions") || 0);
+let aiQuestionCount=
+Number(
+localStorage.getItem(
+"devisAIQuestions"
+)||0
+);
 
 
 async function askDrDevis(){
 
-    const input =
-        document.getElementById("aiQuestion");
+const input=
+document.getElementById("aiQuestion");
 
-    const question =
-        input.value.trim();
+const question=
+input.value.trim();
 
-    if(!question) return;
+if(!question)return;
 
 
-    const chat =
-        document.getElementById("chatBox");
+const chat=
+document.getElementById("chatBox");
 
 
-    chat.innerHTML += `
+chat.innerHTML+=`
 
-    <div class="message user">
-    ${escapeHTML(question)}
-    </div>
+<div class="message user">
+${escapeHTML(question)}
+</div>
 
-    `;
+`;
 
 
-    input.value = "";
+input.value="";
 
-    aiQuestionCount++;
+aiQuestionCount++;
 
-    localStorage.setItem(
-        "devisAIQuestions",
-        aiQuestionCount
-    );
+localStorage.setItem(
+"devisAIQuestions",
+aiQuestionCount
+);
 
-    updateDashboard();
+updateDashboard();
 
 
-    const thinkingId =
-        "thinking-" + Date.now();
+const id=
+"thinking-"+Date.now();
 
 
-    chat.innerHTML += `
+chat.innerHTML+=`
 
-    <div
-    class="message bot"
-    id="${thinkingId}">
-    Dr. DEVIS is preparing an answer...
-    </div>
+<div
+class="message bot"
+id="${id}">
 
-    `;
+Dr. DEVIS is preparing an answer...
 
-    chat.scrollTop = chat.scrollHeight;
+</div>
 
+`;
 
-    /*
-       SECURITY NOTE:
+chat.scrollTop=
+chat.scrollHeight;
 
-       A production Meta AI connection should call YOUR SERVER:
 
-       POST /api/ask
+try{
 
-       with:
-       { "question": "..." }
+const response=
+await fetch("/api/ask",{
 
-       Your server then contacts Meta using the private API key.
+method:"POST",
 
-       This prevents visitors from stealing your API key.
-    */
+headers:{
+"Content-Type":
+"application/json"
+},
 
+body:JSON.stringify({
+question:question
+})
 
-    try{
+});
 
-        const response =
-            await fetch("/api/ask",{
 
-                method:"POST",
+if(!response.ok)
+throw new Error();
 
-                headers:{
-                    "Content-Type":
-                    "application/json"
-                },
 
-                body:JSON.stringify({
-                    question:question
-                })
+const data=
+await response.json();
 
-            });
 
+document
+.getElementById(id)
+?.remove();
 
-        if(!response.ok){
 
-            throw new Error(
-                "AI backend not connected."
-            );
+chat.innerHTML+=`
 
-        }
+<div class="message bot">
 
+${escapeHTML(
+data.answer||
+"No response returned."
+)}
 
-        const data =
-            await response.json();
+</div>
 
+`;
 
-        document.getElementById(
-            thinkingId
-        )?.remove();
+}catch(error){
 
+document
+.getElementById(id)
+?.remove();
 
-        chat.innerHTML += `
 
-        <div class="message bot">
+chat.innerHTML+=`
 
-        ${escapeHTML(
-            data.answer ||
-            "No AI response was returned."
-        )}
+<div class="message bot">
 
-        </div>
+${escapeHTML(
+localAI(question)
+)}
 
-        `;
+<br><br>
 
+<small>
 
-    }catch(error){
+Live Meta AI requires the secure
+<code>/api/ask</code> backend connection.
 
-        document.getElementById(
-            thinkingId
-        )?.remove();
+</small>
 
+</div>
 
-        /*
-           Local fallback:
-           The site still responds to common questions
-           when no backend is connected.
-        */
+`;
 
-        const fallback =
-            localAI(question);
+}
 
 
-        chat.innerHTML += `
-
-        <div class="message bot">
-
-        ${escapeHTML(fallback)}
-
-        <br><br>
-
-        <small>
-        <b>Developer note:</b>
-        Connect your secure /api/ask backend to Meta's current
-        Model API for live AI responses.
-        </small>
-
-        </div>
-
-        `;
-
-    }
-
-
-    chat.scrollTop =
-        chat.scrollHeight;
+chat.scrollTop=
+chat.scrollHeight;
 
 }
 
 
 /* =========================================================
-   LOCAL AI FALLBACK
+   LOCAL FALLBACK
 ========================================================= */
 
 function localAI(question){
 
-    const q =
-        question.toLowerCase();
+const q=
+question.toLowerCase();
 
 
-    const foundDrug =
-        drugs.find(drug =>
-            q.includes(
-                drug.name.toLowerCase()
-            )
-        );
+const drug=
+drugs.find(
+item=>
+q.includes(
+item.name.toLowerCase()
+)
+);
 
 
-    if(foundDrug){
+if(drug){
 
-        return (
+return (
 
-        foundDrug.name +
-        " is classified as " +
-        foundDrug.class +
-        ".\n\n" +
+drug.name+
+" is classified as "+
+drug.class+
+".\n\n"+
 
-        "Common educational uses: " +
-        foundDrug.uses +
-        "\n\n" +
+"Common educational uses: "+
+drug.uses+
+"\n\n"+
 
-        "Mechanism: " +
-        foundDrug.mechanism +
-        "\n\n" +
+"Mechanism: "+
+drug.mechanism+
+"\n\n"+
 
-        "Important safety information: " +
-        foundDrug.sideEffects +
-        "\n\n" +
+"Important safety information: "+
+drug.sideEffects+
+"\n\n"+
 
-        "For patient-specific dosing and treatment, " +
-        "consult a qualified pharmacist or clinician " +
-        "and verify the current product information."
+"For patient-specific dosing and treatment, consult a qualified pharmacist or clinician."
 
-        );
+);
 
-    }
+}
 
 
-    if(
-        q.includes("adme")
-    ){
+if(q.includes("adme")){
 
-        return `
-ADME stands for:
+return `
+ADME means:
 
 A — Absorption
 D — Distribution
 M — Metabolism
 E — Excretion
 
-It describes what happens to a medicine in the body after administration.
+It describes the major processes affecting a medicine in the body.
 `;
 
-    }
+}
 
 
-    if(
-        q.includes("pharmacodynamics")
-    ){
+if(q.includes("pharmacodynamics")){
 
-        return `
+return `
 Pharmacodynamics describes what a drug does to the body.
 
-It includes drug-receptor interactions, mechanisms of action,
+It includes receptor interactions, mechanisms of action,
 therapeutic effects and adverse effects.
 `;
 
-    }
+}
 
 
-    if(
-        q.includes("pharmacokinetics")
-    ){
+if(q.includes("pharmacokinetics")){
 
-        return `
+return `
 Pharmacokinetics describes what the body does to a drug.
 
 The major processes are absorption, distribution, metabolism and excretion.
 `;
 
-    }
+}
 
 
-    if(
-        q.includes("antibiotic")
-    ){
+if(q.includes("antibiotic")){
 
-        return `
+return `
 Antibiotics are medicines used to treat susceptible bacterial infections.
 
-They do not treat viral infections such as ordinary viral colds.
-Appropriate antibiotic selection should consider the suspected organism,
-site of infection, resistance patterns, allergies, patient factors and
-current treatment guidelines.
+They do not treat ordinary viral infections.
+
+Appropriate antibiotic selection depends on the suspected organism,
+site of infection, resistance patterns, allergies, patient factors
+and current treatment guidelines.
 `;
 
-    }
+}
 
 
-    if(
-        q.includes("paracetamol")
-    ){
-
-        return `
-Paracetamol is an analgesic and antipyretic used for pain and fever.
-
-The most important safety concern is excessive exposure, which can cause
-serious liver injury. Combination products should therefore be checked
-carefully for duplicate paracetamol.
-
-For exact dosing, verify the patient's age/weight, formulation and current
-product guidance.
-`;
-
-    }
-
-
-    return `
-I can help explain medicines, pharmacology, drug classes, mechanisms,
-adverse effects, interactions and pharmacy concepts.
-
-For live AI responses, connect this website to your secure server-side
-Meta Model API endpoint.
+return `
+I can explain medicines, pharmacology, drug classes,
+mechanisms, adverse effects, interactions and pharmacy concepts.
 
 Try asking:
+
 • What is amoxicillin?
 • Explain pharmacodynamics.
 • What is ADME?
@@ -2431,213 +2881,460 @@ Try asking:
 
 
 /* =========================================================
-   FILE UPLOADS
+   FILE UPLOAD + DOWNLOAD SYSTEM
 ========================================================= */
 
 function handleFiles(files){
 
-    const fileArray =
-        Array.from(files);
+const fileArray=
+Array.from(files);
 
-    if(!fileArray.length) return;
-
-
-    let stored =
-        JSON.parse(
-            localStorage.getItem(
-                "devisFiles"
-            ) || "[]"
-        );
+if(!fileArray.length)return;
 
 
-    fileArray.forEach(file => {
-
-        stored.push({
-
-            name:file.name,
-
-            type:file.type ||
-                 "Unknown",
-
-            size:file.size,
-
-            date:new Date()
-                .toLocaleString()
-
-        });
-
-    });
+let stored=
+JSON.parse(
+localStorage.getItem(
+"devisFiles"
+)||"[]"
+);
 
 
-    localStorage.setItem(
-        "devisFiles",
-        JSON.stringify(stored)
-    );
+fileArray.forEach(file=>{
+
+/*
+IMPORTANT:
+Browser-only storage can store the actual file
+temporarily using IndexedDB.
+
+The metadata is also stored in localStorage.
+*/
+
+const reader=
+new FileReader();
 
 
-    displayFiles();
+reader.onload=function(event){
 
-}
+stored.push({
 
+id:
+Date.now()+
+"-"+
+Math.random()
+.toString(36)
+.substring(2),
 
-function displayFiles(){
+name:file.name,
 
-    const list =
-        document.getElementById(
-            "fileList"
-        );
+type:file.type||
+"application/octet-stream",
 
+size:file.size,
 
-    const files =
-        JSON.parse(
-            localStorage.getItem(
-                "devisFiles"
-            ) || "[]"
-        );
+date:
+new Date()
+.toLocaleString(),
 
+data:event.target.result
 
-    document.getElementById(
-        "fileCount"
-    ).textContent =
-        files.length;
-
-
-    if(!files.length){
-
-        list.innerHTML = `
-        <div class="card">
-        No files uploaded yet.
-        </div>
-        `;
-
-        return;
-
-    }
+});
 
 
-    list.innerHTML =
-        files.map((file,index)=>`
-
-        <div class="file-item">
-
-        <div>
-
-        📄 <b>
-        ${escapeHTML(file.name)}
-        </b>
-
-        <br>
-
-        <small>
-        ${escapeHTML(file.type)}
-        •
-        ${formatBytes(file.size)}
-        •
-        ${escapeHTML(file.date)}
-        </small>
-
-        </div>
-
-        <button
-        class="btn btn-danger"
-        onclick="deleteFile(${index})">
-        Delete
-        </button>
-
-        </div>
-
-        `).join("");
-
-}
+localStorage.setItem(
+"devisFiles",
+JSON.stringify(stored)
+);
 
 
-function deleteFile(index){
+displayFiles();
 
-    let files =
-        JSON.parse(
-            localStorage.getItem(
-                "devisFiles"
-            ) || "[]"
-        );
+displayPublicResources();
+
+};
 
 
-    files.splice(index,1);
+reader.readAsDataURL(file);
 
-
-    localStorage.setItem(
-        "devisFiles",
-        JSON.stringify(files)
-    );
-
-
-    displayFiles();
-
-}
-
-
-function formatBytes(bytes){
-
-    if(bytes === 0)
-        return "0 Bytes";
-
-    const units =
-        ["Bytes","KB","MB","GB"];
-
-    const i =
-        Math.floor(
-            Math.log(bytes) /
-            Math.log(1024)
-        );
-
-    return (
-        (bytes /
-        Math.pow(1024,i))
-        .toFixed(2)
-        +
-        " " +
-        units[i]
-    );
+});
 
 }
 
 
 /* =========================================================
-   DRAG & DROP
+   DISPLAY DOWNLOADABLE FILES
+========================================================= */
+
+function displayFiles(){
+
+const list=
+document.getElementById(
+"fileList"
+);
+
+
+const files=
+JSON.parse(
+localStorage.getItem(
+"devisFiles"
+)||"[]"
+);
+
+
+document.getElementById(
+"fileCount"
+).textContent=
+files.length;
+
+
+if(!files.length){
+
+list.innerHTML=`
+
+<div class="card">
+
+No files uploaded yet.
+
+</div>
+
+`;
+
+return;
+
+}
+
+
+list.innerHTML=
+
+files.map((file,index)=>`
+
+<div class="file-card">
+
+<div class="file-card-header">
+
+<div class="file-icon">
+
+${getFileIcon(file.type)}
+
+</div>
+
+
+<div>
+
+<h3>
+${escapeHTML(file.name)}
+</h3>
+
+<div class="file-meta">
+
+${escapeHTML(file.type)}
+
+•
+
+${formatBytes(file.size)}
+
+•
+
+${escapeHTML(file.date)}
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="file-actions">
+
+<a
+class="download-btn"
+href="${file.data}"
+download="${escapeAttribute(file.name)}">
+
+⬇ Download
+
+</a>
+
+
+<a
+class="preview-btn"
+href="${file.data}"
+target="_blank">
+
+👁 View
+
+</a>
+
+
+<button
+class="delete-btn"
+onclick="deleteFile(${index})">
+
+Delete
+
+</button>
+
+</div>
+
+</div>
+
+`).join("");
+
+}
+
+
+/* =========================================================
+   PUBLIC RESOURCES
+========================================================= */
+
+function displayPublicResources(){
+
+const list=
+document.getElementById(
+"publicResources"
+);
+
+
+const files=
+JSON.parse(
+localStorage.getItem(
+"devisFiles"
+)||"[]"
+);
+
+
+if(!files.length){
+
+list.innerHTML=`
+
+<div class="card">
+
+<p>
+
+No public resources have been uploaded yet.
+
+</p>
+
+</div>
+
+`;
+
+return;
+
+}
+
+
+list.innerHTML=
+
+files.map(file=>`
+
+<div class="file-card">
+
+<div class="file-card-header">
+
+<div class="file-icon">
+
+${getFileIcon(file.type)}
+
+</div>
+
+
+<div>
+
+<span class="public-badge">
+FREE RESOURCE
+</span>
+
+<h3>
+${escapeHTML(file.name)}
+</h3>
+
+<div class="file-meta">
+
+${formatBytes(file.size)}
+•
+${escapeHTML(file.type)}
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="file-actions">
+
+<a
+class="download-btn"
+href="${file.data}"
+download="${escapeAttribute(file.name)}">
+
+⬇ DOWNLOAD RESOURCE
+
+</a>
+
+
+<a
+class="preview-btn"
+href="${file.data}"
+target="_blank">
+
+👁 OPEN
+
+</a>
+
+</div>
+
+</div>
+
+`).join("");
+
+}
+
+
+/* =========================================================
+   DELETE FILE
+========================================================= */
+
+function deleteFile(index){
+
+let files=
+JSON.parse(
+localStorage.getItem(
+"devisFiles"
+)||"[]"
+);
+
+
+files.splice(index,1);
+
+
+localStorage.setItem(
+"devisFiles",
+JSON.stringify(files)
+);
+
+
+displayFiles();
+
+displayPublicResources();
+
+updateDashboard();
+
+}
+
+
+/* =========================================================
+   FILE ICON
+========================================================= */
+
+function getFileIcon(type){
+
+if(type.startsWith("image/"))
+return "🖼️";
+
+if(type.startsWith("video/"))
+return "🎥";
+
+if(type.includes("pdf"))
+return "📕";
+
+if(
+type.includes("word") ||
+type.includes("document")
+)
+return "📘";
+
+if(
+type.includes("spreadsheet") ||
+type.includes("excel")
+)
+return "📗";
+
+if(
+type.includes("presentation") ||
+type.includes("powerpoint")
+)
+return "📙";
+
+return "📄";
+
+}
+
+
+/* =========================================================
+   FORMAT FILE SIZE
+========================================================= */
+
+function formatBytes(bytes){
+
+if(bytes===0)
+return "0 Bytes";
+
+
+const units=[
+"Bytes",
+"KB",
+"MB",
+"GB"
+];
+
+
+const i=
+Math.floor(
+Math.log(bytes)/
+Math.log(1024)
+);
+
+
+return(
+(bytes/
+Math.pow(1024,i))
+.toFixed(2)+
+" "+
+units[i]
+);
+
+}
+
+
+/* =========================================================
+   DRAG AND DROP
 ========================================================= */
 
 function dragOver(event){
 
-    event.preventDefault();
+event.preventDefault();
 
-    document
-    .getElementById("uploadZone")
-    .classList.add("dragover");
+document
+.getElementById("uploadZone")
+.classList.add("dragover");
 
 }
 
 
 function dragLeave(event){
 
-    event.preventDefault();
+event.preventDefault();
 
-    document
-    .getElementById("uploadZone")
-    .classList.remove("dragover");
+document
+.getElementById("uploadZone")
+.classList.remove("dragover");
 
 }
 
 
 function dropFiles(event){
 
-    event.preventDefault();
+event.preventDefault();
 
-    document
-    .getElementById("uploadZone")
-    .classList.remove("dragover");
+document
+.getElementById("uploadZone")
+.classList.remove("dragover");
 
-    handleFiles(
-        event.dataTransfer.files
-    );
+handleFiles(
+event.dataTransfer.files
+);
 
 }
 
@@ -2648,197 +3345,210 @@ function dropFiles(event){
 
 function trackPageView(){
 
-    let views =
-        Number(
-            localStorage.getItem(
-                "devisViews"
-            ) || 0
-        );
+let views=
+Number(
+localStorage.getItem(
+"devisViews"
+)||0
+);
 
 
-    views++;
+views++;
 
 
-    localStorage.setItem(
-        "devisViews",
-        views
-    );
+localStorage.setItem(
+"devisViews",
+views
+);
 
 
-    updateDashboard();
+updateDashboard();
 
 }
 
 
 function calculateCommission(){
 
-    const views =
-        Number(
-            localStorage.getItem(
-                "devisViews"
-            ) || 0
-        );
+const views=
+Number(
+localStorage.getItem(
+"devisViews"
+)||0
+);
 
 
-    /*
-       DEMO RATE
-
-       This is NOT real advertising revenue.
-
-       Replace it with the actual rate from your
-       legitimate advertising / affiliate provider.
-    */
-
-    const rate =
-        0.01;
+const rate=
+0.01;
 
 
-    return views * rate;
+return views*rate;
 
 }
 
 
 function updateDashboard(){
 
-    const views =
-        Number(
-            localStorage.getItem(
-                "devisViews"
-            ) || 0
-        );
+const views=
+Number(
+localStorage.getItem(
+"devisViews"
+)||0
+);
 
 
-    const files =
-        JSON.parse(
-            localStorage.getItem(
-                "devisFiles"
-            ) || "[]"
-        );
+const files=
+JSON.parse(
+localStorage.getItem(
+"devisFiles"
+)||"[]"
+);
 
 
-    const commission =
-        calculateCommission();
+const commission=
+calculateCommission();
 
 
-    document.getElementById(
-        "viewCount"
-    ).textContent =
-        views.toLocaleString();
+document.getElementById(
+"viewCount"
+).textContent=
+views.toLocaleString();
 
 
-    document.getElementById(
-        "accountViews"
-    ).textContent =
-        views.toLocaleString();
+document.getElementById(
+"accountViews"
+).textContent=
+views.toLocaleString();
 
 
-    document.getElementById(
-        "commissionBalance"
-    ).textContent =
-        commission.toFixed(2);
+document.getElementById(
+"commissionBalance"
+).textContent=
+commission.toFixed(2);
 
 
-    document.getElementById(
-        "accountCommission"
-    ).textContent =
-        commission.toFixed(2);
+document.getElementById(
+"accountCommission"
+).textContent=
+commission.toFixed(2);
 
 
-    document.getElementById(
-        "fileCount"
-    ).textContent =
-        files.length;
+document.getElementById(
+"fileCount"
+).textContent=
+files.length;
 
 
-    document.getElementById(
-        "questionCount"
-    ).textContent =
-        aiQuestionCount;
+document.getElementById(
+"questionCount"
+).textContent=
+aiQuestionCount;
 
 
-    document.getElementById(
-        "drugCount"
-    ).textContent =
-        drugs.length;
+document.getElementById(
+"drugCount"
+).textContent=
+drugs.length;
 
 
-    const progress =
-        Math.min(
-            commission * 10,
-            100
-        );
+const progress=
+Math.min(
+commission*10,
+100
+);
 
 
-    document.getElementById(
-        "commissionProgress"
-    ).style.width =
-        progress + "%";
+document.getElementById(
+"commissionProgress"
+).style.width=
+progress+"%";
 
 }
 
 
 /* =========================================================
-   WITHDRAWAL
+   WITHDRAW
 ========================================================= */
 
 function withdrawCommission(){
 
-    const balance =
-        calculateCommission();
+const balance=
+calculateCommission();
 
 
-    if(balance <= 0){
+if(balance<=0){
 
-        alert(
-            "There is currently no calculated commission balance."
-        );
+alert(
+"There is currently no calculated commission balance."
+);
 
-        return;
+return;
 
-    }
+}
 
 
-    alert(
+alert(
 
-        "Withdrawal system is ready for connection, " +
-        "but real withdrawals require a verified payment, " +
-        "advertising or affiliate provider."
+"Your calculated balance is $"+
+balance.toFixed(2)+
+".\n\n"+
+"Connect a verified advertising, affiliate or payment provider "+
+"before enabling real withdrawals."
 
-    );
+);
 
 }
 
 
 /* =========================================================
-   SECURITY / UTILITY
+   SECURITY HELPERS
 ========================================================= */
 
 function escapeHTML(value){
 
-    return String(value)
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
+return String(value)
+
+.replace(/&/g,"&amp;")
+
+.replace(/</g,"&lt;")
+
+.replace(/>/g,"&gt;")
+
+.replace(/"/g,"&quot;")
+
+.replace(/'/g,"&#039;");
+
+}
+
+
+function escapeAttribute(value){
+
+return String(value)
+
+.replace(/"/g,"%22")
+
+.replace(/'/g,"%27");
 
 }
 
 
 function escapeQuotes(value){
 
-    return String(value)
-    .replace(/\\/g,"\\\\")
-    .replace(/'/g,"\\'");
+return String(value)
+
+.replace(/\\/g,"\\\\")
+
+.replace(/'/g,"\\'");
 
 }
 
 
 /* =========================================================
-   START FILE DISPLAY
+   INITIAL FILE DISPLAY
 ========================================================= */
 
 displayFiles();
+
+displayPublicResources();
 
 </script>
 
